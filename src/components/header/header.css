@@ -1,0 +1,48 @@
+header {
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: .5em; }
+
+header nav, header .logo {
+  flex: 1; }
+
+header nav ul {
+  margin: 0;
+  padding: 0; }
+
+header nav ul li {
+  list-style-type: none;
+  flex: 1;
+  color: white;
+  text-align: center; }
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 5px; }
+
+header nav ul li a:hover, a.active {
+  border-bottom: 1px solid white; }
+
+@media screen and (max-width: 780px) {
+  .hamburger {
+    color: white; }
+  #services-wrapper.flex, header.flex, #testimonials div {
+    flex-direction: column; }
+  header .inner-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  header nav {
+    height: 0;
+    overflow: hidden;
+    transition: .5s all; }
+  header nav.open {
+    height: 12em; }
+  header nav ul {
+    display: flex;
+    flex-direction: column; }
+  header .logo, header .hamburger {
+    flex: 1; } }

@@ -1,0 +1,80 @@
+$primary-color: orange;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+body {
+  margin:0;
+  font-family: 'open-sans', helvetica;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:repeat(8, minmax(300px, auto));
+  background-image:url('../static/images/bg.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment:fixed;
+  line-height: 1.75;
+}
+
+a {
+  color:white;
+}
+p {
+  margin:0;
+  padding:0;
+}
+section {
+  background:rgba(245,245,245,.9)
+}
+
+.dark, section h1 {
+    background: #1a1a1a;
+}
+
+.flex {
+  display: flex;
+}
+.around {
+  justify-content: space-around;
+}
+.flex-1{
+  flex:1;
+}
+
+.hamburger{ display: none; }
+
+
+@import './animation.scss';
+@import './fontello.scss';
+@import '../components/header/header.scss';
+@import '../components/gallery/gallery.scss';
+@import '../components/services/services.scss';
+@import '../components/contact/contact.scss';
+@import '../components/about/about.scss';
+@import '../components/testimonials/testimonials.scss';

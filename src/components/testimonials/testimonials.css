@@ -1,0 +1,13 @@
+/* TESTIMONIALS */
+#testimonials div {
+  align-items: baseline; }
+
+#testimonials blockquote {
+  background: #f3f3f3;
+  padding: 1em 2em;
+  font-style: italic;
+  border-radius: .5em;
+  flex: 1; }
+
+#testimonials cite {
+  padding: .5em; }

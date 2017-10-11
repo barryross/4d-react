@@ -1,0 +1,12 @@
+#about div {
+  align-items: flex-start; }
+
+#about img {
+  margin: 0 1em; }
+
+#about div {
+  margin: 0 15%;
+  display: flex; }
+
+#about img {
+  width: 100px; }

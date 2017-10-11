@@ -1,0 +1,17 @@
+/* SERVICES */
+#services-wrapper {
+  display: flex;
+  justify-content: center; }
+
+#services li {
+  list-style-type: none;
+  line-height: 1.5em; }
+
+#services li:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: '\f058';
+  color: green; }
+
+.service {
+  flex-direction: column;
+  align-items: center; }

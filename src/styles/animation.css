@@ -1,0 +1,30 @@
+.fa-service-icon {
+  background: #1A5273;
+  height: 75px;
+  width: 75px;
+  line-height: 75px;
+  font-size: 40px;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 0px white; }
+
+.fa-service-icon:hover {
+  animation: .75s serviceAnimate ease-in; }
+
+@keyframes serviceAnimate {
+  0% {
+    transform: rotate(0deg);
+    background: #1A5273;
+    font-size: 40px;
+    box-shadow: inset 0px 0px 0px 0px white; }
+  50% {
+    transform: rotate(360deg);
+    font-size: 70px;
+    background: #3F6E8A;
+    box-shadow: inset 0px 0px 0px 2px white; }
+  100% {
+    transform: rotate(360deg);
+    font-size: 40px;
+    background: #3F6E8A;
+    box-shadow: inset 0px 0px 0px 0px white; } }
