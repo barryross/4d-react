@@ -1,17 +1,18 @@
-#about div {
-  align-items:flex-start;
+#about {
+  margin-top:100px;
+  
+.about{
+  width: 75%;
+  margin: 0 auto;
+  div {
+    align-items:flex-start;
+    // margin: 0 15%;
+    display:flex;
+  }
+  img {
+    margin: 0 1em;
+     width: 100px;
+  }
 }
-
-#about img {
-  margin: 0 1em;
-}
-
-
-#about div{
-  margin: 0 15%;
-  display:flex;
-}
-
-#about img {
-  width: 100px;
+  
 }

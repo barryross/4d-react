@@ -1,7 +1,8 @@
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
 #portfolio {
   padding: 2rem;
-  display: block; }
+  display: block;
+  grid-area: portfolio; }
 
 #portfolio-filters {
   font-family: 'open sans', helvetica;

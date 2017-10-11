@@ -1,11 +1,13 @@
 import React from 'react'
+import PortfolioFilters from './PortfolioFilters'
+import PortfolioItems from './PortfolioItems'
 const Gallery =  () => {
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
-      <div id="portfolio-filters" class="flex around"></div>
-      <div class="grid">
-      </div>
+        <PortfolioFilters/>
+        <PortfolioItems/>
+ 
     </section>
   )
 }

@@ -1,47 +1,26 @@
-$primary-color: orange;
 
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
+@import './variables.scss';
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-body {
+#root .app {
   margin:0;
   font-family: 'open-sans', helvetica;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows:repeat(8, minmax(300px, auto));
-  background-image:url('../static/images/bg.jpg');
+  background-image:url('/images/bg.jpg');
   background-size: cover;
   background-position: center bottom;
   background-attachment:fixed;
   line-height: 1.75;
 }
-
+ul, li {
+  margin-left:0;
+  padding-left:0;
+}
 a {
   color:white;
 }
@@ -50,11 +29,14 @@ p {
   padding:0;
 }
 section {
-  background:rgba(245,245,245,.9)
+  background:$white;
 }
 
-.dark, section h1 {
-    background: #1a1a1a;
+h1 {
+    background: $secondary;
+    color: $white;
+    text-align:center;
+    padding: .75em 0;
 }
 
 .flex {
@@ -68,7 +50,6 @@ section {
 }
 
 .hamburger{ display: none; }
-
 
 @import './animation.scss';
 @import './fontello.scss';
