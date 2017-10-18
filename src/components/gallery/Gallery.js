@@ -13,10 +13,12 @@ export default class Gallery extends Component {
       currentProject: null
     }
     this.setCurrentProject = this.setCurrentProject.bind(this);
-
+    this.close = this.close.bind(this)
   }
 
-
+  close(){
+    this.setState({open:false})
+  }
   setCurrentProject(project){
     this.setState({open:true,currentProject:project })
   }
@@ -29,7 +31,7 @@ export default class Gallery extends Component {
         {
           this.state.open ?
 
-      <Modal open={this.state.open} onClose={this.close}>
+      <Modal open={this.state.open} onClose={this.close} closeIcon>
 
              <Modal.Header>{this.state.currentProject.project}</Modal.Header>
              <Modal.Content image>
