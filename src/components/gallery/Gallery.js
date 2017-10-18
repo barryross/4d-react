@@ -31,8 +31,7 @@ export default class Gallery extends Component {
         {
           this.state.open ?
 
-      <Modal open={this.state.open} onClose={this.close} closeIcon>
-
+          <Modal open={this.state.open} onClose={this.close} closeIcon>
              <Modal.Header>{this.state.currentProject.project}</Modal.Header>
              <Modal.Content image>
                <Image wrapped size='medium' src='/' />
