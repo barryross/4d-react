@@ -1,5 +1,13 @@
 import React from 'react'
+import Scroll from 'react-scroll'; // Imports all Mixins
+
+const handleSetActive = (evt)=>{
+  console.log(evt)
+  alert('t')
+}
 const Header =  () => {
+  let Link       = Scroll.Link;
+
   return (
     <header class="flex dark">
           <div class="inner-wrapper">
@@ -12,12 +20,14 @@ const Header =  () => {
         </div>
           <nav>
             <ul class="flex">
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#contact">Contact</a></li>
+
+              <li><Link to="about" activeClass="active" spy={true} smooth={true} offset={50} duration={500}  >About</Link></li>
+            <li><Link to="services" activeClass="active" spy={true} smooth={true} offset={50} duration={500} >Services</Link></li>
+          <li><Link to="portfolio" activeClass="active" spy={true} smooth={true} offset={50} duration={500}  >Portfolio</Link></li>
+        <li><Link to="testimonials" activeClass="active" spy={true} smooth={true} offset={50} duration={500} >Testimonials</Link></li>
+      <li><Link to="pricing" activeClass="active" spy={true} smooth={true} offset={50} duration={500} >Pricing</Link></li>
+
+    <li><Link to="contact" activeClass="active" spy={true} smooth={true} offset={50} duration={500} >Contact</Link></li>
             </ul>
           </nav>
         </header>
