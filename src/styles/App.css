@@ -1,51 +1,4 @@
 @charset "UTF-8";
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-#root .app {
-  margin: 0;
-  font-family: 'open-sans', helvetica;
-  background-image: url("/images/bg.jpg");
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-  line-height: 1.75; }
-
-ul, li {
-  margin-left: 0;
-  padding-left: 0; }
-
-a {
-  color: white; }
-
-p {
-  margin: 0;
-  padding: 0; }
-
-section {
-  background: #fff; }
-
-h1 {
-  background: #1C3738;
-  color: #fff;
-  text-align: center;
-  padding: .75em 0; }
-
-.flex {
-  display: flex; }
-
-.around {
-  justify-content: space-around; }
-
-.flex-1 {
-  flex: 1; }
-
-.hamburger {
-  display: none; }
-
 .fa-service-icon {
   background: #1A5273;
   height: 75px;
@@ -243,15 +196,31 @@ h1 {
 /* 'ï‰¸' */
 header {
   align-items: center;
+  justify-content: space-around;
+  display: flex;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  padding: .5em;
-  background: #000F08;
-  grid-area: header; }
+  padding: .5em 1em;
+  background: #fff;
+  grid-area: header;
+  border-bottom: 3px solid #233237; }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    background: #18121E;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 10em; }
 
-header nav, header .logo {
+header .inner-wrapper, header nav {
   flex: 1; }
 
 header nav ul {
@@ -261,12 +230,12 @@ header nav ul {
 header nav ul li {
   list-style-type: none;
   flex: 1;
-  color: white;
   text-align: center; }
 
 header nav ul li a {
   text-decoration: none;
-  padding: 5px; }
+  padding: 5px;
+  color: #233237; }
 
 header nav ul li a:hover, a.active {
   border-bottom: 1px solid white; }
@@ -295,28 +264,37 @@ header nav ul li a:hover, a.active {
 
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
 #portfolio {
-  padding: 2rem;
   display: block;
   grid-area: portfolio; }
 
 #portfolio-filters {
-  font-family: 'open sans', helvetica;
-  margin: 1em 0;
-  align-items: center; }
-  #portfolio-filters icon {
-    padding: .5em .25em;
-    margin: .5em .25em; }
-
-#portfolio-filters span:hover {
-  cursor: pointer; }
-
-#portfolio-filters span.active {
-  color: green;
-  border-bottom: 1px solid green; }
-
-h1 {
-  font-size: 2rem;
-  margin: 0 0 1.5em; }
+  font-weight: 300;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 2em auto;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em 0; }
+  #portfolio-filters span {
+    font-weight: 300 !important;
+    font-size: 1.25em;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    display: flex; }
+    #portfolio-filters span:hover {
+      color: #984B43;
+      cursor: pointer; }
+      #portfolio-filters span:hover:before {
+        color: #984B43; }
+    #portfolio-filters span::before {
+      font-size: 1.5em;
+      text-align: center;
+      width: 100%;
+      color: #233237; }
 
 .grid {
   display: grid;
@@ -337,7 +315,6 @@ h1 {
   flex-direction: column;
   box-sizing: border-box;
   background: #0c9a9a;
-  color: #fff;
   color: #fff;
   box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
   transition: transform 0.3s ease-in-out;
@@ -422,24 +399,31 @@ h1 {
   color: green; }
 
 .service {
-  flex-direction: column;
-  width: 25%;
-  align-items: center;
-  justify-content: center; }
+  width: 25%; }
   .service .fa-service-icon {
     z-index: 200; }
 
+#contact form {
+  width: 70%;
+  margin: 0 auto; }
+
 #about {
-  margin-top: 100px; }
+  margin-top: 125px; }
   #about .about {
-    width: 75%;
-    margin: 0 auto; }
-    #about .about div {
-      align-items: flex-start;
-      display: flex; }
+    margin: 0 auto;
+    width: 50%; }
+    #about .about .about-text {
+      padding: 1em;
+      display: flex;
+      margin: 1em 0; }
+      #about .about .about-text p {
+        line-height: 3em; }
     #about .about img {
       margin: 0 1em;
-      width: 100px; }
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 500px; }
 
 /* TESTIMONIALS */
 #testimonials div {
@@ -454,3 +438,88 @@ h1 {
 
 #testimonials cite {
   padding: .5em; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+body {
+  font-family: 'Cantarell', sans-serif; }
+
+#root .App {
+  margin: 0;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  line-height: 1.75; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+h1 {
+  text-align: left;
+  font-size: 2.75em;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 5px; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.17em; }
+
+h4 {
+  font-size: 1.12em; }
+
+h5 {
+  font-size: .83em; }
+
+h6 {
+  font-size: .75em; }
+
+h1 {
+  background: #18121E;
+  color: #fff;
+  padding: .5em;
+  margin: 1em 0; }
+
+ul, li {
+  margin-left: 0;
+  padding-left: 0; }
+
+a {
+  color: white; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.card {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1em; }
+  .card ul li {
+    padding: .25em; }
+
+.flex {
+  display: flex; }
+
+.around {
+  justify-content: space-around; }
+
+.flex-1 {
+  flex: 1; }
+
+.hamburger {
+  display: none; }
+
+section {
+  margin: 2em 0; }

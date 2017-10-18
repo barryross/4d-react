@@ -3,7 +3,7 @@
 #services-wrapper {
   display: flex;
   justify-content: space-around;
- 
+
 }
 
 #services li {
@@ -18,11 +18,9 @@
 }
 
 .service {
-  flex-direction: column;
   width: 25%;
-  align-items: center;
-  justify-content: center;
-  
+
+
   .fa-service-icon{
     z-index:200;
   }

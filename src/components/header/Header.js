@@ -3,13 +3,13 @@ const Header =  () => {
   return (
     <header class="flex dark">
           <div class="inner-wrapper">
-            <div class="logo">
-             <img src="images/logo.png" alt="4d media logo"/>
-            </div>
+            <div class="logo-container">
+            <div class="logo"><span>4d Media</span> </div>
             <div class="hamburger">
             Menu
             </div>
           </div>
+        </div>
           <nav>
             <ul class="flex">
               <li><a href="#about">About</a></li>

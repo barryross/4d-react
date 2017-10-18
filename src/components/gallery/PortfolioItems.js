@@ -1,16 +1,17 @@
 import React from 'react'
 import {portfolioItems} from './data'
 
-const  sizes = ["medium", "small", "small", "small"];
+const  sizes = ["medium", "small", "small", "small", "large"];
 const rnd = () => Math.floor(Math.random()*sizes.length);
-
 const PortfolioItems =  () => {
   return (
     <div class="grid">
       {
         portfolioItems.map((item)=>{
+          console.log("ITEM --> ", item);
           return (
              <div class={"item item--"+sizes[rnd()]}>
+       
              <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
                <div class="overlay">
                 <h3>{item.project}</h3>  

@@ -2,20 +2,48 @@
 
 
 @import './variables.scss';
-
+@import './animation.scss';
+@import './fontello.scss';
+@import '../components/header/header.scss';
+@import '../components/gallery/gallery.scss';
+@import '../components/services/services.scss';
+@import '../components/contact/contact.scss';
+@import '../components/about/about.scss';
+@import '../components/testimonials/testimonials.scss';
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-#root .app {
+body {
+  font-family: 'Cantarell', sans-serif;
+
+}
+#root .App {
   margin:0;
-  font-family: 'open-sans', helvetica;
   background-image:url('/images/bg.jpg');
   background-size: cover;
   background-position: center bottom;
   background-attachment:fixed;
   line-height: 1.75;
+}
+ h2, h3, h4, h5, h6 {
+
+  font-weight: 700;
+
+}
+h1 { text-align:left; font-size: 2.75em;  font-family: 'Fjalla One', sans-serif;   letter-spacing: 5px;}
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+h1 {
+    background: $navy;
+    color: $white;
+    // text-align:center;
+    padding: .5em;
+    margin: 1em 0;
 }
 ul, li {
   margin-left:0;
@@ -28,16 +56,23 @@ p {
   margin:0;
   padding:0;
 }
-section {
-  background:$white;
+
+
+.card {
+  z-index:1;
+  background:rgba(255,255,255, .9)!important;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items:center;
+  text-align:center;
+  padding: 1em;
+
+  ul li {
+    padding: .25em;
+  }
 }
 
-h1 {
-    background: $secondary;
-    color: $white;
-    text-align:center;
-    padding: .75em 0;
-}
 
 .flex {
   display: flex;
@@ -51,11 +86,6 @@ h1 {
 
 .hamburger{ display: none; }
 
-@import './animation.scss';
-@import './fontello.scss';
-@import '../components/header/header.scss';
-@import '../components/gallery/gallery.scss';
-@import '../components/services/services.scss';
-@import '../components/contact/contact.scss';
-@import '../components/about/about.scss';
-@import '../components/testimonials/testimonials.scss';
+section {
+  margin: 2em 0;
+}

@@ -1,11 +1,17 @@
 #about {
-  margin-top: 100px; }
+  margin-top: 125px; }
   #about .about {
-    width: 75%;
-    margin: 0 auto; }
-    #about .about div {
-      align-items: flex-start;
-      display: flex; }
+    margin: 0 auto;
+    width: 50%; }
+    #about .about .about-text {
+      padding: 1em;
+      display: flex;
+      margin: 1em 0; }
+      #about .about .about-text p {
+        line-height: 3em; }
     #about .about img {
       margin: 0 1em;
-      width: 100px; }
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 500px; }

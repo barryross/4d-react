@@ -1,18 +1,29 @@
 #about {
-  margin-top:100px;
-  
+  margin-top:125px;
+
 .about{
-  width: 75%;
+
   margin: 0 auto;
-  div {
-    align-items:flex-start;
+  width: 50%;
+  .about-text {
+    padding:1em;
+    // border-radius: 3em;
+
     // margin: 0 15%;
     display:flex;
+
+    margin: 1em 0;
+    p {
+      line-height: 3em;
+    }
   }
   img {
     margin: 0 1em;
-     width: 100px;
+     width: 200px;
+     height:200px;
+     object-fit:cover;
+     border-radius: 500px;
   }
 }
-  
+
 }
