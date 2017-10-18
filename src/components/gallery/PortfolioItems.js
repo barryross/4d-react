@@ -3,25 +3,26 @@ import {portfolioItems} from './data'
 
 const  sizes = ["medium", "small", "small", "small", "large"];
 const rnd = () => Math.floor(Math.random()*sizes.length);
-const PortfolioItems =  () => {
+const PortfolioItems =  ({showModal, setCurrentProject}) => {
   return (
     <div class="grid">
       {
         portfolioItems.map((item)=>{
           console.log("ITEM --> ", item);
           return (
-             <div class={"item item--"+sizes[rnd()]}>
-       
+             <div onClick={()=>{setCurrentProject(item);}} class={"item item--"+sizes[rnd()]}>
+
              <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
                <div class="overlay">
-                <h3>{item.project}</h3>  
+                <h3>{item.project}</h3>
                 <IconTags tags={item.tags}/>
                </div>
              </div>
           )
-          
+
         })
       }
+
    </div>
   )
 }
@@ -35,7 +36,7 @@ const IconTags = ({tags}) => {
       }
     </div>
   )
-  
+
 }
 
 
