@@ -43,27 +43,21 @@ header {
 
          a {
            text-decoration:none;
-           padding: 5px;
+           padding: 5px 2em;
            color: $gunmetal;
+           transition: .25s background;
 
            &:hover {
-             text-decoration: underline;
+             text-decoration: none;
              cursor:pointer;
+             color: $white;
+             background: $navy;
            }
          }
      }
    }
 }
 
-
-
-
-
-
-
-header nav ul li a:hover, a.active{
-  border-bottom: 1px solid white;
-}
 
 @media screen and (max-width: 780px){
   .hamburger {
