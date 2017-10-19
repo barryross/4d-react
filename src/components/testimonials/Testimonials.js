@@ -3,7 +3,7 @@ const Testimonials =  () => {
   return (
     <section id="testimonials">
           <h1>Testimonials</h1>
-          <div class="flex">
+        <div class="flex wrapper">
 
           <blockquote>
             <p></p>

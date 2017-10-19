@@ -199,6 +199,7 @@ header {
   justify-content: space-around;
   display: flex;
   position: fixed;
+  height: 100px;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -433,10 +434,11 @@ header nav ul li a:hover, a.active {
 
 #contact form {
   width: 70%;
-  margin: 0 auto; }
+  padding: 4em 0;
+  margin: 3em auto; }
 
 #about {
-  margin-top: 125px; }
+  margin-top: 100px; }
   #about .about {
     margin: 0 auto;
     width: 50%; }
@@ -556,5 +558,7 @@ p {
   display: none; }
 
 section {
-  margin: 2em 0;
+  margin: 2em 0; }
+
+section .wrapper {
   padding: 0 2em; }

@@ -26,7 +26,8 @@ export default class Gallery extends Component {
     return (
       <section id="portfolio">
         <h1>Portfolio</h1>
-          <PortfolioFilters/>
+      <div className="wrapper">
+       <PortfolioFilters/>
         <PortfolioItems showModal={this.showModal} setCurrentProject={this.setCurrentProject}/>
         {
           this.state.open ?
@@ -93,6 +94,7 @@ export default class Gallery extends Component {
            </Modal>
            : ''
          }
+       </div>
       </section>
     )
   }
