@@ -62,7 +62,7 @@ export const portfolioItems = [
     ],
     images:{
       primary:"home.png",
-      others:["image2.png", "image3.png"]
+      others:["Screen-Shot-2016-10-18-at-5.32.39-PM-1024x617.png", "Screen-Shot-2016-10-18-at-5.33.25-PM-1024x521.png", "susanross2-1024x635.jpg"]
     }
   },
 
@@ -84,7 +84,7 @@ export const portfolioItems = [
     ],
     images:{
       primary:"ams.jpg",
-      others:["image2.png", "image3.png"]
+      others:["ams.jpg"]
     }
   },
 
@@ -107,12 +107,12 @@ export const portfolioItems = [
   ],
   images:{
     primary:"home.jpg",
-    others:["image2.png", "image3.png"]
+    others:["Laptop_03.jpg"]
   }
 },
  {
   project:"Drama Music Productions",
-  url:"http://www.barryross.com",
+  url:"http://www.dramamusicproductions.com",
   directory:"drama-music/",
   description:"A one-stop recording studio in Vancouver BC, specializing in affordable high quality song production for singers, songwriters and vocalists wanting a unique sound … Located in scenic Downtown West End Vancouver on Beach Avenue, we are a small but capable company working hard to inspire and build up every one of its music production clients. *The client has changed a number of things around since I worked on the site",
 feature:[
@@ -130,7 +130,7 @@ workPerformed:[
   tags:["audio", "css", "video"],
   images:{
     primary:"home.png",
-    others:["image2.png", "image3.png"]
+    others:[]
   }
 },
  {
@@ -145,7 +145,7 @@ workPerformed:[
 ],
   images:{
     primary:"flood.png",
-    others:["image2.png", "image3.png"]
+    others:["Screen-Shot-2016-10-16-at-3.59.54-PM-1024x509.png", "Screen-Shot-2016-10-16-at-4.00.17-PM-1024x515.png","Screen-Shot-2016-10-16-at-4.00.28-PM-1024x513.png"]
   }
 },
  {
@@ -167,7 +167,7 @@ workPerformed:[
   ],
   images:{
     primary:"home.png",
-    others:["image2.png", "image3.png"]
+    others:["goal_results.png", "Screen-Shot-2016-10-17-at-7.57.56-PM-1024x741.png", "Screen-Shot-2016-10-17-at-8.00.42-PM-1024x908.png"]
   }
 },
 {
@@ -189,7 +189,7 @@ workPerformed:[
   tags:["api", "mapbox", "php", "pods", "wordpress"],
   images:{
     primary:"home.png",
-    others:["image2.png", "image3.png"]
+    others:["2012-07-22_19-29-07.png", "hiatus-directory-1024x522.png"]
   }
 },
 {
@@ -200,7 +200,7 @@ workPerformed:[
   tags:["wordpress", "css", "html"],
   images:{
     primary:"home.jpg",
-    others:["image2.png", "image3.png"]
+    others:[]
   }
 },
 {
@@ -218,7 +218,7 @@ workPerformed:[
   ],
   images:{
     primary:"home.png",
-    others:["home.png", "image3.png"]
+    others:["Screen-Shot-2013-12-30-at-7.04.34-PM-e1388459158557-1024x878.png", "Screen-Shot-2013-12-31-at-5.23.48-PM-e1464031814332-1024x627.png"]
   }
 },
 {
@@ -229,7 +229,7 @@ workPerformed:[
   tags:["wordpress", "css", "html"],
   images:{
     primary:"home.png",
-    others:["home.png", "image3.png"]
+    others:[]
   }
 },
 {
@@ -248,7 +248,7 @@ workPerformed:[
   ],
   images:{
     primary:"home.png",
-    others:["home.png", "image3.png"]
+    others:["Screen-Shot-2016-11-16-at-5.02.24-PM.png", "Screen-Shot-2016-11-16-at-5.02.38-PM.png"]
   }
 },
 {
@@ -259,7 +259,7 @@ workPerformed:[
   tags:["wordpress", "css", "html"],
   images:{
     primary:"tuberbiz.jpg",
-    others:["home.png", "image3.png"]
+    others:["tax-and-business.jpg", "tuberbiz-1024x601.jpg"]
   }
 },
 {
@@ -270,7 +270,7 @@ workPerformed:[
   tags:["wordpress", "css", "html"],
   images:{
     primary:"tax-and-business.jpg",
-    others:["home.png", "image3.png"]
+    others:[]
   }
 }
 ]

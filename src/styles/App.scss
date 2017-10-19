@@ -77,7 +77,13 @@ p {
 .flex {
   display: flex;
 }
-.around {
+.flex-end {
+  justify-content: flex-end!important;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.around, .flex-around {
   justify-content: space-around;
 }
 .flex-1{
@@ -88,4 +94,5 @@ p {
 
 section {
   margin: 2em 0;
+  padding: 0 2em;
 }

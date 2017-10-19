@@ -219,23 +219,22 @@ header {
     padding: 1em;
     font-size: 1em;
     border-radius: 10em; }
-
-header .inner-wrapper, header nav {
-  flex: 1; }
-
-header nav ul {
-  margin: 0;
-  padding: 0; }
-
-header nav ul li {
-  list-style-type: none;
-  flex: 1;
-  text-align: center; }
-
-header nav ul li a {
-  text-decoration: none;
-  padding: 5px;
-  color: #233237; }
+  header .inner-wrapper, header header nav {
+    flex: 1; }
+  header nav ul {
+    margin: 0;
+    padding: 0; }
+    header nav ul li {
+      list-style-type: none;
+      flex: 1;
+      text-align: center; }
+      header nav ul li a {
+        text-decoration: none;
+        padding: 5px;
+        color: #233237; }
+        header nav ul li a:hover {
+          text-decoration: underline;
+          cursor: pointer; }
 
 header nav ul li a:hover, a.active {
   border-bottom: 1px solid white; }
@@ -266,6 +265,37 @@ header nav ul li a:hover, a.active {
 #portfolio {
   display: block;
   grid-area: portfolio; }
+
+.ui.modal > .header {
+  display: flex;
+  justify-content: space-between; }
+
+.ui.modal section {
+  width: 47%; }
+
+.project-images {
+  flex: 1;
+  text-align: right;
+  justify-content: space-between;
+  align-items: center; }
+  .project-images img {
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover; }
+
+.project-icons span {
+  font-size: .5em;
+  margin: 0 .25em; }
+
+.project-description {
+  margin: 1em 0; }
+
+.project-details li {
+  padding: .25em .10em; }
+
+.project-details li:nth-of-type(even) {
+  background: #EAC67A; }
 
 #portfolio-filters {
   font-weight: 300;
@@ -304,27 +334,26 @@ header nav ul li a:hover, a.active {
   grid-auto-rows: 150px;
   grid-auto-flow: row dense;
   /*https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-23*/ }
+  .grid .item {
+    position: relative;
+    /* so the overlay is positioned relative to this */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #0c9a9a;
+    color: #fff;
+    box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 1s all; }
+    .grid .item img {
+      object-fit: cover;
+      /* try playing with this property: 'contain', 'fill', 'cover' */
+      height: 100%;
+      /* helps image fit inside of its parent */ }
 
 .invisible {
   visibility: hidden; }
-
-.item {
-  position: relative;
-  /* so the overlay is positioned relative to this */
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  background: #0c9a9a;
-  color: #fff;
-  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  transition: 1s all; }
-  .item img {
-    object-fit: cover;
-    /* try playing with this property: 'contain', 'fill', 'cover' */
-    height: 100%;
-    /* helps image fit inside of its parent */ }
 
 .item::after {
   /* all of this is for the black overlay effect */
@@ -392,11 +421,10 @@ header nav ul li a:hover, a.active {
 #services li {
   list-style-type: none;
   line-height: 1.5em; }
-
-#services li:before {
-  font: normal normal normal 14px/1 FontAwesome;
-  content: '\f058';
-  color: green; }
+  #services li::before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: '\f058';
+    color: green; }
 
 .service {
   width: 25%; }
@@ -512,7 +540,13 @@ p {
 .flex {
   display: flex; }
 
-.around {
+.flex-end {
+  justify-content: flex-end !important; }
+
+.flex-between {
+  justify-content: space-between; }
+
+.around, .flex-around {
   justify-content: space-around; }
 
 .flex-1 {
@@ -522,4 +556,5 @@ p {
   display: none; }
 
 section {
-  margin: 2em 0; }
+  margin: 2em 0;
+  padding: 0 2em; }
