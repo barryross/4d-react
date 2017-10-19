@@ -2,13 +2,10 @@
   margin-top: 100px; }
   #about .about {
     margin: 0 auto;
-    width: 50%; }
-    #about .about .about-text {
-      padding: 1em;
-      display: flex;
-      margin: 1em 0; }
-      #about .about .about-text p {
-        line-height: 3em; }
+    width: 50%;
+    padding: 3em; }
+    #about .about p {
+      line-height: 3em; }
     #about .about img {
       margin: 0 1em;
       width: 200px;

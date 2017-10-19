@@ -1,0 +1,44 @@
+
+.ui.modal>.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui.modal section {
+  width: 47%;
+}
+  .project-images {
+    flex:1;
+    text-align:right;
+    justify-content: space-between;
+    align-items:center;
+
+    img{
+      max-width: 100px;
+      height:100px;
+      // flex:1;
+      overflow:hidden;
+      object-fit:cover;
+    }
+  }
+
+  .project-icons{
+    span {
+      font-size: .5em;
+      margin:0 .25em;
+    }
+  }
+  .project-description{
+    margin:1em 0;
+  }
+  .project-details {
+    li {
+      padding: .25em .10em;
+    }
+    li:nth-of-type(even) {
+      background: $yellow;
+    }
+    li:nth-of-type(odd) {
+      // background: $red;
+    }
+  }

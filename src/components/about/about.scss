@@ -1,29 +1,21 @@
 #about {
+  
   margin-top:100px;
 
-.about{
+  .about{
+    margin: 0 auto;
+    width: 50%;
+    padding: 3em;
 
-  margin: 0 auto;
-  width: 50%;
-  .about-text {
-    padding:1em;
-    // border-radius: 3em;
+    p {line-height: 3em;}
 
-    // margin: 0 15%;
-    display:flex;
-
-    margin: 1em 0;
-    p {
-      line-height: 3em;
+    img {
+      margin: 0 1em;
+       width: 200px;
+       height: 200px;
+       object-fit:cover;
+       border-radius: 500px;
     }
   }
-  img {
-    margin: 0 1em;
-     width: 200px;
-     height:200px;
-     object-fit:cover;
-     border-radius: 500px;
-  }
-}
 
 }
