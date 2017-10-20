@@ -1,14 +1,18 @@
 import React from 'react'
 import {portfolioFilters} from './data'
-const PortfolioFilters =  () => {
+const PortfolioFilters =  ({toggleFilter, active}) => {
   return (
-    <ul id="portfolio-filters">
-      {
-        portfolioFilters.map((item)=>{
-          return <span className={item.icon}>{item.label}</span>
-        })
-      }
-    </ul>
+    <div>
+      <h3>sdfds</h3>
+
+      <ul id="portfolio-filters">
+        {
+          portfolioFilters.map((item)=>{
+            return <span onClick={()=>toggleFilter(item)} className={item.icon +" "+item.active}>{item.label}</span>
+          })
+        }
+      </ul>
+      </div>
   )
 }
 

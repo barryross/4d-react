@@ -18,14 +18,19 @@
     flex-direction:column;
     height: 100%;
     justify-content: center;
-
+    padding: .5em;
+    border-radius: .25em;
     display:flex;
+    &.true{
+      color: $white;
+      background: $gunmetal;
+    }
     &:hover{
-      color: $red;
+      color: $white;
       cursor:pointer;
 
       &:before{
-        color: $red;
+        color: $white;
       }
     }
     &::before{

@@ -64,6 +64,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  .overlay .tag-set {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; }
 
 .item:hover .overlay {
   display: flex;

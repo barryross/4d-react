@@ -1,0 +1,30 @@
+.ui.modal > .header {
+  display: flex;
+  justify-content: space-between; }
+
+.ui.modal section {
+  width: 47%; }
+
+.project-images {
+  flex: 1;
+  text-align: right;
+  justify-content: space-between;
+  align-items: center; }
+  .project-images img {
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover; }
+
+.project-icons span {
+  font-size: .5em;
+  margin: 0 .25em; }
+
+.project-description {
+  margin: 1em 0; }
+
+.project-details li {
+  padding: .4em .25em; }
+
+.project-details li:nth-of-type(even) {
+  background: rgba(234, 198, 122, 0.2); }

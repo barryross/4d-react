@@ -33,10 +33,10 @@
   }
   .project-details {
     li {
-      padding: .25em .10em;
+      padding: .4em .25em;
     }
     li:nth-of-type(even) {
-      background: $yellow;
+      background: rgba(234, 198, 122, .2)
     }
     li:nth-of-type(odd) {
       // background: $red;

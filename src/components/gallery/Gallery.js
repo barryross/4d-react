@@ -3,32 +3,57 @@ import PortfolioFilters from './PortfolioFilters'
 import PortfolioItems from './PortfolioItems'
 import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
 import {portfolioFilters} from './data'
-import {find} from 'lodash'
+import {find, remove} from 'lodash'
 export default class Gallery extends Component {
   constructor(props){
     super(props)
 
     this.state = {
       open:false,
-      currentProject: null
+      currentProject: null,
+      filters: portfolioFilters,
     }
+
     this.setCurrentProject = this.setCurrentProject.bind(this);
+    this.toggleFilter = this.toggleFilter.bind(this);
+
     this.close = this.close.bind(this)
   }
 
   close(){
     this.setState({open:false})
   }
+
   setCurrentProject(project){
     this.setState({open:true,currentProject:project })
+  }
+  toggleFilter(filter){
+    let filters = this.state.filters;
+
+    let found =  find(filters, {tag:filter.tag});
+    found.active = !found.active;
+    this.setState({filters:filters})
+    console.log("Current filters", this.state.filters.filter((f)=> f.active == true))
+    // let active = this.state.activeFilters;
+    // remove(this.state.activeFilters, (f) => f == filter).length > 0 ? "" :
+    // this.setState({activeFilters: [...this.state.activeFilters].concat(filter)});
+    //
+    // if (this.state.activeFilters.indexOf(filter) > -1 ){
+    //   remove(this.state.activeFilters, (f) => f == filter)
+    // } else {
+    //   this.setState({activeFilters: [...this.state.activeFilters, filter]})
+    //     // console.log("filters after", this.state.activeFilters)
+    // }
+
+
   }
   render(){
     return (
       <section id="portfolio">
         <h1>Portfolio</h1>
         <div className="wrapper">
-         <PortfolioFilters/>
-          <PortfolioItems showModal={this.showModal} setCurrentProject={this.setCurrentProject}/>
+         <PortfolioFilters active={this.state.filters} toggleFilter={this.toggleFilter}/>
+       <PortfolioItems filters={this.state.filters} showModal={this.showModal} setCurrentProject={this.setCurrentProject}/>
           {
             this.state.open ?
 
