@@ -4,6 +4,8 @@ import PortfolioItems from './PortfolioItems'
 import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
 import {portfolioFilters} from './data'
 import {find, remove} from 'lodash'
+import { CSSTransitionGroup } from 'react-transition-group' // ES6
+
 export default class Gallery extends Component {
   constructor(props){
     super(props)
@@ -53,7 +55,12 @@ export default class Gallery extends Component {
         <h1>Portfolio</h1>
         <div className="wrapper">
          <PortfolioFilters active={this.state.filters} toggleFilter={this.toggleFilter}/>
-       <PortfolioItems filters={this.state.filters} showModal={this.showModal} setCurrentProject={this.setCurrentProject}/>
+
+         <PortfolioItems 
+           filters={this.state.filters}
+           showModal={this.showModal}
+           setCurrentProject={this.setCurrentProject}
+         />
           {
             this.state.open ?
 
