@@ -68,11 +68,11 @@ export default class Gallery extends Component {
             <Modal open={this.state.open} onClose={this.close} closeIcon>
                <Modal.Header className={"modal-header flex flex-between"}>
                  <span className="flex-1">{this.state.currentProject.project}</span>
-                <div className={"project-icons flex flex-1 flex-end"}>
+                <div className={"project-icons"}>
                      {
                        this.state.currentProject.tags.map((tag)=>{
                          let tagItem = find(portfolioFilters, {tag:tag});
-                         return tagItem ?  <span className={tagItem.icon}>{tagItem.label}</span> : ''
+                         return tagItem ?  <span className={tagItem.icon}><span className="tag-label">{tagItem.label}</span></span> : ''
                        })
                      }
 
