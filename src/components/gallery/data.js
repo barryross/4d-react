@@ -201,7 +201,7 @@ workPerformed:[
     "Custom PODS CMS-based directory",
     "Customized s2Member Pro plugin to work with BluePay"
   ],
-  tags:["api", "mapbox", "php", "pods", "wordpress"],
+  tags:["api", "mapbox", "php", "pods", "wordpress","eCommerce"],
   images:{
     primary:"home.png",
     others:["2012-07-22_19-29-07.png", "hiatus-directory-1024x522.png"]
@@ -223,7 +223,7 @@ workPerformed:[
   url:"http://www.nalagadesigns.com",
   directory:"nalaga-designs/",
   description:"Nalaga Designs offers a unique array of cedar bark weavings, two dimensional designs, limited edition prints, trade bead jewelry and clothing and accessories by Haida/Kwakwakw’wakw artist Nalaga (Avis O’Brien).",
-  tags:["paypal", "responsive", "training", "woocommerce", "wordpress"],
+  tags:["paypal", "responsive", "training", "woocommerce", "wordpress", "eCommerce"],
   workPerformed:[
     "Customized WordPress template",
     "WooCommerce integration and population",
