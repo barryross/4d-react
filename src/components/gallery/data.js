@@ -51,7 +51,7 @@ export const portfolioFilters = [
   }
   ]
 export const portfolioItems = [
-  {
+  { id:1,
     project:"Adding Solutions.com",
     url:"http://www.susanross.com",
     directory:"adding-solutions/",
@@ -69,7 +69,7 @@ export const portfolioItems = [
     }
   },
 
-   {
+   {id:2,
     project:"AMS",
     url:"http://www.ams.ubc.ca",
     directory:"ams/",
@@ -91,7 +91,7 @@ export const portfolioItems = [
     }
   },
 
- {
+ {id:3,
   project:"Barry Ross",
   url:"http://www.barryross.com",
   directory:"barryross/",
@@ -113,7 +113,7 @@ export const portfolioItems = [
     others:["Laptop_03.jpg"]
   }
 },
- {
+ {id:4,
   project:"Drama Music Productions",
   url:"http://www.dramamusicproductions.com",
   directory:"drama-music/",
@@ -136,7 +136,7 @@ workPerformed:[
     others:[]
   }
 },
- {
+ {id:5,
   project:"Flood art",
   url:"http://www.floodart.com",
   directory:"flood-art/",
@@ -151,12 +151,12 @@ workPerformed:[
     others:["Screen-Shot-2016-10-16-at-3.59.54-PM-1024x509.png", "Screen-Shot-2016-10-16-at-4.00.17-PM-1024x515.png","Screen-Shot-2016-10-16-at-4.00.28-PM-1024x513.png"]
   }
 },
- {
+ {id:6,
   project:"Goal",
   url:"http://www.floodart.com",
   directory:"goal/",
   description:"This is an app I created which helps users identify, manage, and track their goals. It walks users through the steps to Vizualize the results, identify obstacles in your way, Create strategies to overcome the obstacles, Schedule the necessary tasks involved in completing the strategies",
-  tags:["android", "angular", "couchdb", "ios", "mongodb","node", "pouchdb", "responsive"],
+  tags:["android", "angular", "couchdb", "ios", "mongodb","node", "pouchdb", "responsive", "ionic"],
   features:[
     "Offline first mobile app",
     "User registration & authentication",
@@ -173,7 +173,7 @@ workPerformed:[
     others:["goal_results.png", "Screen-Shot-2016-10-17-at-7.57.56-PM-1024x741.png", "Screen-Shot-2016-10-17-at-8.00.42-PM-1024x908.png"]
   }
 },
-{
+{id:7,
   project:"Hiatus Club",
   url:"http://www.floodart.com",
   directory:"hc/",
@@ -195,7 +195,7 @@ workPerformed:[
     others:["2012-07-22_19-29-07.png", "hiatus-directory-1024x522.png"]
   }
 },
-{
+{id:8,
   project:"J&D",
   url:"http://www.floodart.com",
   directory:"j&d/",
@@ -206,7 +206,7 @@ workPerformed:[
     others:[]
   }
 },
-{
+{id:9,
   project:"Nalaga",
   url:"http://www.nalagadesigns.com",
   directory:"nalaga-designs/",
@@ -224,7 +224,7 @@ workPerformed:[
     others:["Screen-Shot-2013-12-30-at-7.04.34-PM-e1388459158557-1024x878.png", "Screen-Shot-2013-12-31-at-5.23.48-PM-e1464031814332-1024x627.png"]
   }
 },
-{
+{id:10,
   project:"Ordinary Lies",
   url:"http://www.nalagadesigns.com",
   directory:"ordinary-lies/",
@@ -235,7 +235,7 @@ workPerformed:[
     others:[]
   }
 },
-{
+{id:11,
   project:"Snap & Dress",
   url:"http://www.nalagadesigns.com",
   directory:"snap-and-dress/",
@@ -254,7 +254,7 @@ workPerformed:[
     others:["Screen-Shot-2016-11-16-at-5.02.24-PM.png", "Screen-Shot-2016-11-16-at-5.02.38-PM.png"]
   }
 },
-{
+{id:12,
   project:"TuberBiz Solutions",
   url:"http://www.nalagadesigns.com",
   directory:"semaphore/",
@@ -265,7 +265,7 @@ workPerformed:[
     others:["tax-and-business.jpg", "tuberbiz-1024x601.jpg"]
   }
 },
-{
+{id:13,
   project:"Tax & Business",
   url:"http://www.nalagadesigns.com",
   directory:"semaphore/",

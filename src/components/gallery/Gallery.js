@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PortfolioFilters from './PortfolioFilters'
-import PortfolioItems from './PortfolioItems'
+import PortfolioItems, {tgroup} from './PortfolioItems'
 import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
 import {portfolioFilters} from './data'
 import {find, remove} from 'lodash'
@@ -56,11 +56,12 @@ export default class Gallery extends Component {
         <div className="wrapper">
          <PortfolioFilters active={this.state.filters} toggleFilter={this.toggleFilter}/>
 
-         <PortfolioItems 
+         <PortfolioItems
            filters={this.state.filters}
            showModal={this.showModal}
            setCurrentProject={this.setCurrentProject}
          />
+       <tgroup/>
           {
             this.state.open ?
 

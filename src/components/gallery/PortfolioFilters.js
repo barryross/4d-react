@@ -6,7 +6,7 @@ const PortfolioFilters =  ({toggleFilter, active}) => {
       <ul id="portfolio-filters">
         {
           portfolioFilters.map((item)=>{
-            return <span onClick={()=>toggleFilter(item)} className={item.icon +" "+item.active}>{item.label}</span>
+            return <div onClick={()=>toggleFilter(item)} className={item.icon +" "+item.active}><span class="filter-label">{item.label}</span></div>
           })
         }
       </ul>
