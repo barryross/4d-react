@@ -101,3 +101,15 @@ section {
 section .wrapper {
   padding: 0 2em;
 }
+
+
+@media screen and (max-width: 800px){
+  body{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 1.75em;
+    text-align:center;
+    padding:.25em;
+  }
+}

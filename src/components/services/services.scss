@@ -1,24 +1,36 @@
 /* SERVICES */
+#services{
+  #services li {
+    list-style-type:none;
+    line-height: 1.5em;
 
-
-#services li {
-  list-style-type:none;
-  line-height: 1.5em;
-
-  &::before{
-    font:normal normal normal 14px/1 FontAwesome;
-    content:'\f058';
-    color:green;
+    &::before{
+      font:normal normal normal 14px/1 FontAwesome;
+      content:'\f058';
+      color:green;
+    }
   }
-}
 
+  .service {
+    width: 25%;
 
+    .fa-service-icon{
+      z-index:200;
+    }
+  }
 
-.service {
-  width: 25%;
+  @media screen and (max-width:800px){
+    #services-wrapper{
+      // flex-direction:row;
+    }
+  }
 
-
-  .fa-service-icon{
-    z-index:200;
+  @media screen and (max-width:700px){
+    #services-wrapper{
+      flex-direction:column;
+      .service{
+        width:auto;
+      }
+    }
   }
 }

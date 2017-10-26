@@ -12,3 +12,6 @@
       height: 200px;
       object-fit: cover;
       border-radius: 500px; }
+  @media screen and (max-width: 800px) {
+    #about .about {
+      width: 90%; } }

@@ -29,3 +29,7 @@
     #portfolio-filters div .filter-label {
       font-family: "Cantarell" !important;
       font-weight: 400; }
+
+@media screen and (max-width: 800px) {
+  #portfolio-filters {
+    width: 100%; } }
