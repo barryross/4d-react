@@ -4,62 +4,50 @@ export const portfolioFilters = [
     label:"All",
     icon:"fa fa-archive",
     tag:"all",
-    active:false
+    active:true
   },
   {
     label:"Bootstrap",
     icon:"icon-bootstrap",
     tag:"bootstrap",
-    active:false
+    active:true
 
   },
   {
     label:"Angular",
     icon:"icon-angular",
     tag:"angular",
-    active:false
-
-
+    active:true
   },
   {
     label:"Ionic",
     icon:"icon-ionic",
     tag:"ionic",
-    active:false
-
-
+    active:true
   },
   {
     label:"eCommerce",
     icon:"fa fa-credit-card",
     tag:"eCommerce",
-    active:false
-
-
+    active:true
   },
   {
     label:"Node.js",
     icon:"icon-nodejs",
     tag:"node",
-    active:false
-
-
+    active:true
   },
   {
     label:"Responsive",
     icon:"icon-nodejs",
     tag:"responsive",
-    active:false
-
-
+    active:true
   },
   {
     label:"Wordpress",
     icon:"icon-wordpress",
     tag:"wordpress",
-    active:false
-
-
+    active:true
   }
   ]
 export const portfolioItems = [

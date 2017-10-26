@@ -3,8 +3,6 @@ import {portfolioFilters} from './data'
 const PortfolioFilters =  ({toggleFilter, active}) => {
   return (
     <div>
-      <h3>sdfds</h3>
-
       <ul id="portfolio-filters">
         {
           portfolioFilters.map((item)=>{
