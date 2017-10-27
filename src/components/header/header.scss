@@ -47,7 +47,7 @@ header {
            color: $gunmetal;
            transition: .25s background;
 
-           &:hover {
+           &:hover, &.active {
              text-decoration: none;
              cursor:pointer;
              color: $white;
