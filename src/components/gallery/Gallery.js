@@ -82,7 +82,7 @@ export default class Gallery extends Component {
                  <Modal.Description>
                  <div class="flex flex-between">
                    <section>
-                     <div class="project-images flex-1 flex flex-around">
+                     <div class="project-images">
                        <Image src={'/images/'+this.state.currentProject.directory+this.state.currentProject.images.primary} />
                          {
                            this.state.currentProject.images.others.map((img)=>{
@@ -91,7 +91,7 @@ export default class Gallery extends Component {
                          }
 
                      </div>
-                     <div class="project-description flex-1">
+                     <div class="project-description">
                         <p>{this.state.currentProject.description}</p>
                       </div>
                   </section>

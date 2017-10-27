@@ -54,3 +54,27 @@
       // background: $red;
     }
   }
+
+  @media screen and (max-width:800px){
+
+  .modal{
+    .description{
+      .flex{
+        flex-wrap:wrap;
+        flex-direction:column;
+      }
+      section:first-of-type{
+        flex-direction:row;
+        width:100%;
+        div{
+          flex:1;
+        }
+      }
+      section:last-of-type{
+        background:green;
+        width:100%;
+      }
+    }
+  }
+
+}

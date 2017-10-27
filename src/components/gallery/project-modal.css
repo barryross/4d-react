@@ -38,3 +38,16 @@
 
 .project-details li:nth-of-type(even) {
   background: rgba(234, 198, 122, 0.2); }
+
+@media screen and (max-width: 800px) {
+  .modal .description .flex {
+    flex-wrap: wrap;
+    flex-direction: column; }
+  .modal .description section:first-of-type {
+    flex-direction: row;
+    width: 100%; }
+    .modal .description section:first-of-type div {
+      flex: 1; }
+  .modal .description section:last-of-type {
+    background: green;
+    width: 100%; } }
