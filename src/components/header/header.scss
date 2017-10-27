@@ -14,7 +14,7 @@ header {
   grid-area:header;
   border-bottom: 3px solid $gunmetal;
 
-
+  .hamburger{display:none;}
   .logo {
     display:flex;
     justify-content: center;
@@ -60,32 +60,59 @@ header {
 
 
 @media screen and (max-width: 780px){
+header{
+  flex-direction: column;
+  display:block;
   .hamburger {
-    color:white;
+    color:$gunmetal;
+    display:block;
+    text-align: right;
+    font-weight:700;
+    font-size:1.5em;
+    &:hover{cursor: pointer;}
   }
-
-
-  header .inner-wrapper{
-    width:90%;
-    display: flex;
+  .logo-container{
+    display:flex;
+    width:100%;
+    align-items: center;
     justify-content:space-around;
+
+    .logo{
+      flex:none;
+    }
+  }
+  .inner-wrapper{
+    width:100%;
+    display: flex;
     align-items:center;
   }
+    nav{
+    padding-top: .95em;
+     height:0;
+     overflow:hidden;
+     transition: .5s all;
+     background: $white;
+     width: 100%;
+     ul{
+       display: flex;
+       flex-direction: column;
 
-  header nav{
-    height:0;
-    overflow:hidden;
-    transition: .5s all;
-  }
+       li, a {
+         display:inline-block;
+         width: 100%;
+         font-size: 1.2em;
+       }
+     }
 
-  header nav.open{
-    height:12em;
-  }
+     &.open{
+      height:15em;
+    }
+   }
 
-  header nav ul{
-    display: flex;
-    flex-direction: column;
-  }
+}
+
+
+
 
   header .logo, header .hamburger{
     flex:1;

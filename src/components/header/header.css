@@ -11,6 +11,8 @@ header {
   background: #fff;
   grid-area: header;
   border-bottom: 3px solid #233237; }
+  header .hamburger {
+    display: none; }
   header .logo {
     display: flex;
     justify-content: center;
@@ -45,21 +47,43 @@ header {
           background: #18121E; }
 
 @media screen and (max-width: 780px) {
-  .hamburger {
-    color: white; }
-  header .inner-wrapper {
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-  header nav {
-    height: 0;
-    overflow: hidden;
-    transition: .5s all; }
-  header nav.open {
-    height: 12em; }
-  header nav ul {
-    display: flex;
-    flex-direction: column; }
+  header {
+    flex-direction: column;
+    display: block; }
+    header .hamburger {
+      color: #233237;
+      display: block;
+      text-align: right;
+      font-weight: 700;
+      font-size: 1.5em; }
+      header .hamburger:hover {
+        cursor: pointer; }
+    header .logo-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around; }
+      header .logo-container .logo {
+        flex: none; }
+    header .inner-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center; }
+    header nav {
+      padding-top: .95em;
+      height: 0;
+      overflow: hidden;
+      transition: .5s all;
+      background: #fff;
+      width: 100%; }
+      header nav ul {
+        display: flex;
+        flex-direction: column; }
+        header nav ul li, header nav ul a {
+          display: inline-block;
+          width: 100%;
+          font-size: 1.2em; }
+      header nav.open {
+        height: 15em; }
   header .logo, header .hamburger {
     flex: 1; } }

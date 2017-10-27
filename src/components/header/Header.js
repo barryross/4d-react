@@ -6,7 +6,8 @@ export default class Header extends Component  {
   constructor(props){
   	super(props);
   	this.state = {
-      activeItem: "about"
+      activeItem: "about",
+      open: true
     };
   }
   render(){
@@ -14,18 +15,18 @@ export default class Header extends Component  {
 
     const menu = ["about", "services", "portfolio", "contact"];
     return (
-      <header class="flex dark">
+      <header class="dark">
             <div class="inner-wrapper">
               <div class="logo-container">
                 <div class="logo">
                   <span>4d Media</span>
                 </div>
-                <div class="hamburger">
+                <div class="hamburger" onClick={this.handleHamburger}>
                   Menu
                 </div>
               </div>
             </div>
-            <nav>
+            <nav className={this.state.open ? "open" : ""}>
               <ul class="flex">
                 {
                   menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item} className={this.state.activeItem == item ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item}</Link></li>
@@ -37,7 +38,12 @@ export default class Header extends Component  {
     )
   }
   handleSetActive = (item)=>{
-    this.setState({activeItem:item})
+    this.setState({activeItem:item, open: false})
+  }
+
+  handleHamburger = () =>{
+
+    this.setState({open:!this.state.open})
   }
 
 }
