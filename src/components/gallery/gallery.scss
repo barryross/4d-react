@@ -75,7 +75,7 @@
 .overlay{
     display:none;
     position: absolute;
-    background: rgba(0,0,0,.9);
+    background: rgba(255,255,255,.9);
     width: 100%;
     top:50%;
     transform:translateY(-50%);
@@ -83,7 +83,7 @@
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
-
+    border: 1px solid $gunmetal;
     .tag-set {
       width: 50%;
       margin:0 auto;
@@ -94,7 +94,8 @@
 
 .item:hover .overlay{
       display:flex;
-      color: white;
+      color: $gunmetal;
+
 }
 
 #da-thumbs li a div span {

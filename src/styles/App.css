@@ -344,14 +344,15 @@ header {
 .overlay {
   display: none;
   position: absolute;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
   min-height: 25%;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  border: 1px solid #233237; }
   .overlay .tag-set {
     width: 50%;
     margin: 0 auto;
@@ -360,7 +361,7 @@ header {
 
 .item:hover .overlay {
   display: flex;
-  color: white; }
+  color: #233237; }
 
 #da-thumbs li a div span {
   display: block;
