@@ -434,6 +434,10 @@ header {
   background: rgba(24, 18, 30, 0.1); }
 
 @media screen and (max-width: 800px) {
+  .modal .project-overview {
+    order: 2; }
+  .modal .project-description {
+    order: 1; }
   .modal .description .flex {
     flex-wrap: wrap;
     flex-direction: column; }
@@ -443,7 +447,6 @@ header {
     .modal .description section:first-of-type div {
       flex: 1; }
   .modal .description section:last-of-type {
-    background: green;
     width: 100%; } }
 
 #portfolio-filters {
@@ -631,7 +634,7 @@ p {
 .flex-1 {
   flex: 1; }
 
-section {
+hr {
   margin: 2em 0; }
 
 section .wrapper {

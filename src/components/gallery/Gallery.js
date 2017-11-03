@@ -81,7 +81,7 @@ export default class Gallery extends Component {
                <Modal.Content>
                  <Modal.Description>
                  <div class="flex flex-between">
-                   <section>
+                   <section class="project-overview">
                      <h3><i class="sticky note icon"></i>
 Overview</h3>
                      <div class="project-description">

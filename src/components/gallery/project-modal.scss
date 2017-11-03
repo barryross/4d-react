@@ -62,6 +62,12 @@
   @media screen and (max-width:800px){
 
   .modal{
+      .project-overview{
+          order:2;
+      }
+      .project-description{
+          order:1;
+      }
     .description{
       .flex{
         flex-wrap:wrap;
@@ -75,7 +81,6 @@
         }
       }
       section:last-of-type{
-        background:green;
         width:100%;
       }
     }
