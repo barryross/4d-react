@@ -29,6 +29,8 @@
     #portfolio-filters div .filter-label {
       font-family: "Cantarell" !important;
       font-weight: 400; }
+  #portfolio-filters .toggle {
+    width: auto !important; }
 
 @media screen and (max-width: 800px) {
   #portfolio-filters {

@@ -3,12 +3,6 @@ import React, {Component} from 'react';
 import { Form, Message } from 'semantic-ui-react';
 import SubscribeFrom from 'react-mailchimp-subscribe';
 
-const options = [
-  { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
-]
-
-
 
 export default class Contact extends Component{
 

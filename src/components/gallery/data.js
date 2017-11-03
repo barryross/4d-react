@@ -1,11 +1,6 @@
 
 export const portfolioFilters = [
-  {
-    label:"All",
-    icon:"fa fa-archive",
-    tag:"all",
-    active:true
-  },
+
   {
     label:"Bootstrap",
     icon:"icon-bootstrap",
@@ -192,7 +187,7 @@ workPerformed:[
   tags:["api", "mapbox", "php", "pods", "wordpress","eCommerce"],
   images:{
     primary:"home.png",
-    others:["2012-07-22_19-29-07.png", "hiatus-directory-1024x522.png"]
+    others:["hiatus-directory-1024x522.png"]
   }
 },
 {id:8,

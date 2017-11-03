@@ -335,16 +335,10 @@ header {
   /* creates "bright" effect when you rollover item */
   opacity: 0; }
 
-@media screen and (min-width: 768px) {
-  .item--full {
-    grid-column: 1/-1;
-    /* ensures it spans the whole thing */
-    grid-row-end: span 2; } }
-
 .overlay {
   display: none;
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
@@ -352,7 +346,7 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #233237; }
+  border: 1px solid rgba(26, 82, 115, 0.8); }
   .overlay .tag-set {
     width: 50%;
     margin: 0 auto;
@@ -388,6 +382,12 @@ header {
   opacity: 0.01;
   transition: opacity 300ms ease-in; }
 
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
+    /* ensures it spans the whole thing */
+    grid-row-end: span 2; } }
+
 .ui.modal > .header {
   display: flex;
   justify-content: space-between; }
@@ -396,6 +396,9 @@ header {
   width: 47%; }
 
 .project-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
   flex: 1;
   text-align: right;
   justify-content: space-between;
@@ -408,7 +411,8 @@ header {
 
 .project-icons {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  color: gray; }
   .project-icons span {
     align-items: center;
     justify-content: center;
@@ -427,7 +431,7 @@ header {
   padding: .4em .25em; }
 
 .project-details li:nth-of-type(even) {
-  background: rgba(234, 198, 122, 0.2); }
+  background: rgba(24, 18, 30, 0.1); }
 
 @media screen and (max-width: 800px) {
   .modal .description .flex {
@@ -473,6 +477,8 @@ header {
     #portfolio-filters div .filter-label {
       font-family: "Cantarell" !important;
       font-weight: 400; }
+  #portfolio-filters .toggle {
+    width: auto !important; }
 
 @media screen and (max-width: 800px) {
   #portfolio-filters {

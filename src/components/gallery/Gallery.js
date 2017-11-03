@@ -82,27 +82,30 @@ export default class Gallery extends Component {
                  <Modal.Description>
                  <div class="flex flex-between">
                    <section>
-                     <div class="project-images">
-                       <Image src={'/images/'+this.state.currentProject.directory+this.state.currentProject.images.primary} />
-                         {
-                           this.state.currentProject.images.others.map((img)=>{
-                             return img ?  <Image src={'/images/'+this.state.currentProject.directory+img} /> : ''
-                           })
-                         }
-
-                     </div>
+                     <h3><i class="sticky note icon"></i>
+Overview</h3>
                      <div class="project-description">
                         <p>{this.state.currentProject.description}</p>
                       </div>
+                      <hr/>
+                      <div class="project-images">
+                        <Image src={'/images/'+this.state.currentProject.directory+this.state.currentProject.images.primary} />
+                          {
+                            this.state.currentProject.images.others.map((img)=>{
+                              return img ?  <Image src={'/images/'+this.state.currentProject.directory+img} /> : ''
+                            })
+                          }
+
+                      </div>
                   </section>
                    <section class="project-details">
-                     <h2>Site features</h2>
+                     <h3><i class="options icon"></i>Site features</h3>
                      <ul>
                        {
                          this.state.currentProject.features ? this.state.currentProject.features.map((feature)=> <li>{feature}</li>) : ''
                        }
                      </ul>
-                       <h2>Work performed</h2>
+                       <h3><i class="code icon"></i>Work performed</h3>
                        <ul>
                          {
                             this.state.currentProject.workPerformed ? this.state.currentProject.workPerformed.map((performed)=><li>{performed}</li>)
@@ -111,7 +114,7 @@ export default class Gallery extends Component {
                        </ul>
                        <div class="project-visit">
                          <hr/>
-                       <h5>Visit site</h5>
+                       <h5><i class="linkify icon"></i>Visit site</h5>
                          <span class="project-url">{this.state.currentProject.url}</span>
                        </div>
                    </section>

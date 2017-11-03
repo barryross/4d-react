@@ -64,18 +64,11 @@
 
 
 
-@media screen and (min-width: 768px) {
-   .item--full{
-      grid-column: 1/-1; /* ensures it spans the whole thing */
-      grid-row-end: span 2;
-    }
-
-  }
 
 .overlay{
     display:none;
     position: absolute;
-    background: rgba(255,255,255,.9);
+    background: white;
     width: 100%;
     top:50%;
     transform:translateY(-50%);
@@ -83,7 +76,7 @@
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid $gunmetal;
+    border: 1px solid rgba(26, 82, 115, .8);
     .tag-set {
       width: 50%;
       margin:0 auto;
@@ -128,3 +121,11 @@
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+@media screen and (min-width: 768px) {
+   .item--full{
+      grid-column: 1/-1; /* ensures it spans the whole thing */
+      grid-row-end: span 2;
+    }
+
+  }
