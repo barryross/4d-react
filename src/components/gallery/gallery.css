@@ -1,4 +1,7 @@
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
+.project-url a {
+  color: #233237; }
+
 .grid {
   display: grid;
   grid-gap: 30px;

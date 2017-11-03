@@ -115,7 +115,7 @@ Overview</h3>
                        <div class="project-visit">
                          <hr/>
                        <h5><i class="linkify icon"></i>Visit site</h5>
-                         <span class="project-url">{this.state.currentProject.url}</span>
+                   <span class="project-url"><a target="_blank" href={this.state.currentProject.url}>{this.state.currentProject.url}</a></span>
                        </div>
                    </section>
                </div>

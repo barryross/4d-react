@@ -1,6 +1,9 @@
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
 @import '../../styles/variables.scss';
-
+    
+  .project-url a {
+      color: $gunmetal;
+  }
 
 .grid {
   display: grid;

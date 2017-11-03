@@ -53,14 +53,16 @@ export const portfolioItems = [
     description:"This is a professional site for Susan Ross, a therapist in Bellevue, Washington who offers individual therapy and neurofeedback for children, adolescents and adults who have ADD/ADHD, addictions, trauma and/or “problems with living.”",
     tags:["bootstrap", "css", "html", "responsive"],
     features:[
-
+      "responsive",
+      "downloadable forms/docs"
     ],
     workPerformed:[
-      "Customized Bootstrap Template"
+      "Customized Bootstrap Template",
+      ".doc to .pdf conversion"
     ],
     images:{
       primary:"home.png",
-      others:["Screen-Shot-2016-10-18-at-5.32.39-PM-1024x617.png", "Screen-Shot-2016-10-18-at-5.33.25-PM-1024x521.png", "susanross2-1024x635.jpg"]
+      others:["Screen-Shot-2016-10-18-at-5.32.39-PM-1024x617.png", "Screen-Shot-2016-10-18-at-5.33.25-PM-1024x521.png"]
     }
   },
 
@@ -101,7 +103,8 @@ export const portfolioItems = [
     "Mailchimp Integration"
   ],
   workPerformed:[
-    "Customized WordPress Theme"
+    "Customized WordPress Theme",
+    "Performed above integrations"
   ],
   images:{
     primary:"home.jpg",
@@ -140,6 +143,10 @@ workPerformed:[
   workPerformed:[
     "Customized Bootstrap Template",
     "Image resizing"
+],
+siteFeatures:[
+    "Portfolio lightbox-style gallery",
+    "Bootstrap"
 ],
   images:{
     primary:"flood.png",
@@ -192,14 +199,16 @@ workPerformed:[
 },
 {id:8,
   project:"J&D",
-  url:"http://www.floodart.com",
+  url:"http://www.jdfoods.net",
   directory:"j&d/",
   description:"description of site",
-  tags:["wordpress", "css", "html"],
+  tags:["wordpress", "css", "html", "eCommerce"],
   images:{
     primary:"home.jpg",
     others:[]
-  }
+},
+    features:["Online purchasing", "Media Coverage"],
+    workPerformed:["Wordpress page-linking issues", "Order-form customizations (programming)", "Customizing/debugging slideshow functionality"]
 },
 {id:9,
   project:"Nalaga",
@@ -207,6 +216,11 @@ workPerformed:[
   directory:"nalaga-designs/",
   description:"Nalaga Designs offers a unique array of cedar bark weavings, two dimensional designs, limited edition prints, trade bead jewelry and clothing and accessories by Haida/Kwakwakw’wakw artist Nalaga (Avis O’Brien).",
   tags:["paypal", "responsive", "training", "woocommerce", "wordpress", "eCommerce"],
+  features:[
+      "Online checkout",
+      "Photo gallery",
+      "Embedded media"
+  ],
   workPerformed:[
     "Customized WordPress template",
     "WooCommerce integration and population",
@@ -214,6 +228,7 @@ workPerformed:[
     "Embedded YouTube videos",
     "Customer training"
   ],
+  
   images:{
     primary:"home.png",
     others:["Screen-Shot-2013-12-30-at-7.04.34-PM-e1388459158557-1024x878.png", "Screen-Shot-2013-12-31-at-5.23.48-PM-e1464031814332-1024x627.png"]
@@ -237,12 +252,13 @@ workPerformed:[
   description:"This is an e-commerce site for Ziva, a woman in Texas who makes and sells dresses, skirts and ruffles.",
   tags:["css","responsive", "woocommerce", "wordpress", "eCommerce"],
   features:[
-    "WooCommerce/Site consulting",
-    "Helped customize the theme",
-    "Minor WooCommerce customization"
+    "Online checkout",
+    "Customized WP theme",
   ],
   workPerformed:[
-    "Other than a few CSS tweaks here and there, I didn’t help with the design of this site. Most of my work was on dev tweaks and feature planning"
+      "WooCommerce/Site consulting",
+      "Helped customize the theme",
+      "Minor WooCommerce customization"
   ],
   images:{
     primary:"home.png",
@@ -258,7 +274,9 @@ workPerformed:[
   images:{
     primary:"tuberbiz.jpg",
     others:["tax-and-business.jpg", "tuberbiz-1024x601.jpg"]
-  }
+},
+features:[],
+workPerformed:["Image adjustments/modifications", "Minor page modifications"]
 },
 {id:13,
   project:"Tax & Business",
@@ -269,6 +287,8 @@ workPerformed:[
   images:{
     primary:"tax-and-business.jpg",
     others:[]
-  }
+},
+workPerformed:["Image adjustments/modifications", "Minor page modifications", "Google Tag Manager integration"]
+
 }
 ]
