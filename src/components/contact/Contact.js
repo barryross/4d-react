@@ -51,7 +51,6 @@ export default class Contact extends Component{
 
     return (
       <section id="contact">
-        <FormComp/>
         <h1>Contact</h1>
       <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
         <Message
@@ -73,29 +72,3 @@ export default class Contact extends Component{
   }
 
 }
-
-const formProps = {
-  action: '//4d-media.us6.list-manage.com/subscribe/post',
-  messages: {
-    inputPlaceholder: "Name",
-    btnLabel: "Name",
-    sending: "Envoi en cours...",
-    success: "Merci de votre intérêt!",
-    error: "teest"
-  },
-  styles: {
-    sending: {
-      fontSize: 18,
-      color: "auto"
-    },
-    success: {
-      fontSize: 18,
-      color: "green"
-    },
-    error: {
-      fontSize: 18,
-      color: "red"
-    }
-  }
-}
-const FormComp = () => <SubscribeFrom {...formProps}/>
