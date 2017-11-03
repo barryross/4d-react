@@ -7,8 +7,8 @@ const PortfolioFilters =  ({toggleFilter, active}) => {
     <div>
       <div id="portfolio-filters">
 
-        <Button attached="top" circular icon='settings' />
-      <Button attached="bottom" circular icon='settings' />
+        {/* <Button attached="top" circular icon='settings' />
+      <Button attached="bottom" circular icon='settings' /> */}
 
 
 

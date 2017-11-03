@@ -507,7 +507,11 @@ header {
 #contact form {
   width: 70%;
   padding: 4em 0;
-  margin: 3em auto; }
+  margin: 3em auto;
+  max-width: 600px; }
+  #contact form button {
+    display: block;
+    margin: 0 auto; }
 
 #about {
   margin-top: 100px; }
