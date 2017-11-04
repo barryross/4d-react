@@ -1,4 +1,6 @@
 import React from 'react'
+import Paper from 'material-ui/Paper';
+
 // import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 
 const Services =  () => {
@@ -7,7 +9,7 @@ const Services =  () => {
           <h1>Services</h1>
         <div id="services-wrapper" className={"flex flex-around"}>
 
-            <div id="development" class="service flex card" >
+            <Paper zDepth={2} id="development" class="service flex card" >
 
                   <i class="fa fa-code-fork fa-service-icon" aria-hidden="true"></i>
 
@@ -20,9 +22,9 @@ const Services =  () => {
                     <li>Cross-browser & responsive front-end</li>
                   </ul>
 
-             </div>
+             </Paper>
 
-            <div id="consulting" class="service flex card" >
+            <Paper  zDepth={2} id="consulting" class="service flex card" >
 
                   <i class="fa fa-whatsapp fa-service-icon" aria-hidden="true"></i>
 
@@ -34,8 +36,8 @@ const Services =  () => {
                     <li >Walk away with clear priorities, and actionable next steps</li>
                   </ul>
 
-          </div>
-            <div id="wordpress-tutoring" class="service flex card" >
+          </Paper>
+           <Paper  zDepth={2} id="wordpress-tutoring" class="service flex card" >
 
                   <i class="fa fa-wordpress fa-service-icon" aria-hidden="true"></i>
 
@@ -49,7 +51,7 @@ const Services =  () => {
 
 
 
-          </div>
+          </Paper>
         </div>
         </section>
   )
