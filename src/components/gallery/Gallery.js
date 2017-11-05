@@ -5,6 +5,7 @@ import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
 import {portfolioFilters} from './data'
 import {find, remove} from 'lodash'
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
+import Paper from 'material-ui/Paper';
 
 export default class Gallery extends Component {
   constructor(props){
@@ -52,7 +53,8 @@ export default class Gallery extends Component {
   render(){
     return (
       <section id="portfolio">
-        <h1>Portfolio</h1>
+          <Paper zDepth={3} children={<h1>Potfolio</h1>}/>
+
         <div className="wrapper">
          <PortfolioFilters active={this.state.filters} toggleFilter={this.toggleFilter}/>
 

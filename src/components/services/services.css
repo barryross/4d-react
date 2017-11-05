@@ -9,9 +9,17 @@
       content: '\f058';
       color: green; }
   #services .service {
+    padding: 50px 25px;
     width: 25%; }
-    #services .service .fa-service-icon {
-      z-index: 200; }
+    #services .service div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+  @media screen and (max-width: 800px) {
+    #services #services-wrapper {
+      display: flex;
+      flex-direction: row; } }
   @media screen and (max-width: 700px) {
     #services #services-wrapper {
       flex-direction: column; }

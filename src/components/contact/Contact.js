@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import { Form, Message } from 'semantic-ui-react';
 import SubscribeFrom from 'react-mailchimp-subscribe';
+import Paper from 'material-ui/Paper';
 
 
 export default class Contact extends Component{
@@ -51,7 +52,8 @@ export default class Contact extends Component{
 
     return (
       <section id="contact">
-        <h1>Contact</h1>
+          <Paper zDepth={3} children={<h1>Contact</h1>}/>
+
       <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
         <Message
              success
