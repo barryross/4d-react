@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {portfolioItems} from './data'
 import {filter, find, intersection} from 'lodash'
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
+import Paper from 'material-ui/Paper';
 
 const  sizes = ["medium", "small", "small", "small", "small"];
 const rnd = () => Math.floor(Math.random()*sizes.length);
@@ -19,16 +20,17 @@ constructor(props){
     return  intersection(active, item.tags).length > 0 ?
 
           (
-            <div
+            <Paper 
+                zDepth={2}
               key={item.id}
               onClick={()=>{this.props.setCurrentProject(item);}}
               class={"item item--"+sizes[rnd()]}>
                   <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
-                    <div class="overlay">
+              <Paper zDepth={1} class="overlay">
                      <h3>{item.project}</h3>
                      <IconTags tags={item.tags}/>
-                    </div>
-                  </div>
+                    </Paper>
+                </Paper>
 
         )
           : "";
