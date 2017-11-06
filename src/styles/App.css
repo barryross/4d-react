@@ -390,44 +390,57 @@
     /* ensures it spans the whole thing */
     grid-row-end: span 2; } }
 
-.ui.modal > .header {
-  display: flex;
-  justify-content: space-between; }
-
-.ui.modal section {
-  width: 47%; }
-
-.project-images {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  flex: 1;
-  text-align: right;
+.projectModal {
+  display: grid !important;
+  grid-template-rows: repeat(3, minmax(50px, auto));
+  grid-template-columns: 49% 49%;
   justify-content: space-between;
-  align-items: center; }
-  .project-images img {
-    max-width: 100px;
-    height: 100px;
-    overflow: hidden;
-    object-fit: cover; }
-
-.project-icons {
-  display: flex;
-  justify-content: center;
-  color: gray; }
-  .project-icons span {
-    align-items: center;
-    justify-content: center;
+  grid-gap: 10px;
+  background: #fff;
+  grid-template-areas: "a a" "b c" "d d"; }
+  .projectModal div {
+    padding: 5px; }
+  .projectModal .project-header {
+    background-color: #233237;
+    grid-area: a;
     display: flex;
-    flex-direction: column;
-    font-size: .65em;
-    margin: 0 .25em; }
-    .project-icons span:before {
-      display: inline-block;
-      width: 1.5em; }
-
-.project-description {
-  margin: 1em 0; }
+    align-items: center;
+    justify-content: space-between; }
+    .projectModal .project-header h2 {
+      margin: 0;
+      color: #1C3738; }
+    .projectModal .project-header .project-icons {
+      display: flex;
+      justify-content: center;
+      color: gray; }
+      .projectModal .project-header .project-icons span {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size: .65em;
+        margin: 0 .25em; }
+        .projectModal .project-header .project-icons span:before {
+          display: inline-block;
+          width: 1.5em; }
+  .projectModal .project-description {
+    grid-area: b; }
+    .projectModal .project-description .project-images {
+      display: flex;
+      flex-wrap: wrap; }
+      .projectModal .project-description .project-images img {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        object-fit: cover; }
+  .projectModal .project-details {
+    grid-area: c; }
+  .projectModal .project-visit {
+    margin: 0 auto;
+    grid-area: d;
+    text-align: center;
+    width: 100%;
+    background: #f3f3f3; }
 
 .project-details li {
   padding: .4em .25em; }

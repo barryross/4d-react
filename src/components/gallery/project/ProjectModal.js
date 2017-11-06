@@ -3,6 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
 import {find, remove} from 'lodash'
 import {portfolioFilters} from '../data'
+import Paper from 'material-ui/Paper';
 
 
     const ProjectModal = (props)=>{
@@ -11,8 +12,9 @@ import {portfolioFilters} from '../data'
             <Dialog 
                 open={props.open} 
                 onRequestClose={props.handleClose} closeIcon>
-                   <div className={"modal-header flex flex-between"}>
-                        <span className="flex-1">{props.currentProject.project}</span>
+                <div className={"projectModal"}>
+                   <Paper className={"project-header"}>
+                        <h2>{props.currentProject.project}</h2>
                         <div className={"project-icons"}>
                              {
                                props.currentProject.tags.map((tag)=>{
@@ -22,28 +24,25 @@ import {portfolioFilters} from '../data'
                              }
 
                         </div>
-                    </div>
-               <Modal.Content>
-                 <Modal.Description>
-                 <div class="flex flex-between">
-                   <section class="project-overview">
-                     <h3><i class="sticky note icon"></i>
-        Overview</h3>
-                     <div class="project-description">
+                    </Paper>
+                    
+                      <div class="project-description">
+                         <h3><i class="sticky note icon"></i>Overview</h3>
                         <p>{props.currentProject.description}</p>
-                      </div>
-                      <hr/>
-                      <div class="project-images">
-                        <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
-                          {
-                            props.currentProject.images.others.map((img)=>{
-                              return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
-                            })
-                          }
+                    <hr/>
+                        <div class="project-images">
+                          <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
+                            {
+                              props.currentProject.images.others.map((img)=>{
+                                return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
+                              })
+                            }
 
+                        </div>
                       </div>
-                  </section>
-                   <section class="project-details">
+            
+                     
+                   <div class="project-details">
                      <h3><i class="options icon"></i>Site features</h3>
                      <ul>
                        {
@@ -57,15 +56,14 @@ import {portfolioFilters} from '../data'
                                : ""
                          }
                        </ul>
-                       <div class="project-visit">
-                         <hr/>
+            
+                   </div>
+                   <div class="project-visit">
                        <h5><i class="linkify icon"></i>Visit site</h5>
-                   <span class="project-url"><a target="_blank" href={props.currentProject.url}>{props.currentProject.url}</a></span>
-                       </div>
-                   </section>
+                    <span class="project-url"><a target="_blank" href={props.currentProject.url}>{props.currentProject.url}</a></span>
+                   </div>
                </div>
-               </Modal.Description>
-             </Modal.Content>
+        
 
            </Dialog>
         )
