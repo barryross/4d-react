@@ -1,5 +1,5 @@
 import React from 'react'
-import {portfolioFilters} from './data'
+import {portfolioFilters} from '../data'
 import { Button } from 'semantic-ui-react'
 import Paper from 'material-ui/Paper';
 
