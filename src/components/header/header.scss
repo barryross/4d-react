@@ -10,7 +10,7 @@
   width: 100%;
   z-index:1;
   padding: .5em 1em;
-  background: $black!important;
+  background: $navy!important;
   color:$white;
   grid-area:header;
   // border-bottom: 3px solid $gunmetal;
@@ -26,10 +26,16 @@
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     background: $white;
-    padding: 1em;
-    font-size:1em;
+    padding: .25em;
+    font-size:1.25em;
     border-radius: 10em;
+    
+    div{
+        display:flex;
+        flex-direction:column;
+    }
   }
+  
   .inner-wrapper, header nav {
    flex: 1;
  }
@@ -63,11 +69,12 @@
 
 
 @media screen and (max-width: 780px){
-header{
+.header{
   flex-direction: column;
   display:block;
+  padding: 5px 0;
   .hamburger {
-    color:$gunmetal;
+    color:white;
     display:block;
     text-align: right;
     font-weight:700;
@@ -88,13 +95,18 @@ header{
     width:100%;
     display: flex;
     align-items:center;
+    
+    .logo-container{
+        padding:0 .5em;
+        justify-content: space-between;
+    }
   }
     nav{
     padding-top: .95em;
      height:0;
      overflow:hidden;
      transition: .5s all;
-     background: $white;
+     background: $navy;
      width: 100%;
      ul{
        display: flex;

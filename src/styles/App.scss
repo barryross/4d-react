@@ -20,17 +20,18 @@
 body {
   font-family: 'Cantarell', sans-serif;
   width: 100vw;
-}
-#root .App {
-  margin:0;
   background-image:url('/images/bg.jpg');
   background-size: cover;
   background-position: center bottom;
   background-attachment:fixed;
+}
+#root .App {
+  margin:0;
+ 
   line-height: 1.75;
 }
- h2, h3, h4, h5, h6 {
-
+ h1,h2, h3, h4, h5, h6 {
+     color: $darkGray;
   font-weight: 700;
 
 }

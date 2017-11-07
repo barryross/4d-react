@@ -53,22 +53,21 @@ export default class Contact extends Component{
     return (
       <section id="contact">
           <Paper zDepth={3} children={<h1>Contact</h1>}/>
-
-      <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
-        <Message
-             success
-             header='Form Completed'
-             content="Thank you for your submission.  I will be in touch shortly!"
-           />
-            <Form.Group widths='equal'>
-              <Form.Input name="fname" value={fname} label='First name' placeholder='First name' onChange={this.onChange}/>
-            <Form.Input name="lname" value={lname} label='First name' placeholder='Last name' onChange={this.onChange}/>
-          <Form.Input name="email" value={email} label='Email' placeholder='Email' onChange={this.onChange}/>
-            </Form.Group>
-            <Form.TextArea name="message" value={message} label='Message' placeholder='What can I help you with?' onChange={this.onChange}/>
-
-          <Form.Button>Submit</Form.Button>
-          </Form>
+          <Paper className="form-container">    
+              <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
+              <Message
+                 success
+                 content="Thank you for your submission.  I will be in touch shortly!"
+               />
+                <Form.Group widths='equal'>
+                 <Form.Input name="fname" value={fname} label='First name' placeholder='First name' onChange={this.onChange}/>
+                 <Form.Input name="lname" value={lname} label='First name' placeholder='Last name' onChange={this.onChange}/>
+                 <Form.Input name="email" value={email} label='Email' placeholder='Email' onChange={this.onChange}/>
+                </Form.Group>
+                <Form.TextArea name="message" value={message} label='Message' placeholder='What can I help you with?' onChange={this.onChange}/>
+               <Form.Button>Submit</Form.Button>
+              </Form>
+          </Paper>
        </section>
      )
   }

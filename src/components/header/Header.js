@@ -16,26 +16,26 @@ export default class Header extends Component  {
 
     const menu = ["about", "services", "portfolio", "contact"];
     return (
-        <Paper zDepth={4} class="header dark">
-      <div class="inner-wrapper">
-        <div class="logo-container">
-          <div class="logo">
-            <span>4d Media</span>
+      <Paper zDepth={4} class="header dark">
+          <div class="inner-wrapper">
+            <div class="logo-container">
+              <div class="logo">
+                <span>4d Media</span>
+              </div>
+              <div class="hamburger" onClick={this.handleHamburger}>
+                Menu
+              </div>
+            </div>
           </div>
-          <div class="hamburger" onClick={this.handleHamburger}>
-            Menu
-          </div>
-        </div>
-      </div>
-      <nav className={this.state.open ? "open" : ""}>
-        <ul class="flex">
-          {
-            menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item} className={this.state.activeItem == item ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item}</Link></li>
-          )
-          }
-        </ul>
-      </nav>
-  </Paper>
+          <nav className={this.state.open ? "open" : ""}>
+            <ul class="flex">
+              {
+                menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item} className={this.state.activeItem == item ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item}</Link></li>
+              )
+              }
+            </ul>
+          </nav>
+    </Paper>
     )
   }
   handleSetActive = (item)=>{
