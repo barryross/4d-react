@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Dialog from 'material-ui/Dialog';
-import { Popup, Button, Header, Image, Modal, Link } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 import {find, remove} from 'lodash'
 import {portfolioFilters} from '../data'
 import Paper from 'material-ui/Paper';

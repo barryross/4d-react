@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {portfolioItems} from './data'
-import {filter, find, intersection} from 'lodash'
+import {intersection} from 'lodash'
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
 import Paper from 'material-ui/Paper';
 

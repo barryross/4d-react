@@ -1,7 +1,6 @@
 
 import React, {Component} from 'react';
 import { Form, Message } from 'semantic-ui-react';
-import SubscribeFrom from 'react-mailchimp-subscribe';
 import Paper from 'material-ui/Paper';
 
 

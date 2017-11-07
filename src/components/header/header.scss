@@ -13,6 +13,7 @@
   background: $navy!important;
   color:$white;
   grid-area:header;
+  text-transform: capitalize;
   // border-bottom: 3px solid $gunmetal;
 
   .hamburger{display:none;}

@@ -10,7 +10,8 @@
   padding: .5em 1em;
   background: #18121E !important;
   color: #fff;
-  grid-area: header; }
+  grid-area: header;
+  text-transform: capitalize; }
   .header .hamburger {
     display: none; }
   .header .logo {

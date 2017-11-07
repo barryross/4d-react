@@ -2,9 +2,8 @@ import React, {Component} from 'react'
 import PortfolioFilters from './filters/PortfolioFilters'
 import PortfolioItems, {tgroup} from './PortfolioItems'
 import {portfolioFilters} from './data'
-import {find, remove} from 'lodash'
+import {find} from 'lodash'
 
-import { CSSTransitionGroup } from 'react-transition-group' // ES6
 import Paper from 'material-ui/Paper';
 import ProjectModal from './project/ProjectModal'
 export default class Gallery extends Component {
