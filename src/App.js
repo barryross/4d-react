@@ -5,7 +5,9 @@ import Header from './components/header/Header'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Services from './components/services/Services'
-import Gallery from './components/gallery/Gallery'
+import Portfolio from './components/gallery/Gallery'
+import Testimonials from './components/testimonials/Testimonials'
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
@@ -14,9 +16,10 @@ class App extends Component {
       <MuiThemeProvider>
       <div className="App">
         <Header/>
-        <About/>
         <Services/>
-        <Gallery/>
+        {/* <Testimonials/> */}
+        <About/>
+        <Portfolio/>
         <Contact/>
       </div>
     </MuiThemeProvider>

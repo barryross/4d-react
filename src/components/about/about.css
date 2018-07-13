@@ -1,17 +1,17 @@
-#about {
-  margin-top: 100px; }
+#about .about {
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  flex-direction: row; }
+  #about .about .about-text {
+    text-align: left; }
+  #about .about img {
+    margin: 0 1.5em;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 500px; }
+
+@media screen and (max-width: 800px) {
   #about .about {
-    margin: 0 auto;
-    width: 50%;
-    padding: 3em; }
-    #about .about p {
-      line-height: 3em; }
-    #about .about img {
-      margin: 0 1em;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 500px; }
-  @media screen and (max-width: 800px) {
-    #about .about {
-      width: 90%; } }
+    width: 90%; } }

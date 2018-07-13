@@ -51,8 +51,8 @@ export default class Contact extends Component{
 
     return (
       <section id="contact">
-          <Paper zDepth={3} children={<h1>Contact</h1>}/>
-          <Paper className="form-container">    
+          <h1>Contact</h1>
+          <div className="form-container">    
               <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
               <Message
                  success
@@ -66,7 +66,7 @@ export default class Contact extends Component{
                 <Form.TextArea name="message" value={message} label='Message' placeholder='What can I help you with?' onChange={this.onChange}/>
                <Form.Button>Submit</Form.Button>
               </Form>
-          </Paper>
+          </div>
        </section>
      )
   }

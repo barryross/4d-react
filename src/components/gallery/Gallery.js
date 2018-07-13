@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import PortfolioFilters from './filters/PortfolioFilters'
+import PortfolioMenu from './filters/PortfolioMenu'
 import PortfolioItems, {tgroup} from './PortfolioItems'
-import {portfolioFilters} from './data'
+import {portfolioFilters, portfolioControls} from './data'
 import {find} from 'lodash'
 
 import Paper from 'material-ui/Paper';
 import ProjectModal from './project/ProjectModal'
-export default class Gallery extends Component {
+export default class Portfolio extends Component {
   constructor(props){
     super(props)
 
@@ -14,6 +14,7 @@ export default class Gallery extends Component {
       open:false,
       currentProject: null,
       filters: portfolioFilters,
+      portfolioControls:  portfolioControls
     }
 
     this.setCurrentProject = this.setCurrentProject.bind(this);
@@ -31,50 +32,68 @@ export default class Gallery extends Component {
   }
   toggleFilter(filter){
     let filters = this.state.filters;
+    
+    if(filter == "All"){
+      let none =  find(portfolioControls, {label:"None"});
+      none.active = false;
+      let all =  find(portfolioControls, {label:"All"});
+      all.active = true;
+           filters = filters.map((item)=>{
+         item.active = true;
+         return item
+      })
+    }
+    else if(filter=="None"){
+      let none =  find(portfolioControls, {label:"None"});
+      none.active = true;
+      let all =  find(portfolioControls, {label:"All"});
+      all.active = false;
+      let found =  find(portfolioControls, {label:"None"});
+      found.active = true;
+      filters = filters.map((item)=>{
+        item.active = false;
+        return item
+     })
+    }
+    else{
+      let found =  find(filters, {tag:filter.tag});
+      found.active = !found.active;
+    }
 
-    let found =  find(filters, {tag:filter.tag});
-    found.active = !found.active;
+    console.log("filters", filters, portfolioControls)
     this.setState({filters:filters})
-    console.log("Current filters", this.state.filters.filter((f)=> f.active == true))
-    // let active = this.state.activeFilters;
-    // remove(this.state.activeFilters, (f) => f == filter).length > 0 ? "" :
-    // this.setState({activeFilters: [...this.state.activeFilters].concat(filter)});
-    //
-    // if (this.state.activeFilters.indexOf(filter) > -1 ){
-    //   remove(this.state.activeFilters, (f) => f == filter)
-    // } else {
-    //   this.setState({activeFilters: [...this.state.activeFilters, filter]})
-    //     // console.log("filters after", this.state.activeFilters)
-    // }
 
 
   }
   render(){
     return (
-      <section id="portfolio">
-          <Paper zDepth={3} children={<h1>Potfolio</h1>}/>
+      <section id="gallery">
+          <section id="work">
+          <h1>Work</h1>
 
-        <div className="wrapper">
-         <PortfolioFilters active={this.state.filters} toggleFilter={this.toggleFilter}/>
+            <div className="wrapper">
+             <PortfolioMenu active={this.state.filters} toggleFilter={this.toggleFilter}/>
 
-         <PortfolioItems
-           filters={this.state.filters}
-           showModal={this.showModal}
-           setCurrentProject={this.setCurrentProject}
-         />
-  
-          {
-            this.state.open ?
+             <PortfolioItems
+               filters={this.state.filters}
+               showModal={this.showModal}
+               setCurrentProject={this.setCurrentProject}
+             />
+      
+              {
+                this.state.open ?
 
-             <ProjectModal
-             currentProject={this.state.currentProject}
-             open={this.state.open}
-             handleClose={this.handleClose}
-            />
-           : ''
-         }
-       </div>
+                 <ProjectModal
+                 currentProject={this.state.currentProject}
+                 open={this.state.open}
+                 handleClose={this.handleClose}
+                />
+               : ''
+             }
+           </div>
+          </section>
       </section>
+     
     )
   }
 

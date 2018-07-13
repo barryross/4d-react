@@ -1,9 +1,10 @@
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
 .project-url a {
-  color: #233237; }
+  color: #26262a; }
 
 .grid {
   display: grid;
+  margin: 1em 0;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* columns keet auto-generated based on available free space */
@@ -69,7 +70,7 @@
 
 .item:hover .overlay {
   display: flex;
-  color: #233237; }
+  color: #26262a; }
 
 #da-thumbs li a div span {
   display: block;

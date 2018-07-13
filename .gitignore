@@ -5,7 +5,7 @@
 
 # testing
 /coverage
-
+functions/index.js
 # production
 /build
 

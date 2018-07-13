@@ -1,13 +1,28 @@
 /* TESTIMONIALS */
-#testimonials div {
-  align-items: baseline; }
-
-#testimonials blockquote {
-  background: #f3f3f3;
-  padding: 1em 2em;
-  font-style: italic;
-  border-radius: .5em;
-  flex: 1; }
-
-#testimonials cite {
-  padding: .5em; }
+#testimonials {
+  color: #324343;
+  font-size: 1.15em; }
+  #testimonials p {
+    line-height: 1.55em !important; }
+  #testimonials div {
+    align-items: baseline; }
+  #testimonials blockquote {
+    background: #f3f3f3;
+    padding: 1em 2em;
+    font-style: italic;
+    border-radius: .5em;
+    font-weight: normal;
+    flex: 1; }
+    #testimonials blockquote i {
+      font-size: 150%;
+      padding-right: 3px;
+      color: #cdcdcd; }
+  #testimonials blockquote::first-letter {
+    font-size: 150%; }
+  #testimonials cite {
+    font-style: normal;
+    font-weight: bold;
+    padding: 1em;
+    display: inline-block; }
+  #testimonials cite::before {
+    content: "- "; }

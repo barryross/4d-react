@@ -1,16 +1,40 @@
+@import '../../styles/variables.scss';
 
 /* TESTIMONIALS */
-#testimonials div {
+#testimonials {
+  color:$darkGray;
+  font-size: 1.15em;
+p{
+  line-height:1.55em!important;
+
+}
+div {
   align-items: baseline;
 }
-#testimonials blockquote {
+ blockquote {
+   i{
+    font-size: 150%;
+padding-right: 3px;
+color:$lightGray;
+   }
   background: #f3f3f3;
   padding: 1em 2em;
   font-style: italic;
   border-radius: .5em;
+  font-weight: normal;
   flex: 1;
 }
 
-#testimonials cite {
-  padding: .5em;
+blockquote::first-letter{
+  font-size: 150%;
+}
+ cite {
+   font-style: normal;
+   font-weight:bold;
+  padding: 1em;
+  display: inline-block;
+}
+cite::before{
+  content:"- ";
+}
 }

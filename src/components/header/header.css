@@ -7,8 +7,8 @@
   top: 0;
   width: 100%;
   z-index: 1;
-  padding: .5em 1em;
-  background: #18121E !important;
+  padding: 0.5em 1em;
+  background: #212124 !important;
   color: #fff;
   grid-area: header;
   text-transform: capitalize; }
@@ -24,14 +24,17 @@
     font-family: 'Fjalla One', sans-serif;
     text-transform: uppercase;
     background: #fff;
-    padding: .25em;
+    padding: 0.25em;
     font-size: 1.25em;
     border-radius: 10em; }
     .header .logo div {
       display: flex;
       flex-direction: column; }
-  .header .inner-wrapper, .header header nav {
+  .header .inner-wrapper {
     flex: 1; }
+  .header nav {
+    font-size: 1.10 em;
+    font-weight: 400; }
   .header nav ul {
     margin: 0;
     padding: 0; }
@@ -43,14 +46,14 @@
       .header nav ul li a {
         text-decoration: none;
         padding: 10px 2em;
-        border-radius: 2px;
+        font-size: 1.25em;
         color: #fff;
-        transition: .25s background; }
-        .header nav ul li a:hover, .header nav ul li a.active {
+        transition: 0.25s background; }
+        .header nav ul li a.active, .header nav ul li a:hover {
           text-decoration: none;
           cursor: pointer;
           color: #fff;
-          background: #1D5372; }
+          border-bottom: 2px solid #1D5372; }
 
 @media screen and (max-width: 780px) {
   .header {
@@ -77,23 +80,25 @@
       display: flex;
       align-items: center; }
       .header .inner-wrapper .logo-container {
-        padding: 0 .5em;
+        padding: 0 0.5em;
         justify-content: space-between; }
     .header nav {
-      padding-top: .95em;
+      padding-top: 0.95em;
       height: 0;
       overflow: hidden;
-      transition: .5s all;
-      background: #18121E;
+      transition: 0.5s all;
+      background: #26262a !important;
       width: 100%; }
       .header nav ul {
         display: flex;
         flex-direction: column; }
-        .header nav ul li, .header nav ul a {
+        .header nav ul a,
+        .header nav ul li {
           display: inline-block;
           width: 100%;
-          font-size: 1.2em; }
+          font-size: 1em; }
       .header nav.open {
-        height: 15em; }
-  header .logo, header .hamburger {
+        height: 20em; }
+  header .hamburger,
+  header .logo {
     flex: 1; } }

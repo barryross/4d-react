@@ -14,7 +14,7 @@ constructor(props){
 }
 
   render(){
-    console.log("PORTFOLIO ITEMS",portfolioItems )
+    // console.log("PORTFOLIO ITEMS",portfolioItems, this.props.filters )
     let active = this.props.filters.filter((f)=>{return f.active == true}).map((f)=> f.tag);
     const items = portfolioItems.map((item, i) => {
     return  intersection(active, item.tags).length > 0 ?

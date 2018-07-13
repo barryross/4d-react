@@ -1,14 +1,18 @@
+@import '../../styles/variables.scss';
+
 #about {
-    margin-top: 100px;
   .about{
     margin: 0 auto;
-    width: 50%;
-    padding: 3em;
-
-    p {line-height: 3em;}
+    width: 75%;
+    // padding: 3em;
+    display: flex;
+    flex-direction: row;
+    .about-text{
+      text-align: left;
+    }
 
     img {
-      margin: 0 1em;
+      margin: 0 1.5em;
        width: 200px;
        height: 200px;
        object-fit:cover;

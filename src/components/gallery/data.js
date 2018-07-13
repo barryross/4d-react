@@ -32,18 +32,24 @@ export const portfolioFilters = [
     tag:"node",
     active:true
   },
-  {
-    label:"Responsive",
-    icon:"icon-nodejs",
-    tag:"responsive",
-    active:true
-  },
+
   {
     label:"Wordpress",
     icon:"icon-wordpress",
     tag:"wordpress",
     active:true
   }
+  ]
+
+  export const portfolioControls=[
+    {
+      label:"All",
+      active:true
+    },
+    {
+      label:"None",
+      active:false
+    }
   ]
 export const portfolioItems = [
   { id:1,
@@ -93,7 +99,7 @@ export const portfolioItems = [
   url:"http://www.barryross.com",
   directory:"barryross/",
   description:"In addition to creating with web technologies, I compose and perform music. BarryRoss.com is my music-related site and is a place where I provide info about music, audio and video clips, links to purchase my album, upcoming and previous performance info",
-  tags:["wordpress","responsive", "mailchimp"],
+  tags:["wordpress","responsive", "mailchimp", "current"],
   features:[
     "Twitter Integration",
     "SoundCloud Integration",
@@ -289,6 +295,20 @@ workPerformed:["Image adjustments/modifications", "Minor page modifications"]
     others:[]
 },
 workPerformed:["Image adjustments/modifications", "Minor page modifications", "Google Tag Manager integration"]
+
+},
+{id:14,
+  project:"4D Media",
+  url:"http://www.4d-media.com",
+  directory:"4dmedia/",
+  current:true,
+  description:"The current site you are looking at!",
+  tags:["react", "sass", "CSS3", "HTML5"],
+  images:{
+    primary:"tax-and-business.jpg",
+    others:[]
+},
+workPerformed:[""]
 
 }
 ]

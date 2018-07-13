@@ -1,15 +1,19 @@
 .projectModal {
+  color: #26262a;
   display: grid !important;
   grid-template-rows: repeat(3, minmax(50px, auto));
-  grid-template-columns: 49% 49%;
+  grid-template-columns: 59% 39%;
   justify-content: space-between;
   grid-gap: 10px;
   background: #fff;
   grid-template-areas: "a a" "b c" "d d"; }
+  .projectModal ul li,
+  .projectModal p {
+    line-height: 2em; }
   .projectModal div {
     padding: 5px; }
   .projectModal .project-header {
-    background-color: #233237;
+    border-bottom: 1px solid #26262a;
     grid-area: a;
     display: flex;
     align-items: center;
@@ -41,33 +45,37 @@
         height: 100px;
         margin: 5px;
         object-fit: cover; }
-  .projectModal .project-details {
-    grid-area: c; }
   .projectModal .project-visit {
     margin: 0 auto;
     grid-area: d;
     text-align: center;
-    width: 100%;
-    background: #f3f3f3; }
+    width: 100%; }
 
-.project-details li {
-  padding: .4em .25em; }
+.project-details {
+  text-align: right;
+  padding: 25px !important;
+  grid-area: c;
+  font-size: .75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgba(205, 205, 205, 0.2); }
+  .project-details li {
+    list-style: disc;
+    direction: rtl;
+    list-style-position: inside; }
 
-.project-details li:nth-of-type(even) {
-  background: rgba(24, 18, 30, 0.1); }
+.dialog > div > div > div {
+  overflow-y: scroll !important; }
 
 @media screen and (max-width: 800px) {
-  .modal .project-overview {
-    order: 2; }
-  .modal .project-description {
-    order: 1; }
-  .modal .description .flex {
-    flex-wrap: wrap;
-    flex-direction: column; }
-  .modal .description section:first-of-type {
-    flex-direction: row;
-    width: 100%; }
-    .modal .description section:first-of-type div {
-      flex: 1; }
-  .modal .description section:last-of-type {
-    width: 100%; } }
+  .dialog > div > div > div {
+    overflow-y: scroll !important; }
+  .projectModal {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "a"  "b" "c"  "d"; }
+    .projectModal .project-overview {
+      order: 2; }
+    .projectModal .project-description {
+      order: 1; } }

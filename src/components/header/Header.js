@@ -14,9 +14,14 @@ export default class Header extends Component  {
   render(){
     let Link = Scroll.Link;
 
-    const menu = ["about", "services", "portfolio", "contact"];
+    const menu = [
+        {label:"services", tag:"services"},
+        {label:"about", tag:"about"}, 
+        {label:"work", tag:"work"},
+        {label:"contact", tag:"contact"}
+    ];
     return (
-      <Paper zDepth={4} class="header dark">
+      <Paper zDepth={0} class="header dark">
           <div class="inner-wrapper">
             <div class="logo-container">
               <div class="logo">
@@ -30,7 +35,7 @@ export default class Header extends Component  {
           <nav className={this.state.open ? "open" : ""}>
             <ul class="flex">
               {
-                menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item} className={this.state.activeItem == item ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item}</Link></li>
+                menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item.tag} className={this.state.activeItem == item ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item.label}</Link></li>
               )
               }
             </ul>

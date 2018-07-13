@@ -10,10 +10,11 @@ import Paper from 'material-ui/Paper';
     
         return(
             <Dialog 
+              className="dialog"
                 open={props.open} 
                 onRequestClose={props.handleClose} closeIcon>
                 <div className={"projectModal"}>
-                   <Paper className={"project-header"}>
+                   <div className={"project-header"}>
                         <h2>{props.currentProject.project}</h2>
                         <div className={"project-icons"}>
                              {
@@ -24,7 +25,7 @@ import Paper from 'material-ui/Paper';
                              }
 
                         </div>
-                    </Paper>
+                    </div>
                     
                       <div class="project-description">
                          <h3><i class="sticky note icon"></i>Overview</h3>
@@ -44,18 +45,14 @@ import Paper from 'material-ui/Paper';
                      
                    <div class="project-details">
                      <h3><i class="options icon"></i>Site features</h3>
-                     <ul>
-                       {
+                     <ul>{
                          props.currentProject.features ? props.currentProject.features.map((feature)=> <li>{feature}</li>) : ''
-                       }
-                     </ul>
+                       } </ul>
                        <h3><i class="code icon"></i>Work performed</h3>
-                       <ul>
-                         {
+                       <ul>{
                             props.currentProject.workPerformed ? props.currentProject.workPerformed.map((performed)=><li>{performed}</li>)
                                : ""
-                         }
-                       </ul>
+                         } </ul>
             
                    </div>
                    <div class="project-visit">

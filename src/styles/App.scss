@@ -7,7 +7,7 @@
 @import '../components/header/header.scss';
 @import '../components/gallery/gallery.scss';
 @import '../components/gallery/project/project-modal.scss';
-@import '../components/gallery/filters/portfolio-filters.scss';
+@import '../components/gallery/filters/portfolio-menu.scss';
 @import '../components/services/services.scss';
 @import '../components/contact/contact.scss';
 @import '../components/about/about.scss';
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Cantarell', sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 100vw;
   background-image:url('/images/bg.jpg');
   background-size: cover;
@@ -31,26 +31,33 @@ body {
   line-height: 1.75;
 }
  h1,h2, h3, h4, h5, h6 {
-     color: $darkGray;
+     color: $black;
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 
 }
-h1 { text-align:left; font-size: 2.75em;  font-family: 'Fjalla One', sans-serif;   letter-spacing: 5px;}
+h1 { 
+  text-align:center; 
+  font-size: 2.75em;  
+  // font-family: 'Fjalla One', sans-serif;   
+  letter-spacing: 5px; 
+  }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1.12em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 h1 {
-    background: $white;
-    // color: $white;
-    // text-align:center;
-    padding: .5em;
-    margin: 1em 0;
+
+    margin: 0em!important;
+    padding: 1em!important;
+
 }
 ul, li {
   margin-left:0;
   padding-left:0;
+  line-height: 3em;
+
 }
 a {
   color:white;
@@ -58,10 +65,14 @@ a {
 p {
   margin:0;
   padding:0;
+  line-height: 3em;
 }
 
 .App > section > div:first-child{
-    margin: 40px 0;
+    padding: 40px 0;
+}
+.App > section:first-of-type{
+  padding: 100px 0!important;
 }
 .card {
   // z-index:1;
@@ -101,10 +112,18 @@ hr {
 }
 
 section .wrapper {
-  padding: 0 2em;
+  // padding: 2em 2em;
 }
+section{
+  background:#f2f5f7
+}
+section:nth-of-type(odd){
+  background:#fff;
 
-
+}
+.ui.form .field>label{
+  color:$lightGray;
+}
 @media screen and (max-width: 800px){
   body{
     font-size: 12px;
