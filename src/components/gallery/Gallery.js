@@ -28,6 +28,7 @@ export default class Portfolio extends Component {
   }
 
   setCurrentProject(project){
+    console.log("PROJECT", project)
     this.setState({open:true,currentProject:project })
   }
   toggleFilter(filter){

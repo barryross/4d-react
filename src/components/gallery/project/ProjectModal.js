@@ -32,9 +32,9 @@ import Paper from 'material-ui/Paper';
                         <p>{props.currentProject.description}</p>
                     <hr/>
                         <div class="project-images">
-                          <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
+                          <Image src={'/images/'+props.currentProject.directory+props.currentProject.thumbnail} />
                             {
-                              props.currentProject.images.others.map((img)=>{
+                              props.currentProject.screenshots.map((img)=>{
                                 return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
                               })
                             }
@@ -50,7 +50,7 @@ import Paper from 'material-ui/Paper';
                        } </ul>
                        <h3><i class="code icon"></i>Work performed</h3>
                        <ul>{
-                            props.currentProject.workPerformed ? props.currentProject.workPerformed.map((performed)=><li>{performed}</li>)
+                            props.currentProject.work ? props.currentProject.work.map((performed)=><li>{performed}</li>)
                                : ""
                          } </ul>
             
