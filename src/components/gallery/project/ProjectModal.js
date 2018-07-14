@@ -20,7 +20,7 @@ import Paper from 'material-ui/Paper';
                              {
                                props.currentProject.tags.map((tag)=>{
                                  let tagItem = find(portfolioFilters, {tag:tag});
-                                 return tagItem ?  <span className={tagItem.icon}><span className="tag-label">{tagItem.label}</span></span> : ''
+                                 return tagItem ?  <i className={tagItem.icon}><span className="tag-label">{tagItem.label}</span></i> : ''
                                })
                              }
 
@@ -34,7 +34,7 @@ import Paper from 'material-ui/Paper';
                         <div class="project-images">
                           <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
                             {
-                              props.currentProject.images.others && props.currentProject.images.others.map((img)=>{
+                              props.currentProject.images.others != undefined && props.currentProject.images.others.length > 0 && props.currentProject.images.others.map((img)=>{
                                 return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
                               })
                             }

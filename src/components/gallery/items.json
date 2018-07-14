@@ -119,7 +119,6 @@
     ],
     "images": {
       "primary": "home.png",
-      "others": []
     }
   },
   {
@@ -242,7 +241,6 @@
     ],
     "images": {
       "primary": "home.jpg",
-      "others": []
     },
     "features": [
       "Online purchasing",
@@ -305,7 +303,6 @@
     ],
     "images": {
       "primary": "home.png",
-      "others": []
     }
   },
   {
@@ -382,7 +379,6 @@
     ],
     "images": {
       "primary": "tax-and-business.jpg",
-      "others": []
     },
     "workPerformed": [
       "Image adjustments/modifications",
@@ -407,8 +403,8 @@
     ],
     "images": {
       "primary": "tax-and-business.jpg",
-      "others": []
     },
+    "features":["Filterable portfolio"],
     "workPerformed": [
       ""
     ]

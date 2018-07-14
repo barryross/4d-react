@@ -26,7 +26,8 @@ portfolioControls.map((item)=>{
         {
           portfolioFilters.map((item)=>{
             return (
-            <Button onClick={()=>toggleFilter(item)} variant="contained" className={item.icon+" "+item.active} >
+            <Button onClick={()=>toggleFilter(item)} variant="contained" className={item.active == true ? "true" : ""} >
+            <i class={item.icon}></i>
              <span>{item.label}</span>
             </Button>
             )
