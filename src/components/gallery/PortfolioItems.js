@@ -10,12 +10,14 @@ const rnd = () => Math.floor(Math.random()*sizes.length);
 class PortfolioItems extends Component {
 constructor(props){
   super(props);
-  this.portfolioRef = firebase.database().ref('portfolio/');
   this.state = {
     portfolio: []
   }
+  this.portfolioRef = firebase.database().ref('portfolio/');
+  // console.log("portfolio ref", this.portfolioRef)
+
   this.portfolioRef.on('value', ((snapshot)=>{
-     
+      console.log("Updating state")
     this.setState({portfolio:snapshot.val()});
   }));
 

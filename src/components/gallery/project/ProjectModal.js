@@ -34,7 +34,7 @@ import Paper from 'material-ui/Paper';
                         <div class="project-images">
                           <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
                             {
-                              props.currentProject.images.others.map((img)=>{
+                              props.currentProject.images.others && props.currentProject.images.others.map((img)=>{
                                 return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
                               })
                             }
