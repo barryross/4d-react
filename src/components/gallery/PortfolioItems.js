@@ -17,39 +17,30 @@ constructor(props){
   // console.log("portfolio ref", this.portfolioRef)
 
   this.portfolioRef.on('value', ((snapshot)=>{
-      console.log("Updating state")
+      console.log("Updating", snapshot.val())
     this.setState({portfolio:snapshot.val()});
   }));
 
 }
 
   render(){
-    
-    
-    // console.log("FIREBASE", this.portfolioRef)
-// let storage = firebase.app.storage()
 
-
-// console.log(storage.refFromURL("gs://d-media-e0101.appspot.com/flood.jpg").getDownloadURL().then((item)=>{
-// console.log("ITEM", this.props.firestore)
-// }))
-    // console.log("PORTFOLIO ITEMS",portfolioItems, this.props.filters )
     let active = this.props.filters.filter((f)=>{return f.active == true}).map((f)=> f.tag);
     const items = this.state.portfolio.map((item, i) => {
-    return  intersection(active, item.tags).length > 0 ?
+    return item.visible && intersection(active, item.tags).length > 0 ?
 
           (
             <Paper 
-                zDepth={2}
+              zDepth={2}
               key={item.id}
               onClick={()=>{this.props.setCurrentProject(item);}}
               class={"item item--"+sizes[rnd()]}>
-                  <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
+              <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
               <Paper zDepth={1} class="overlay">
-                     <h3>{item.project}</h3>
-                     <IconTags tags={item.tags}/>
-                    </Paper>
-                </Paper>
+                <h3>{item.project}</h3>
+                <IconTags tags={item.tags}/>
+              </Paper>
+            </Paper>
 
         )
           : "";

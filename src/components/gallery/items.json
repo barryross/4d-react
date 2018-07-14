@@ -1,6 +1,7 @@
 {"portfolio":
   [{
     "id": 1,
+    "visible":true,
     "project": "Adding Solutions.com",
     "url": "http://www.susanross.com",
     "directory": "adding-solutions/",
@@ -29,6 +30,7 @@
   },
   {
     "id": 2,
+    "visible":true,
     "project": "AMS",
     "url": "http://www.ams.ubc.ca",
     "directory": "ams/",
@@ -60,6 +62,7 @@
   },
   {
     "id": 3,
+    "visible":true,
     "project": "Barry Ross",
     "url": "http://www.barryross.com",
     "directory": "barryross/",
@@ -91,6 +94,8 @@
   },
   {
     "id": 4,
+    "visible":true,
+
     "project": "Drama Music Productions",
     "url": "http://www.dramamusicproductions.com",
     "directory": "drama-music/",
@@ -119,6 +124,8 @@
   },
   {
     "id": 5,
+    "visible":true,
+
     "project": "Flood art",
     "url": "http://www.floodart.com",
     "directory": "flood-art/",
@@ -148,6 +155,8 @@
   },
   {
     "id": 6,
+    "visible":true,
+
     "project": "Goal",
     "url": "http://www.floodart.com",
     "directory": "goal/",
@@ -185,6 +194,8 @@
   },
   {
     "id": 7,
+    "visible":true,
+
     "project": "Hiatus Club",
     "url": "http://www.floodart.com",
     "directory": "hc/",
@@ -217,6 +228,8 @@
   },
   {
     "id": 8,
+    "visible":true,
+
     "project": "J&D",
     "url": "http://www.jdfoods.net",
     "directory": "j&d/",
@@ -243,6 +256,8 @@
   },
   {
     "id": 9,
+    "visible":true,
+
     "project": "Nalaga",
     "url": "http://www.nalagadesigns.com",
     "directory": "nalaga-designs/",
@@ -277,6 +292,8 @@
   },
   {
     "id": 10,
+    "visible":true,
+
     "project": "Ordinary Lies",
     "url": "http://www.nalagadesigns.com",
     "directory": "ordinary-lies/",
@@ -293,6 +310,8 @@
   },
   {
     "id": 11,
+    "visible":true,
+
     "project": "Snap & Dress",
     "url": "http://www.snapanddress.com",
     "directory": "snap-and-dress/",
@@ -322,7 +341,10 @@
     }
   },
   {
+    
     "id": 12,
+    "visible":true,
+
     "project": "TuberBiz Solutions",
     "url": "http://www.nalagadesigns.com",
     "directory": "semaphore/",
@@ -347,6 +369,8 @@
   },
   {
     "id": 13,
+    "visible":true,
+
     "project": "Tax & Business",
     "url": "http://www.semaphoretax.com/",
     "directory": "semaphore/",
@@ -368,6 +392,8 @@
   },
   {
     "id": 14,
+    "visible":true,
+
     "project": "4D Media",
     "url": "http://www.4d-media.com",
     "directory": "4dmedia/",
