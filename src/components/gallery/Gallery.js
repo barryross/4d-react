@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
+import {find} from 'lodash'
+
 import PortfolioMenu from './filters/PortfolioMenu'
 import PortfolioItems, {tgroup} from './PortfolioItems'
 import {portfolioFilters, portfolioControls} from './data'
-import {find} from 'lodash'
-
-import Paper from 'material-ui/Paper';
 import ProjectModal from './project/ProjectModal'
 export default class Portfolio extends Component {
   constructor(props){
@@ -19,17 +18,19 @@ export default class Portfolio extends Component {
 
     this.setCurrentProject = this.setCurrentProject.bind(this);
     this.toggleFilter = this.toggleFilter.bind(this);
-
     this.handleClose = this.handleClose.bind(this)
   }
 
   handleClose(){
     this.setState({open:false})
   }
-
+  showProjectDetails(project){
+    console.log("project", project)
+    this.setState({currentProject:project, open:true })
+  }
   setCurrentProject(project){
-    // console.log("PROJECT", project)
-    this.setState({open:true,currentProject:project })
+    console.log("project", project)
+    this.setState({currentProject:project, open:true })
   }
   toggleFilter(filter){
     let filters = this.state.filters;
@@ -77,8 +78,7 @@ export default class Portfolio extends Component {
 
              <PortfolioItems
                filters={this.state.filters}
-               showModal={this.showModal}
-               setCurrentProject={this.setCurrentProject}
+               showProjectDetails={this.showProjectDetails.bind(this)}
              />
       
               {

@@ -470,7 +470,7 @@
     .projectModal .project-visit a {
       font-size: 12px; }
 
-.project-details {
+.project-specifics {
   text-align: right;
   padding: 25px !important;
   grid-area: c;
@@ -479,9 +479,9 @@
   flex-direction: column;
   justify-content: space-around;
   background: rgba(205, 205, 205, 0.2); }
-  .project-details ul, .project-details li {
+  .project-specifics ul, .project-specifics li {
     list-style-position: unset !important; }
-  .project-details ul li {
+  .project-specifics ul li {
     list-style: disc;
     direction: rtl;
     list-style-position: inside; }
