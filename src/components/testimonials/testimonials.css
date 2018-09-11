@@ -7,12 +7,17 @@
   #testimonials div {
     align-items: baseline; }
   #testimonials blockquote {
-    background: #f3f3f3;
     padding: 1em 2em;
     font-style: italic;
     border-radius: .5em;
     font-weight: normal;
     flex: 1; }
+    #testimonials blockquote footer {
+      display: flex;
+      align-items: center; }
+      #testimonials blockquote footer img {
+        max-width: 75px;
+        max-height: 75px; }
     #testimonials blockquote i {
       font-size: 150%;
       padding-right: 3px;

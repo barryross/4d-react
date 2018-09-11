@@ -28,7 +28,7 @@ export default class Portfolio extends Component {
   }
 
   setCurrentProject(project){
-    console.log("PROJECT", project)
+    // console.log("PROJECT", project)
     this.setState({open:true,currentProject:project })
   }
   toggleFilter(filter){
@@ -61,7 +61,7 @@ export default class Portfolio extends Component {
       found.active = !found.active;
     }
 
-    console.log("filters", filters, portfolioControls)
+    // console.log("filters", filters, portfolioControls)
     this.setState({filters:filters})
 
 
@@ -91,7 +91,7 @@ export default class Portfolio extends Component {
                 />
                : ''
              }
-           </div>
+           </div> 
           </section>
       </section>
      

@@ -17,7 +17,7 @@ export default class Header extends Component  {
     const menu = [
         {label:"services", tag:"services"},
         {label:"about", tag:"about"}, 
-        {label:"work", tag:"work"},
+        // {label:"work", tag:"work"},
         {label:"contact", tag:"contact"}
     ];
     return (

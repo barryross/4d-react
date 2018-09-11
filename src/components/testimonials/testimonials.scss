@@ -4,20 +4,28 @@
 #testimonials {
   color:$darkGray;
   font-size: 1.15em;
+
+
 p{
   line-height:1.55em!important;
-
 }
 div {
   align-items: baseline;
 }
  blockquote {
+   footer{
+     display:flex;
+     align-items:center;
+     img{
+      max-width:75px;
+      max-height:75px;
+    }
+   }
    i{
     font-size: 150%;
-padding-right: 3px;
-color:$lightGray;
+    padding-right: 3px;
+    color:$lightGray;
    }
-  background: #f3f3f3;
   padding: 1em 2em;
   font-style: italic;
   border-radius: .5em;

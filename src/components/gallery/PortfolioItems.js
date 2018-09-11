@@ -23,19 +23,19 @@ constructor(props){
 
 }
 
-  render(){
-
+  render(){     
     let active = this.props.filters.filter((f)=>{return f.active == true}).map((f)=> f.tag);
     const items = this.state.portfolio.map((item, i) => {
-    return item.visible && intersection(active, item.tags).length > 0 ?
+      // console.log("item images", item.images.primary)
 
+    return item.visible && intersection(active, item.tags).length > 0 ?
           (
             <Paper 
               zDepth={2}
               key={item.id}
               onClick={()=>{this.props.setCurrentProject(item);}}
               class={"item item--"+sizes[rnd()]}>
-              <img src={process.env.PUBLIC_URL + '/images/'+item.directory+"/"+item.images.primary} />
+              <img src={'/images/'+item.directory+"/"+item.images.primary} />
               <Paper zDepth={1} class="overlay">
                 <h3>{item.project}</h3>
                 <IconTags tags={item.tags}/>

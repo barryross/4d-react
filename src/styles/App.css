@@ -367,7 +367,10 @@
     width: 50%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around; }
+    justify-content: center; }
+    .overlay .tag-set icon {
+      display: inline-block;
+      padding: 0px 1px; }
 
 .item:hover .overlay {
   display: flex;
@@ -410,6 +413,7 @@
   grid-template-rows: repeat(3, minmax(50px, auto));
   grid-template-columns: 59% 39%;
   justify-content: space-between;
+  font-size: 14px;
   grid-gap: 10px;
   background: #fff;
   grid-template-areas: "a a" "b c" "d d"; }
@@ -431,16 +435,22 @@
       display: flex;
       justify-content: center;
       color: gray; }
-      .projectModal .project-header .project-icons span {
-        align-items: center;
+      .projectModal .project-header .project-icons i {
+        text-align: center; }
+      .projectModal .project-header .project-icons > span {
+        text-align: center; }
+      .projectModal .project-header .project-icons span.tag-label {
         justify-content: center;
         display: flex;
         flex-direction: column;
         font-size: .65em;
         margin: 0 .25em; }
-        .projectModal .project-header .project-icons span:before {
+        .projectModal .project-header .project-icons span.tag-label:before {
           display: inline-block;
           width: 1.5em; }
+        .projectModal .project-header .project-icons span.tag-label.tag-label {
+          font-family: 'Roboto', sans-serif;
+          padding-top: 5px; }
   .projectModal .project-description {
     grid-area: b; }
     .projectModal .project-description .project-images {
@@ -452,31 +462,38 @@
         margin: 5px;
         object-fit: cover; }
   .projectModal .project-visit {
+    font-size: 16px;
     margin: 0 auto;
     grid-area: d;
     text-align: center;
     width: 100%; }
+    .projectModal .project-visit a {
+      font-size: 12px; }
 
 .project-details {
   text-align: right;
   padding: 25px !important;
   grid-area: c;
-  font-size: .75em;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background: rgba(205, 205, 205, 0.2); }
-  .project-details li {
+  .project-details ul, .project-details li {
+    list-style-position: unset !important; }
+  .project-details ul li {
     list-style: disc;
     direction: rtl;
     list-style-position: inside; }
 
-.dialog > div > div > div {
+.dialog > div > div > div, .dialog > div {
   overflow-y: scroll !important; }
 
+.dialog > div > div > div > div {
+  min-height: 80vh;
+  max-height: none !important; }
+
 @media screen and (max-width: 800px) {
-  .dialog > div > div > div {
-    overflow-y: scroll !important; }
   .projectModal {
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -601,12 +618,17 @@
   #testimonials div {
     align-items: baseline; }
   #testimonials blockquote {
-    background: #f3f3f3;
     padding: 1em 2em;
     font-style: italic;
     border-radius: .5em;
     font-weight: normal;
     flex: 1; }
+    #testimonials blockquote footer {
+      display: flex;
+      align-items: center; }
+      #testimonials blockquote footer img {
+        max-width: 75px;
+        max-height: 75px; }
     #testimonials blockquote i {
       font-size: 150%;
       padding-right: 3px;

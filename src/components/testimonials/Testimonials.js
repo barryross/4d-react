@@ -1,39 +1,51 @@
-import React from 'react'
-const Testimonials =  () => {
-  return (
-    <section id="testimonials">
+import React, {Component} from 'react'
+import firebase from '../../common/firebase.js';
+
+
+class Testimonials extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      testimonials:[]
+    }
+   const testimonials = firebase.database().ref('testimonials/');
+   testimonials.on('value', ((snapshot)=>{
+     let filtered = snapshot.val().filter((o)=>!o.hidden) //Filter out items that are set to hidden
+      this.setState({testimonials:filtered});
+    }));
+  }
+
+  render(){
+    const defaultImage = "https://i2.wp.com/www.ahfirstaid.org/wp-content/uploads/2014/07/avatar-placeholder.png?w=204"
+
+    console.log("these testimonials", this.testimonials)
+    return (
+      <section id="testimonials">
           <h1>Testimonials</h1>
-        <div class="flex wrapper">
+           <div class="flex wrapper">
+           {
+             this.state.testimonials.length > 0 && this.state.testimonials.map(testimonial => {
+              return (
+                <blockquote>
+                  {testimonial.logo === undefined}
+                  <p> 
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    {testimonial.content}
+                  </p>  
+                  <footer>
+                    <img src={testimonial.logo ? testimonial.logo : defaultImage}/> <cite>{testimonial.citation}</cite>
+                  </footer>
+                </blockquote>
+              )
+             })
+           }
+          </div>
+      </section>
+    )
+  }
 
-          <blockquote>
-        
-            <p>  
-              <i class="fa fa-quote-left" aria-hidden="true"></i>
-We at J-Squared.co contracted Barry to help us integrate a very new API into a custom Wordpress site. Not only was he able to un-entangle the intricacies of an unfamiliar and complex API and successfully integrate its functionality into the site as we requested, but he did so with great professionalism, seamlessness, and efficient communication throughout the process. He also stood by for revisions and handled feedback and modifications quite pleasantly. We very much appreciate and admire Barry's thoroughness, and plan to continue working with him in the future.</p>
-            <cite>Jennifer Zhao</cite>
-          </blockquote>
 
-          <blockquote>
-        
-        <p>  
-          <i class="fa fa-quote-left" aria-hidden="true"></i>
-We at J-Squared.co contracted Barry to help us integrate a very new API into a custom Wordpress site. Not only was he able to un-entangle the intricacies of an unfamiliar and complex API and successfully integrate its functionality into the site as we requested, but he did so with great professionalism, seamlessness, and efficient communication throughout the process. He also stood by for revisions and handled feedback and modifications quite pleasantly. We very much appreciate and admire Barry's thoroughness, and plan to continue working with him in the future.</p>
-        <cite>Jennifer Zhao</cite>
-      </blockquote>
-
-          <blockquote>
-        
-        <p>  
-          <i class="fa fa-quote-left" aria-hidden="true"></i>
-We at J-Squared.co contracted Barry to help us integrate a very new API into a custom Wordpress site. Not only was he able to un-entangle the intricacies of an unfamiliar and complex API and successfully integrate its functionality into the site as we requested, but he did so with great professionalism, seamlessness, and efficient communication throughout the process. He also stood by for revisions and handled feedback and modifications quite pleasantly. We very much appreciate and admire Barry's thoroughness, and plan to continue working with him in the future.</p>
-        <cite>Jennifer Zhao</cite>
-      </blockquote>
-
-   
-        </div>
-
-        </section>
-  )
 }
 
 export default Testimonials

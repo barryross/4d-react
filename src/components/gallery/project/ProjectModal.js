@@ -7,6 +7,8 @@ import Paper from 'material-ui/Paper';
 
 
     const ProjectModal = (props)=>{
+
+      const {currentProject}  = props.currentProject
     
         return(
             <Dialog 
@@ -15,12 +17,12 @@ import Paper from 'material-ui/Paper';
                 onRequestClose={props.handleClose} closeIcon>
                 <div className={"projectModal"}>
                    <div className={"project-header"}>
-                        <h2>{props.currentProject.project}</h2>
+                        <h2>{currentProject.project}</h2>
                         <div className={"project-icons"}>
                              {
                                props.currentProject.tags.map((tag)=>{
                                  let tagItem = find(portfolioFilters, {tag:tag});
-                                 return tagItem ?  <i className={tagItem.icon}><span className="tag-label">{tagItem.label}</span></i> : ''
+                                 return tagItem ? <span> <span className="tag-label">{tagItem.label}</span><i className={tagItem.icon}></i> </span>: ''
                                })
                              }
 
@@ -29,13 +31,13 @@ import Paper from 'material-ui/Paper';
                     
                       <div class="project-description">
                          <h3><i class="sticky note icon"></i>Overview</h3>
-                        <p>{props.currentProject.description}</p>
+                        <p>{currentProject.description}</p>
                     <hr/>
                         <div class="project-images">
-                          <Image src={'/images/'+props.currentProject.directory+props.currentProject.images.primary} />
+                          <Image src={'/images/'+currentProject.directory+currentProject.images.primary} />
                             {
-                              props.currentProject.images.others != undefined && props.currentProject.images.others.length > 0 && props.currentProject.images.others.map((img)=>{
-                                return img ?  <Image src={'/images/'+props.currentProject.directory+img} /> : ''
+                              currentProject.images.others != undefined && currentProject.images.others.length > 0 && currentProject.images.others.map((img)=>{
+                                return img ?  <Image src={'/images/'+currentProject.directory+img} /> : ''
                               })
                             }
 
@@ -44,21 +46,29 @@ import Paper from 'material-ui/Paper';
             
                      
                    <div class="project-details">
-                     <h3><i class="options icon"></i>Site features</h3>
-                     <ul>{
-                         props.currentProject.features ? props.currentProject.features.map((feature)=> <li>{feature}</li>) : ''
-                       } </ul>
-                       <h3><i class="code icon"></i>Work performed</h3>
-                       <ul>{
-                            props.currentProject.work ? props.currentProject.work.map((performed)=><li>{performed}</li>)
-                               : ""
-                         } </ul>
-            
+
+                    { !currentProject.features ? "" : 
+                      <div>
+                        <h3><i class="options icon"></i>Site features</h3>
+                        <ul>{
+                            currentProject.features ? currentProject.features.map((feature)=> <li>{feature}</li>) : ''
+                          } </ul>
+                          <h3><i class="code icon"></i>Work performed</h3>
+                          <ul>{
+                                currentProject.workPerformed ? currentProject.workPerformed.map((workPerformed)=><li>{workPerformed}</li>)
+                                  : ""
+                            } </ul>
+                      </div>
+                        }
                    </div>
-                   <div class="project-visit">
-                       <h5><i class="linkify icon"></i>Visit site</h5>
-                    <span class="project-url"><a target="_blank" href={props.currentProject.url}>{props.currentProject.url}</a></span>
-                   </div>
+                   {
+                     !props.currentProject.url ? "" :  
+                      <div class="project-visit">
+                        <h5><i class="linkify icon"></i>Visit site</h5>
+                      <span class="project-url"><a target="_blank" href={currentProject.url}>{currentProject.url}</a></span>
+                    </div>
+                   }
+                   
                </div>
         
 
