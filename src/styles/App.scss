@@ -106,6 +106,14 @@ p {
     padding: .25em;
   }
 }
+
+.loading-spinner{
+  color: $lightBlue;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
 .button, .ui.button{
   display: block;
   margin:0 auto;

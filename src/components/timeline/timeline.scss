@@ -1,15 +1,42 @@
+@import '../../styles/variables.scss';
+
+.vertical-timeline{
+  &::before{
+    background: $lightBlue;
+  }
+}
 .vertical-timeline-element-icon{
 
      display: flex;
     justify-content: center;
     align-items: center;
+    width:40px;
+    height:40px;
+    margin-left:-20px;
+    color:$cta;
+    background: $cta!important;
 
     i{
       font-size:36px;
     }
 }
+.vertical-timeline-element{
+  &:nth-of-type(even){
+    .vertical-timeline-element-date{
+      right:135%!important;
+  }
+  }
+  &:nth-of-type(odd){
+    .vertical-timeline-element-date{
+      left:135%!important;
+    }
+  }
+  .vertical-timeline-element-date{
+    top:-8px!important;
+  }
+}
+
 .vertical-timeline-element-content.bounce-in span{
-  color:black!important;
   Font-Family: 'Ubuntu', Sans-Serif;
   font-weight:800;
   font-size:18px!important;

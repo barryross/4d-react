@@ -16,7 +16,7 @@ portfolioControls.map((item)=>{
   </Button>
     </div>
     )
-                      })
+})
 
           }
           

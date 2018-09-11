@@ -23,8 +23,8 @@ export class Timeline extends Component {
 
 render(){
   return(
-<section id="timeline">
-    <h1>Timeline <span>What's my story?</span></h1>
+<section id="experience">
+    <h1>Experience <span>What's my story?</span></h1>
 
     <VerticalTimeline>
       {

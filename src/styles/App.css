@@ -309,6 +309,7 @@
 
 .grid {
   display: grid;
+  position: relative;
   margin: 1em 0;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -676,15 +677,31 @@
   #testimonials cite::before {
     content: "- "; }
 
+.vertical-timeline::before {
+  background: #2185d0; }
+
 .vertical-timeline-element-icon {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  color: #1A5273;
+  background: #1A5273 !important; }
   .vertical-timeline-element-icon i {
     font-size: 36px; }
 
+.vertical-timeline-element:nth-of-type(even) .vertical-timeline-element-date {
+  right: 135% !important; }
+
+.vertical-timeline-element:nth-of-type(odd) .vertical-timeline-element-date {
+  left: 135% !important; }
+
+.vertical-timeline-element .vertical-timeline-element-date {
+  top: -8px !important; }
+
 .vertical-timeline-element-content.bounce-in span {
-  color: black !important;
   Font-Family: 'Ubuntu', Sans-Serif;
   font-weight: 800;
   font-size: 18px !important; }
@@ -775,6 +792,13 @@ p {
   padding: 1em; }
   .card ul li {
     padding: .25em; }
+
+.loading-spinner {
+  color: #2185d0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .button, .ui.button {
   display: block;
