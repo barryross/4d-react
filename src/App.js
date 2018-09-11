@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Services/>
-        <Testimonials/>
+        {/* <Testimonials/> */}
         <About/>
         <Portfolio/>
         <Contact/>
