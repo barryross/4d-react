@@ -1,0 +1,16 @@
+.vertical-timeline-element-icon{
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+      font-size:36px;
+    }
+}
+.vertical-timeline-element-content.bounce-in span{
+  color:black!important;
+  Font-Family: 'Ubuntu', Sans-Serif;
+  font-weight:800;
+  font-size:18px!important;
+}

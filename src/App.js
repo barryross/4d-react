@@ -4,6 +4,8 @@ import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Services from './components/services/Services'
 import Portfolio from './components/gallery/Gallery'
+import Timeline from './components/timeline/Timeline'
+
 import Testimonials from './components/testimonials/Testimonials'
 import '@firebase/firestore';
 import '@firebase/storage';
@@ -21,11 +23,13 @@ class App extends Component {
       <MuiThemeProvider>
       <div className="App">
         <Header/>
-        <Services/>
-        {/* <Testimonials/> */}
         <About/>
+        <Services/>
         <Portfolio/>
         <Contact/>
+        <Timeline/>
+   
+        {/* <Testimonials/> */}
       </div>
     </MuiThemeProvider>
     );

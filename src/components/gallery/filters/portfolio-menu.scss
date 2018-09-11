@@ -7,10 +7,18 @@
   height: 60px;
   justify-content: space-around;
   align-items: center;
-  margin: 2em auto;
+  margin: 3em auto;
   padding: .1em 0;
+  button{
+    border-radius:0px;
+    display:flex;
+
+    i{
+      margin-right:5px;
+    }
+  }
   button.true {
-    background: $gunmetal;
+    background: $cta;
     color: $white
   }
   div {

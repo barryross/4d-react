@@ -12,19 +12,23 @@
 @import '../components/contact/contact.scss';
 @import '../components/about/about.scss';
 @import '../components/testimonials/testimonials.scss';
+@import '../components/timeline/timeline.scss';
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   width: 100vw;
   background-image:url('/images/bg.jpg');
   background-size: cover;
   background-position: center bottom;
   background-attachment:fixed;
+  Font-Family: 'Open Sans', Sans-Serif;
+
+
 }
+
 #root .App {
   margin:0;
  
@@ -33,15 +37,29 @@ body {
  h1,h2, h3, h4, h5, h6 {
      color: $black;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  Font-Family: 'Ubuntu', Sans-Serif!important;
+
 
 }
-h1 { 
-  text-align:center; 
+h1{
+  display:flex;
+  align-items:center;
+  text-align:left; 
   font-size: 2.75em;  
-  // font-family: 'Fjalla One', sans-serif;   
-  letter-spacing: 5px; 
+  Font-Family: 'Open Sans', Sans-Serif;
+  font-weight:800;
+  background:#212124;
+  color:white;
+
+letter-spacing: 5px; 
+  span{
+    font-size:16px!important;
+    margin-left:100px;
+    Font-Family: 'Ubuntu', Sans-Serif;
+    font-weight:300;
   }
+}
+
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1.12em; }
@@ -88,7 +106,16 @@ p {
     padding: .25em;
   }
 }
+.button, .ui.button{
+  display: block;
+  margin:0 auto;
+  background: $lightBlue;
+  color:white;
 
+  &:hover{
+    background:#1A5273;
+  }
+}
 
 .flex {
   display: flex;
@@ -115,10 +142,14 @@ section .wrapper {
   // padding: 2em 2em;
 }
 section{
-  background:#f2f5f7
+    background:#fff;
+    margin-bottom:50px;
+    padding-bottom:15px;
+
+  // background:#f2f5f7
 }
-section:nth-of-type(odd){
-  background:#fff;
+section:nth-of-type(even){
+  // background:#FAFAFA;
 
 }
 .ui.form .field>label{

@@ -61,8 +61,9 @@ export default class Contact extends Component{
                 <Form.Group widths='equal'>
                  <Form.Input name="fname" value={fname} label='First name' placeholder='First name' onChange={this.onChange}/>
                  <Form.Input name="lname" value={lname} label='First name' placeholder='Last name' onChange={this.onChange}/>
-                 <Form.Input name="email" value={email} label='Email' placeholder='Email' onChange={this.onChange}/>
                 </Form.Group>
+                <Form.Input name="email" value={email} label='Email' placeholder='Email' onChange={this.onChange}/>
+
                 <Form.TextArea name="message" value={message} label='Message' placeholder='What can I help you with?' onChange={this.onChange}/>
                <Form.Button>Submit</Form.Button>
               </Form>

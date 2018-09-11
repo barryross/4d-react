@@ -71,7 +71,8 @@ export default class Portfolio extends Component {
     return (
       <section id="gallery">
           <section id="work">
-          <h1>Work</h1>
+          <h1>Work <span>What have I worked on?</span></h1>
+
 
             <div className="wrapper">
              <PortfolioMenu active={this.state.filters} toggleFilter={this.toggleFilter}/>

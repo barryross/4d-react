@@ -41,7 +41,7 @@ function ProjectDetails(props){
         {
           !props.project.url ? "" :  
           <div class="project-visit">
-            <h5><i class="linkify icon"></i>Visit site</h5>
+          <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Visit site </h4>
           <span class="project-url"><a target="_blank" href={project.url}>{project.url}</a></span>
         </div>
         }
@@ -52,9 +52,11 @@ function Description(props){
   const { project } = props
   return (
     <div class="project-description">
-     <h3><i class="sticky note icon"></i>Overview</h3>
+     <h4 class="ui horizontal divider header">
+        <i class="tag icon"></i>
+        Description
+      </h4>
       <p>{project.description}</p>
-      <hr/>
       <ProjectImages {...props}/>
     </div>
   )
@@ -67,14 +69,14 @@ function Specifics(props){
     <div class="project-specifics">
       { !project.features ? "" : 
         <div>
-          <h3><i class="options icon"></i>Site features</h3>
+               <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Features </h4>
           <ul>
-            {project.features.map(feature => <li>{feature}</li>) }
+            {project.features.map(feature => <li><i class="check circle icon"></i>{feature}</li>) }
           </ul>
 
-          <h3><i class="code icon"></i>Work performed</h3>
+          <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Contribution </h4>
           <ul>
-            {project.workPerformed ? project.workPerformed.map((workPerformed)=><li>{workPerformed}</li>): ""} 
+            {project.workPerformed ? project.workPerformed.map((workPerformed)=><li><i class="check circle icon"></i>{workPerformed}</li>): ""} 
           </ul>
         </div>
         }

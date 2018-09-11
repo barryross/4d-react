@@ -1,33 +1,28 @@
 /* SERVICES */
-#services i.fa-check {
-  color: green !important;
-  padding: 3px; }
-
-#services #services {
+#services {
   list-style-type: none; }
-  #services #services::before {
-    font: normal normal normal 14px/1 FontAwesome;
-    content: '\f058';
-    color: green; }
-
-#services .service {
-  padding: 50px 25px;
-  width: 25%; }
-  #services .service div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-  #services .service ul {
-    padding-top: 20px; }
-
-@media screen and (max-width: 800px) {
-  #services #services-wrapper {
-    display: flex;
-    flex-direction: row; } }
-
-@media screen and (max-width: 700px) {
-  #services #services-wrapper {
-    flex-direction: column; }
-    #services #services-wrapper .service {
-      width: auto; } }
+  #services .inner-wrapper {
+    padding: 20px 0; }
+    #services .inner-wrapper #services-wrapper {
+      width: 50%;
+      margin: 0 auto;
+      padding: 25px 0; }
+      #services .inner-wrapper #services-wrapper .card {
+        min-height: 350px;
+        padding: 20px 0;
+        margin-top: 0; }
+        #services .inner-wrapper #services-wrapper .card .header {
+          padding: 20px 0; }
+      #services .inner-wrapper #services-wrapper ul {
+        text-align: left; }
+        #services .inner-wrapper #services-wrapper ul li {
+          line-height: 150%; }
+  @media screen and (max-width: 800px) {
+    #services #services-wrapper {
+      display: flex;
+      flex-direction: row; } }
+  @media screen and (max-width: 700px) {
+    #services #services-wrapper {
+      flex-direction: column; }
+      #services #services-wrapper .service {
+        width: auto; } }

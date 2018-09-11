@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.header {
+.primary-header {
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -26,7 +26,10 @@
         width: 80px;
         height: 80px;
         color: $navy;
-        font-family: 'Fjalla One', sans-serif;
+        Font-Family: 'Ubuntu', Sans-Serif;
+        font-weight:800;
+        line-height:100%;
+        lext-align:left;
         text-transform: uppercase;
         background: $white;
         padding: 0.25em;
@@ -46,6 +49,8 @@
 
     nav {
         // flex: .5;
+        Font-Family: 'Open Sans', Sans-Serif;
+
         font-size:1.10 em;
         font-weight: 400;
 

@@ -6,10 +6,15 @@
   height: 60px;
   justify-content: space-around;
   align-items: center;
-  margin: 2em auto;
+  margin: 3em auto;
   padding: .1em 0; }
+  #portfolio-menu button {
+    border-radius: 0px;
+    display: flex; }
+    #portfolio-menu button i {
+      margin-right: 5px; }
   #portfolio-menu button.true {
-    background: #26262a;
+    background: #1A5273;
     color: #fff; }
   #portfolio-menu div {
     font-weight: 300 !important;

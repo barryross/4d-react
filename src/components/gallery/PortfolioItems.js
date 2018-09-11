@@ -36,7 +36,7 @@ constructor(props){
               <img src={'/images/'+item.directory+"/"+item.images.primary} />
               <Paper zDepth={1} class="overlay">
                 <h3>{item.project}</h3>
-                <IconTags tags={item.tags}/>
+                {/* <IconTags tags={item.tags}/> */}
               </Paper>
             </Paper>
         )

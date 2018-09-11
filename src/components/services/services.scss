@@ -1,32 +1,35 @@
 /* SERVICES */
 #services{
-    // padding: 5em 0;
-    i.fa-check{color:green!important;
-      padding:3px;
-      // width:8px;
-    }
-    
-   
-  #services {
-    list-style-type:none;
-    &::before{
-      font:normal normal normal 14px/1 FontAwesome;
-      content:'\f058';
-      color:green;
-    }
-  }
 
-  .service {
-    padding: 50px 25px;
-    width: 25%;
-    div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    
+  
+    list-style-type:none;
+    .inner-wrapper{
+      padding:20px 0;
+      #services-wrapper{
+        width:50%;
+        margin:0 auto;
+        .card{
+          min-height:350px;
+          padding:20px 0;
+          margin-top: 0;
+          .header{
+            padding: 20px 0;
+          }
+        }
+        padding: 25px 0;
+        ul{
+          text-align:left;
+          li{
+            line-height:150%;
+          }
+        }
+  
+      }
+  
     }
-    ul{padding-top:20px;}
-  }
+ 
+
 
   @media screen and (max-width:800px){
     #services-wrapper{

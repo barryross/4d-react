@@ -1,24 +1,32 @@
 @import '../../styles/variables.scss';
 
 #contact {
-
+  background: #FAFAFA;
+  .ui.form .field > label{
+    color:$gunmetal!important;
+  }
+  min-height:600px;
   h1{
     color: $white;
   }
-  background: $gunmetal;
+  // background: $gunmetal;
     .form-container{
         width: 75%;
         margin:0px auto;
     }
   form {
-    // padding: 4em 0;
-    margin:0 auto;
-    max-width: 600px;
-
-    button{
-        display: block;
-        margin:0 auto;
+    #placeholder{
+      color:$gunmetal;
     }
+    margin:100px auto;
+    max-width: 500px;
+    input, textarea{
+      border-radius:0px;
+      border:1px solid $gunmetal;
+      color:$lightGray;
+    }
+
+ 
   }
 
 }
