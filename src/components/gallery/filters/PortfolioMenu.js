@@ -10,7 +10,7 @@ const PortfolioMenu =  ({toggleFilter, active}) => {
           {
 portfolioControls.map((item)=>{
     return( 
-   <div>
+   <div class="filter-preset">
  <Button onClick={()=>toggleFilter(item.label)} variant="contained" className={item.active == true ? "true" : ""} >
     <span className={item}>{item.label}</span>
   </Button>
@@ -22,7 +22,7 @@ portfolioControls.map((item)=>{
           
       </div>
 
-      <div >
+      <div class="filters" >
         {
           portfolioFilters.map((item)=>{
             return (

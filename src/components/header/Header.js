@@ -17,8 +17,9 @@ export default class Header extends Component  {
     const menu = [
         {label:"about", tag:"about"},         
         {label:"services", tag:"services"},
-        {label:"experience", tag:"experience"},
         {label:"work", tag:"work"},
+        // {label:"experience", tag:"experience"},
+        {label:"testimonials", tag:"testimonials"},
         {label:"contact", tag:"contact"}
     ];
     return (
@@ -29,16 +30,14 @@ export default class Header extends Component  {
                 <span>4d Media</span>
               </div>
               <div class="hamburger" onClick={this.handleHamburger}>
-                Menu
+              <i class="fa fa-bars" aria-hidden="true"></i>
+
               </div>
             </div>
           </div>
           <nav className={this.state.open ? "open" : ""}>
             <ul class="flex">
-              {
-                menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item.tag} className={this.state.activeItem == item.label ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item.label}</Link></li>
-              )
-              }
+              { menu.map((item)=><li><Link onClick={()=>this.handleSetActive(item)} to={item.tag} className={this.state.activeItem == item.label ? "active": ""} spy={true} smooth={true} offset={50} duration={500} >{item.label}</Link></li> )}
             </ul>
           </nav>
     </Paper>
@@ -49,7 +48,6 @@ export default class Header extends Component  {
   }
 
   handleHamburger = () =>{
-
     this.setState({open:!this.state.open})
   }
 

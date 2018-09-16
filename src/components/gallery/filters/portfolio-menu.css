@@ -11,6 +11,8 @@
   #portfolio-menu button {
     border-radius: 0px;
     display: flex; }
+    #portfolio-menu button:hover {
+      color: white; }
     #portfolio-menu button i {
       margin-right: 5px; }
   #portfolio-menu button.true {
@@ -41,4 +43,9 @@
 
 @media screen and (max-width: 800px) {
   #portfolio-menu {
-    width: 100%; } }
+    width: 100%;
+    height: auto; }
+    #portfolio-menu .filters {
+      flex-wrap: wrap; }
+      #portfolio-menu .filters button {
+        flex: 1; } }

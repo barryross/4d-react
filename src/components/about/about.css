@@ -24,6 +24,15 @@
       width: 300px;
       height: 400px;
       object-fit: cover; }
-  @media screen and (max-width: 800px) {
-    #about .about {
-      width: 90%; } }
+  @media screen and (max-width: 700px) {
+    #about h1 {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      #about h1 span {
+        margin-left: 0px; }
+    #about .card.about {
+      width: 90%;
+      flex-direction: column; }
+      #about .card.about .about-text {
+        padding: 0 10px; } }

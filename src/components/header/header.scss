@@ -7,7 +7,8 @@
     position: fixed;
     height: 100px;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    max-width:100%;
     z-index: 1;
     padding: 0.5em 1em;
     background: $black!important;
@@ -87,7 +88,7 @@
     }
 }
 @media screen and (max-width: 780px) {
-    .header {
+    .primary-header {
         flex-direction: column;
         display: block;
         padding: 5px 0;
@@ -104,16 +105,7 @@
             }
         }
 
-        .logo-container {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-around;
-
-            .logo {
-                flex: none;
-            }
-        }
+      
 
         .inner-wrapper {
             width: 100%;
@@ -121,9 +113,15 @@
             align-items: center;
 
             .logo-container {
-                padding: 0 0.5em;
-                justify-content: space-between;
-            }
+              display: flex;
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 20px;
+              .logo {
+                  flex: none;
+              }
+          }
         }
 
         nav {
@@ -131,7 +129,7 @@
             height: 0;
             overflow: hidden;
             transition: 0.5s all;
-            background: $gunmetal!important;
+            background: black;
             width: 100%;
 
             ul {
@@ -143,6 +141,16 @@
                     display: inline-block;
                     width: 100%;
                     font-size: 1em;
+                    a{
+                      &.active{
+                        border:none;
+                      }
+                      &:hover{
+                        border:none;
+                        color:$cta;
+                        background:$lightGray;
+                      }
+                    }
                 }
             }
 
@@ -151,7 +159,9 @@
             }
         }
     }
-
+    header .hamburger{
+      i:after{font-size:28px;}
+    }
     header .hamburger,
     header .logo {
         flex: 1;

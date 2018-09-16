@@ -28,6 +28,19 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     transition: 1s all; }
+    .grid .item .overlay {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      min-height: 25%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background: black !important; }
+      .grid .item .overlay h3 {
+        color: white; }
     .grid .item:after {
       content: '';
       position: absolute;
@@ -52,26 +65,6 @@
   /* creates "bright" effect when you rollover item */
   opacity: 0; }
 
-.overlay {
-  display: none;
-  position: absolute;
-  background: white;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  min-height: 25%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-  .overlay .tag-set {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; }
-    .overlay .tag-set icon {
-      display: inline-block;
-      padding: 0px 1px; }
-
 .item:hover .overlay {
   display: flex;
   color: #26262a; }
@@ -86,20 +79,6 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
   margin: 40px 20px 20px;
   padding: 10px 0; }
-
-.example-enter {
-  opacity: 0.01; }
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in; }
-
-.example-leave {
-  opacity: 1; }
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in; }
 
 @media screen and (min-width: 768px) {
   .item--full {

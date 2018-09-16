@@ -5,7 +5,8 @@
   position: fixed;
   height: 100px;
   top: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   z-index: 1;
   padding: 0.5em 1em;
   background: black !important;
@@ -60,49 +61,57 @@
           border-bottom: 2px solid #1D5372; }
 
 @media screen and (max-width: 780px) {
-  .header {
+  .primary-header {
     flex-direction: column;
     display: block;
     padding: 5px 0; }
-    .header .hamburger {
+    .primary-header .hamburger {
       color: white;
       display: block;
       text-align: right;
       font-weight: 700;
       font-size: 1.5em; }
-      .header .hamburger:hover {
+      .primary-header .hamburger:hover {
         cursor: pointer; }
-    .header .logo-container {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-around; }
-      .header .logo-container .logo {
-        flex: none; }
-    .header .inner-wrapper {
+    .primary-header .inner-wrapper {
       width: 100%;
       display: flex;
       align-items: center; }
-      .header .inner-wrapper .logo-container {
-        padding: 0 0.5em;
-        justify-content: space-between; }
-    .header nav {
+      .primary-header .inner-wrapper .logo-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px; }
+        .primary-header .inner-wrapper .logo-container .logo {
+          flex: none; }
+    .primary-header nav {
       padding-top: 0.95em;
       height: 0;
       overflow: hidden;
       transition: 0.5s all;
-      background: #26262a !important;
+      background: black;
       width: 100%; }
-      .header nav ul {
+      .primary-header nav ul {
         display: flex;
         flex-direction: column; }
-        .header nav ul a,
-        .header nav ul li {
+        .primary-header nav ul a,
+        .primary-header nav ul li {
           display: inline-block;
           width: 100%;
           font-size: 1em; }
-      .header nav.open {
+          .primary-header nav ul a a.active,
+          .primary-header nav ul li a.active {
+            border: none; }
+          .primary-header nav ul a a:hover,
+          .primary-header nav ul li a:hover {
+            border: none;
+            color: #1A5273;
+            background: #cdcdcd; }
+      .primary-header nav.open {
         height: 20em; }
+  header .hamburger i:after {
+    font-size: 28px; }
   header .hamburger,
   header .logo {
     flex: 1; } }

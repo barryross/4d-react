@@ -10,6 +10,9 @@
   margin: 3em auto;
   padding: .1em 0;
   button{
+    &:hover{
+      color:white;
+    }
     border-radius:0px;
     display:flex;
 
@@ -53,5 +56,11 @@
 @media screen and (max-width:800px) {
   #portfolio-menu {
     width: 100%;
+    height:auto;
+    .filters{
+      flex-wrap:wrap;
+
+      button{flex:1}
+    }
   }
 }

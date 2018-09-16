@@ -25,11 +25,12 @@ class App extends Component {
         <Header/>
         <About/>
         <Services/>
-        {/* <Portfolio/> */}
+        <Portfolio/>
+        <Testimonials/>
         <Contact/>
         {/* <Timeline/> */}
-   
-        {/* <Testimonials/> */}
+
+
       </div>
     </MuiThemeProvider>
     );

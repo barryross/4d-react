@@ -72,8 +72,6 @@ export default class Portfolio extends Component {
       <section id="gallery">
           <section id="work">
           <h1>Work <span>What have I worked on?</span></h1>
-
-
             <div className="wrapper">
              <PortfolioMenu active={this.state.filters} toggleFilter={this.toggleFilter}/>
 
@@ -84,13 +82,12 @@ export default class Portfolio extends Component {
       
               {
                 this.state.open ?
-
-                 <ProjectModal
-                 currentProject={this.state.currentProject}
-                 open={this.state.open}
-                 handleClose={this.handleClose}
-                />
-               : ''
+                  <ProjectModal
+                  currentProject={this.state.currentProject}
+                  open={this.state.open}
+                  handleClose={this.handleClose}
+                  />
+                : ''
              }
            </div> 
           </section>
