@@ -76,6 +76,7 @@ export default class Portfolio extends Component {
              <PortfolioMenu active={this.state.filters} toggleFilter={this.toggleFilter}/>
 
              <PortfolioItems
+               storage={this.props.storage}
                filters={this.state.filters}
                showProjectDetails={this.showProjectDetails.bind(this)}
              />

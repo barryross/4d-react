@@ -15,6 +15,7 @@ constructor(props){
     portfolio: [],
     loading: true
   }
+
   this.portfolioRef = firebase.database().ref('portfolio/');
   this.portfolioRef.on('value', ((snapshot)=>{
       console.log("Updating", snapshot.val())
@@ -27,7 +28,7 @@ constructor(props){
     const {showProjectDetails} = this.props
     let active = this.props.filters.filter((f)=>{return f.active == true}).map((f)=> f.tag);
     const items = this.state.portfolio.map((item, i) => {
-        return item.visible && intersection(active, item.tags).length > 0 ?
+              return item.visible && intersection(active, item.tags).length > 0 ?
               (
                 <Paper 
                   zDepth={2}

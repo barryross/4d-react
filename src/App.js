@@ -17,15 +17,28 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+
+  }
+
+  componentDidMount(){
+
+  }
   render() {
+
     return (
+  
 
       <MuiThemeProvider>
       <div className="App">
         <Header/>
         <About/>
         <Services/>
-        <Portfolio/>
+        <Portfolio
+          storage={this.storage}
+        />
         <Testimonials/>
         <Contact/>
         {/* <Timeline/> */}
