@@ -36,9 +36,7 @@ class App extends Component {
         <Header/>
         <About/>
         <Services/>
-        <Portfolio
-          storage={this.storage}
-        />
+        <Portfolio/>
         <Testimonials/>
         <Contact/>
         {/* <Timeline/> */}
