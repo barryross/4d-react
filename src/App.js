@@ -5,6 +5,8 @@ import Contact from './components/contact/Contact'
 import Services from './components/services/Services'
 import Portfolio from './components/gallery/Gallery'
 import Timeline from './components/timeline/Timeline'
+import Footer from './components/footer/Footer'
+
 
 import Testimonials from './components/testimonials/Testimonials'
 import '@firebase/firestore';
@@ -36,10 +38,12 @@ class App extends Component {
         <Header/>
         <About/>
         <Services/>
-        <Portfolio/>
+        {/* <Portfolio/> */}
         <Testimonials/>
         <Contact/>
-        {/* <Timeline/> */}
+        <Timeline/>
+        <Footer/>
+
 
 
       </div>

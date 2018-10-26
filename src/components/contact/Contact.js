@@ -1,7 +1,6 @@
 
 import React, {Component} from 'react';
 import { Form, Message } from 'semantic-ui-react';
-import Paper from 'material-ui/Paper';
 
 
 export default class Contact extends Component{

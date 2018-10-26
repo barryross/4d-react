@@ -1,93 +1,64 @@
 @import '../../styles/variables.scss';
 
-.primary-header {
-    align-items: center;
-    justify-content: space-around;
+
+.menu-item{
+  a{
+    color:black;
+    font-size:18px;
+    Font-Family: 'Ubuntu', Sans-Serif;
+    font-weight: 300;  
+}
+
+.primary-header{
+  display:flex;
+  align-items:center;
+  .secondary{
+    margin:0;
+ 
+  }
+}
+.logo-container{
+  margin-left:15px;
+  display:flex;
+  align-items:center;
+  .logo {
     display: flex;
-    position: fixed;
-    height: 100px;
-    top: 0;
-    width: 100vw;
-    max-width:100%;
-    z-index: 1;
-    padding: 0.5em 1em;
-    background: $black!important;
-    color: $white;
-    grid-area: header;
-    text-transform: capitalize;
-    
-    .hamburger {
-        display: none;
-    }
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    color: $navy;
+    Font-Family: 'Ubuntu', Sans-Serif;
+    font-weight:800;
+    line-height:100%;
+    text-align:left;
+    text-transform: uppercase;
+    background: $white;
+    padding: 0.25em;
+    font-size: 1.25em;
+    border-radius: 10em;
 
-    .logo {
+    div {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: 80px;
-        color: $navy;
-        Font-Family: 'Ubuntu', Sans-Serif;
-        font-weight:800;
-        line-height:100%;
-        lext-align:left;
-        text-transform: uppercase;
-        background: $white;
-        padding: 0.25em;
-        font-size: 1.25em;
-        border-radius: 10em;
-
-        div {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    .inner-wrapper {
-        flex: 1;
-    }
-
-
-    nav {
-        // flex: .5;
-        Font-Family: 'Open Sans', Sans-Serif;
-
-        font-size:1.10 em;
-        font-weight: 400;
-
-    }
-
-    
-    nav ul {
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            flex: 1;
-            text-align: center;
-            margin: 2px;
-
-            a {
-                text-decoration: none;
-                padding: 10px 2em;
-                font-size: 1.25em;
-                // border-radius: 2px;
-                color: $white;
-                transition: 0.25s background;
-
-                &.active,
-                &:hover {
-                    text-decoration: none;
-                    cursor: pointer;
-                    color: $white;
-                    border-bottom: 2px solid $primary-color;
-                }
-            }
-        }
+        flex-direction: column;
     }
 }
+}
+  
+.primary-nav{
+  display:flex;
+  align-items:center;
+  height:auto;
+  display:flex;
+  justify-content: flex-end;
+  a{
+    height:auto;
+  }
+}
 @media screen and (max-width: 780px) {
+  .pusher{
+    width:100vw;
+  }
     .primary-header {
         flex-direction: column;
         display: block;

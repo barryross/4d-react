@@ -1,60 +1,14 @@
 
-export const portfolioFilters = [
-
-  {
-    label:"Bootstrap",
-    icon:"devicon-bootstrap-plain",
-    tag:"bootstrap",
-    active:true
-
-  },
-  {
-    label:"Angular",
-    icon:"devicon-angularjs-plain",
-    tag:"angular",
-    active:true
-  },
-  {
-    label:"Ionic",
-    icon:"icon-ionic",
-    tag:"ionic",
-    active:true
-  },
-  {
-    label:"eCommerce",
-    icon:"fa fa-credit-card",
-    tag:"eCommerce",
-    active:true
-  },
-  {
-    label:"React",
-    icon:"devicon-react-original",
-    tag:"react",
-    active:true
-  },
-  {
-    label:"Node.js",
-    icon:"devicon-nodejs-plain",
-    tag:"node",
-    active:true
-  },
-
-  {
-    label:"Wordpress",
-    icon:"devicon-nodejs-plain",
-    tag:"wordpress",
-    active:true
-  }
-  ]
-
   export const portfolioControls=[
     {
       label:"All",
-      active:true
+      active:true,
+      preset:true
     },
     {
       label:"None",
-      active:false
+      active:false,
+      preset:true
     }
   ]
   export const portfolioItems = [{

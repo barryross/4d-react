@@ -1,21 +1,20 @@
+.menu-item a {
+  color: black;
+  font-size: 18px;
+  Font-Family: 'Ubuntu', Sans-Serif;
+  font-weight: 300; }
+
 .primary-header {
-  align-items: center;
-  justify-content: space-around;
   display: flex;
-  position: fixed;
-  height: 100px;
-  top: 0;
-  width: 100vw;
-  max-width: 100%;
-  z-index: 1;
-  padding: 0.5em 1em;
-  background: black !important;
-  color: #fff;
-  grid-area: header;
-  text-transform: capitalize; }
-  .primary-header .hamburger {
-    display: none; }
-  .primary-header .logo {
+  align-items: center; }
+  .primary-header .secondary {
+    margin: 0; }
+
+.logo-container {
+  margin-left: 15px;
+  display: flex;
+  align-items: center; }
+  .logo-container .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,42 +24,28 @@
     Font-Family: 'Ubuntu', Sans-Serif;
     font-weight: 800;
     line-height: 100%;
-    lext-align: left;
+    text-align: left;
     text-transform: uppercase;
     background: #fff;
     padding: 0.25em;
     font-size: 1.25em;
     border-radius: 10em; }
-    .primary-header .logo div {
+    .logo-container .logo div {
       display: flex;
       flex-direction: column; }
-  .primary-header .inner-wrapper {
-    flex: 1; }
-  .primary-header nav {
-    Font-Family: 'Open Sans', Sans-Serif;
-    font-size: 1.10 em;
-    font-weight: 400; }
-  .primary-header nav ul {
-    margin: 0;
-    padding: 0; }
-    .primary-header nav ul li {
-      list-style-type: none;
-      flex: 1;
-      text-align: center;
-      margin: 2px; }
-      .primary-header nav ul li a {
-        text-decoration: none;
-        padding: 10px 2em;
-        font-size: 1.25em;
-        color: #fff;
-        transition: 0.25s background; }
-        .primary-header nav ul li a.active, .primary-header nav ul li a:hover {
-          text-decoration: none;
-          cursor: pointer;
-          color: #fff;
-          border-bottom: 2px solid #1D5372; }
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  height: auto;
+  display: flex;
+  justify-content: flex-end; }
+  .primary-nav a {
+    height: auto; }
 
 @media screen and (max-width: 780px) {
+  .pusher {
+    width: 100vw; }
   .primary-header {
     flex-direction: column;
     display: block;

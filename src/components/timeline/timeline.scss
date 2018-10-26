@@ -1,8 +1,40 @@
 @import '../../styles/variables.scss';
 
 .vertical-timeline{
+  hr{
+    margin: 15px 0;
+  }
+  .logoContainer{
+    display:flex;
+    justify-content: center;
+    margin-bottom:25px;
+  }
+  .vertical-timeline-element-role{
+    font-weight:300;
+    // text-decoration:dotted underline;
+    margin:5px 0;
+    padding-top: 5px;
+  }
+  .logo{
+    max-height:70px;
+    // max-width:100px;
+    // padding-bottom:10px;
+  }
   &::before{
     background: $lightBlue;
+  }
+
+  .technologies{
+    border-top: 1px solid gray;
+    margin-top: 20px;
+    padding-top: 10px;
+    ul{
+      display:flex;
+      li{
+        padding-right: 15px;
+        font-size: 20px;
+      }
+    }
   }
 }
 .vertical-timeline-element-icon{
@@ -21,6 +53,10 @@
     }
 }
 .vertical-timeline-element{
+
+  .vertical-timeline-element-content{
+    box-shadow:none;
+  }
   &:nth-of-type(even){
     .vertical-timeline-element-date{
       right:135%!important;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../../common/firebase.js';
-
+import {icons} from '../../common/icons'
+import {find} from 'lodash'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 function WorkIcon(){
@@ -22,25 +23,39 @@ export class Timeline extends Component {
   }
 
 render(){
+  let {timeline} = this.state
   return(
-<section id="experience">
-    <h1>Experience <span>What's my story?</span></h1>
+<section id="timeline">
+    <h1>Timeline <span>What's my story?</span></h1>
 
     <VerticalTimeline>
       {
-        this.state.timeline.length > 0 && this.state.timeline.map(item =>{
+        timeline && timeline.length > 0 && timeline.map(item =>{
           return (
             <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date={item.date}
-            iconStyle={{ background: 'white', color: '#fff' }}
-            // icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">{item.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
-            <p>
-            {item.description}
-            </p>
+              className="vertical-timeline-element--work"
+              date={item.date}
+              iconStyle={{ background: 'white', color: '#fff' }}
+              // icon={<WorkIcon />}
+            >
+              <div className="logoContainer"> <img className="logo" src={item.logo}/></div>
+              <h3 className="vertical-timeline-element-title">{item.title}</h3>
+              <h4 className="vertical-timeline-element-role">{item.role}</h4>
+              <hr/>
+              <p className="vertical-timeline-element-subtitle">{item.subtitle}</p>
+              <p>{item.description}</p>
+                {item.tags && item.tags.length > 0 &&
+                 <div class="technologies">
+                  <h5>technologies used</h5>
+                  <ul>
+                    {item.tags.map(tag=>{
+                      console.log("LOOKING FOR", tag)
+                      let obj = find(icons, {tag:tag});
+                      return <li><i class={obj.icon}></i></li>
+                    })}
+                  </ul>
+              </div>
+            }
           </VerticalTimelineElement>
           )
         })

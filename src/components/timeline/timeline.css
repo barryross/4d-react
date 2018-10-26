@@ -1,5 +1,31 @@
+.vertical-timeline hr {
+  margin: 15px 0; }
+
+.vertical-timeline .logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px; }
+
+.vertical-timeline .vertical-timeline-element-role {
+  font-weight: 300;
+  margin: 5px 0;
+  padding-top: 5px; }
+
+.vertical-timeline .logo {
+  max-height: 70px; }
+
 .vertical-timeline::before {
   background: #2185d0; }
+
+.vertical-timeline .technologies {
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  padding-top: 10px; }
+  .vertical-timeline .technologies ul {
+    display: flex; }
+    .vertical-timeline .technologies ul li {
+      padding-right: 15px;
+      font-size: 20px; }
 
 .vertical-timeline-element-icon {
   display: flex;
@@ -12,6 +38,9 @@
   background: #1A5273 !important; }
   .vertical-timeline-element-icon i {
     font-size: 36px; }
+
+.vertical-timeline-element .vertical-timeline-element-content {
+  box-shadow: none; }
 
 .vertical-timeline-element:nth-of-type(even) .vertical-timeline-element-date {
   right: 135% !important; }

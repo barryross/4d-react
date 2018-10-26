@@ -18,11 +18,17 @@
         #services .inner-wrapper #services-wrapper ul li {
           line-height: 150%; }
   @media screen and (max-width: 800px) {
-    #services #services-wrapper {
-      display: flex;
-      flex-direction: row; } }
-  @media screen and (max-width: 700px) {
-    #services #services-wrapper {
-      flex-direction: column; }
-      #services #services-wrapper .service {
-        width: auto; } }
+    #services {
+      list-style-type: none; }
+      #services .inner-wrapper {
+        padding: 25px 0; }
+        #services .inner-wrapper #services-wrapper {
+          flex-direction: column;
+          justify-content: center;
+          width: 85%; }
+          #services .inner-wrapper #services-wrapper .ui.card {
+            margin: 25px auto; }
+        #services .inner-wrapper ul {
+          text-align: left; }
+          #services .inner-wrapper ul li {
+            line-height: 150%; } }

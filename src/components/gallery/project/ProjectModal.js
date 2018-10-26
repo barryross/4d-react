@@ -2,7 +2,7 @@ import React from "react";
 import Dialog from 'material-ui/Dialog';
 import { Image } from 'semantic-ui-react'
 import {find} from 'lodash'
-import {portfolioFilters} from '../data'
+import {icons} from '../../../common/icons'
 
 
 
@@ -28,7 +28,7 @@ function ProjectDetails(props){
             <div className={"project-icons"}>
                   {
                     project.tags.map(tag =>{
-                      let tagItem = find(portfolioFilters, {tag:tag});
+                      let tagItem = find(icons, {tag:tag});
                       return tagItem ? <span> <span className="tag-label">{tagItem.label}</span><i className={tagItem.icon}></i> </span>: ''
                     })
                   }
@@ -41,7 +41,7 @@ function ProjectDetails(props){
         {
           !props.project.url ? "" :  
           <div class="project-visit">
-          <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Visit site </h4>
+          <h4 class="ui horizontal divider header"> Visit site </h4>
           <span class="project-url"><a target="_blank" href={project.url}>{project.url}</a></span>
         </div>
         }
@@ -53,7 +53,7 @@ function Description(props){
   return (
     <div class="project-description">
      <h4 class="ui horizontal divider header">
-        <i class="tag icon"></i>
+        <i class="sitemap icon"></i>
         Description
       </h4>
       <p>{project.description}</p>
@@ -69,12 +69,12 @@ function Specifics(props){
     <div class="project-specifics">
       { !project.features ? "" : 
         <div>
-               <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Features </h4>
+               <h4 class="ui horizontal divider header"> <i class="cubes icon"></i> Features </h4>
           <ul>
             {project.features.map(feature => <li><i class="check circle icon"></i>{feature}</li>) }
           </ul>
 
-          <h4 class="ui horizontal divider header"> <i class="tag icon"></i> Contribution </h4>
+          <h4 class="ui horizontal divider header"> <i class="code icon"></i> Contribution </h4>
           <ul>
             {project.workPerformed ? project.workPerformed.map((workPerformed)=><li><i class="check circle icon"></i>{workPerformed}</li>): ""} 
           </ul>

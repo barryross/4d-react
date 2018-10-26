@@ -1,69 +1,88 @@
 import React, {Component} from 'react'
 import {find} from 'lodash'
-
+import {icons} from '../../common/icons'
 import PortfolioMenu from './filters/PortfolioMenu'
 import PortfolioItems, {tgroup} from './PortfolioItems'
-import {portfolioFilters, portfolioControls} from './data'
+import {portfolioControls} from './data'
 import ProjectModal from './project/ProjectModal'
 export default class Portfolio extends Component {
   constructor(props){
     super(props)
-
     this.state = {
       open:false,
       currentProject: null,
-      filters: portfolioFilters,
+      filters: icons,
       portfolioControls:  portfolioControls
     }
-
-    this.setCurrentProject = this.setCurrentProject.bind(this);
-    this.toggleFilter = this.toggleFilter.bind(this);
-    this.handleClose = this.handleClose.bind(this)
   }
 
-  handleClose(){
+  handleClose = () =>{
     this.setState({open:false})
   }
-  showProjectDetails(project){
+  showProjectDetails = (project) => {
     console.log("project", project)
     this.setState({currentProject:project, open:true })
   }
-  setCurrentProject(project){
+  setCurrentProject = (project) =>{
     console.log("project", project)
     this.setState({currentProject:project, open:true })
   }
-  toggleFilter(filter){
+
+  resetQuickSelect(){
+    let none =  find(portfolioControls, {label:"None"});
+    let all =  find(portfolioControls, {label:"All"});
+
+    none.false
+    all
+
+  }
+  toggleFilter = (filter) =>{
     let filters = this.state.filters;
-    
-    if(filter == "All"){
-      let none =  find(portfolioControls, {label:"None"});
-      none.active = false;
-      let all =  find(portfolioControls, {label:"All"});
-      all.active = true;
-           filters = filters.map((item)=>{
-         item.active = true;
-         return item
+    let updatedFilters = [];
+    console.log(`toggling ${filter}`)
+
+    if(filter.preset){
+      console.log("USING A PRESET!")
+      //Set all filters to active:true
+         
+      //Set all controls to false
+      portfolioControls.map(control =>{
+        return control.active = false;
       })
-    }
-    else if(filter=="None"){
-      let none =  find(portfolioControls, {label:"None"});
-      none.active = true;
-      let all =  find(portfolioControls, {label:"All"});
-      all.active = false;
-      let found =  find(portfolioControls, {label:"None"});
-      found.active = true;
-      filters = filters.map((item)=>{
-        item.active = false;
-        return item
-     })
-    }
-    else{
-      let found =  find(filters, {tag:filter.tag});
-      found.active = !found.active;
+
+      //Set current control to active
+      find(portfolioControls, {label:filter.label}).active = true
+      if(filter.label === "All"){
+        updatedFilters = filters.map(filter =>{
+           filter.active = true
+           return filter
+        })
+
+      } else{
+        updatedFilters = filters.map(filter =>{
+           filter.active = false
+           return filter
+        })
+      }
+      console.log("portfolio controls", portfolioControls)
     }
 
+    else{
+      portfolioControls.map(control =>{
+        return control.active = false;
+      })
+      updatedFilters = filters.map(flt =>{
+        if(flt.tag == filter.tag){
+          flt.active = !flt.active
+        }
+        return flt
+      })
+ 
+    }
+
+
     // console.log("filters", filters, portfolioControls)
-    this.setState({filters:filters})
+    this.setState({filters:updatedFilters})
 
 
   }

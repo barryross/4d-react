@@ -194,24 +194,23 @@
   content: '\f278'; }
 
 /* 'ï‰¸' */
+.menu-item a {
+  color: black;
+  font-size: 18px;
+  Font-Family: 'Ubuntu', Sans-Serif;
+  font-weight: 300; }
+
 .primary-header {
-  align-items: center;
-  justify-content: space-around;
   display: flex;
-  position: fixed;
-  height: 100px;
-  top: 0;
-  width: 100vw;
-  max-width: 100%;
-  z-index: 1;
-  padding: 0.5em 1em;
-  background: black !important;
-  color: #fff;
-  grid-area: header;
-  text-transform: capitalize; }
-  .primary-header .hamburger {
-    display: none; }
-  .primary-header .logo {
+  align-items: center; }
+  .primary-header .secondary {
+    margin: 0; }
+
+.logo-container {
+  margin-left: 15px;
+  display: flex;
+  align-items: center; }
+  .logo-container .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,42 +220,28 @@
     Font-Family: 'Ubuntu', Sans-Serif;
     font-weight: 800;
     line-height: 100%;
-    lext-align: left;
+    text-align: left;
     text-transform: uppercase;
     background: #fff;
     padding: 0.25em;
     font-size: 1.25em;
     border-radius: 10em; }
-    .primary-header .logo div {
+    .logo-container .logo div {
       display: flex;
       flex-direction: column; }
-  .primary-header .inner-wrapper {
-    flex: 1; }
-  .primary-header nav {
-    Font-Family: 'Open Sans', Sans-Serif;
-    font-size: 1.10 em;
-    font-weight: 400; }
-  .primary-header nav ul {
-    margin: 0;
-    padding: 0; }
-    .primary-header nav ul li {
-      list-style-type: none;
-      flex: 1;
-      text-align: center;
-      margin: 2px; }
-      .primary-header nav ul li a {
-        text-decoration: none;
-        padding: 10px 2em;
-        font-size: 1.25em;
-        color: #fff;
-        transition: 0.25s background; }
-        .primary-header nav ul li a.active, .primary-header nav ul li a:hover {
-          text-decoration: none;
-          cursor: pointer;
-          color: #fff;
-          border-bottom: 2px solid #1D5372; }
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  height: auto;
+  display: flex;
+  justify-content: flex-end; }
+  .primary-nav a {
+    height: auto; }
 
 @media screen and (max-width: 780px) {
+  .pusher {
+    width: 100vw; }
   .primary-header {
     flex-direction: column;
     display: block;
@@ -313,10 +298,10 @@
     flex: 1; } }
 
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */
-.project-url a {
+#gallery .project-url a {
   color: #26262a; }
 
-.grid {
+#gallery .grid {
   display: grid;
   position: relative;
   margin: 1em 0;
@@ -326,13 +311,13 @@
   grid-auto-rows: 150px;
   grid-auto-flow: row dense;
   /*https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-23*/ }
-  .grid .item--medium {
+  #gallery .grid .item--medium {
     grid-row-end: span 2; }
-  .grid .item--large {
+  #gallery .grid .item--large {
     grid-row-end: span 3; }
-  .grid .item--full {
+  #gallery .grid .item--full {
     grid-column-end: auto; }
-  .grid .item {
+  #gallery .grid .item {
     position: relative;
     /* so the overlay is positioned relative to this */
     display: flex;
@@ -342,20 +327,24 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     transition: 1s all; }
-    .grid .item .overlay {
+    #gallery .grid .item .overlay {
       display: none;
       position: absolute;
       width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 0%;
       min-height: 25%;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      background: black !important; }
-      .grid .item .overlay h3 {
-        color: white; }
-    .grid .item:after {
+      transition: 1s all;
+      background: #212124 !important;
+      border-bottom: 2px solid white;
+      transition: 1s all; }
+      #gallery .grid .item .overlay h3 {
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase; }
+    #gallery .grid .item:after {
       content: '';
       position: absolute;
       width: 100%;
@@ -363,27 +352,28 @@
       background-color: black;
       opacity: 0.3;
       transition: all 0.3s ease-in-out; }
-    .grid .item:hover {
+    #gallery .grid .item:hover {
+      transition: 1s all;
       transform: scale(1.05);
       /* creates "zoom" effect when you rollover item */ }
-    .grid .item img {
+    #gallery .grid .item img {
       object-fit: cover;
       /* try playing with this property: 'contain', 'fill', 'cover' */
       height: 100%;
       /* helps image fit inside of its parent */ }
 
-.invisible {
+#gallery .invisible {
   visibility: hidden; }
 
-.item:hover::after {
+#gallery .item:hover::after {
   /* creates "bright" effect when you rollover item */
   opacity: 0; }
 
-.item:hover .overlay {
+#gallery .item:hover .overlay {
   display: flex;
   color: #26262a; }
 
-#da-thumbs li a div span {
+#gallery #da-thumbs li a div span {
   display: block;
   text-transform: uppercase;
   font-weight: 400;
@@ -394,8 +384,12 @@
   margin: 40px 20px 20px;
   padding: 10px 0; }
 
+@media screen and (max-width: 800px) {
+  #gallery #testimonials .slick-slider {
+    width: 85% !important; } }
+
 @media screen and (min-width: 768px) {
-  .item--full {
+  #gallery .item--full {
     grid-column: 1/-1;
     /* ensures it spans the whole thing */
     grid-row-end: span 2; } }
@@ -415,6 +409,10 @@
   .projectModal ul li,
   .projectModal p {
     line-height: 2em; }
+  .projectModal a {
+    color: #2185d0;
+    font-style: normal;
+    font-size: 12px; }
   .projectModal div {
     padding: 5px; }
   .projectModal .project-header {
@@ -517,36 +515,15 @@
   align-items: center;
   margin: 3em auto;
   padding: .1em 0; }
-  #portfolio-menu button {
-    border-radius: 0px;
-    display: flex; }
-    #portfolio-menu button:hover {
-      color: white; }
-    #portfolio-menu button i {
+  #portfolio-menu .filter-preset, #portfolio-menu .filters {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: "Cantarell" !important; }
+    #portfolio-menu .filter-preset i, #portfolio-menu .filters i {
       margin-right: 5px; }
-  #portfolio-menu button.true {
-    background: #1A5273;
-    color: #fff; }
-  #portfolio-menu div {
-    font-weight: 300 !important;
-    text-align: center;
-    margin: 0 .05em;
-    font-size: 1em;
-    height: 100%;
-    justify-content: center;
-    padding: .5em;
-    display: flex;
-    transition: .25s all; }
-    #portfolio-menu div:hover {
-      cursor: pointer; }
-    #portfolio-menu div::before {
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      color: #26262a; }
-    #portfolio-menu div .filter-label {
-      font-family: "Cantarell" !important;
-      font-weight: 400; }
+    #portfolio-menu .filter-preset .active, #portfolio-menu .filters .active {
+      background: #2185d0;
+      color: #fff; }
   #portfolio-menu .toggle {
     width: auto !important; }
 
@@ -554,6 +531,8 @@
   #portfolio-menu {
     width: 100%;
     height: auto; }
+    #portfolio-menu .menu {
+      flex-direction: column; }
     #portfolio-menu .filters {
       flex-wrap: wrap; }
       #portfolio-menu .filters button {
@@ -579,14 +558,20 @@
         #services .inner-wrapper #services-wrapper ul li {
           line-height: 150%; }
   @media screen and (max-width: 800px) {
-    #services #services-wrapper {
-      display: flex;
-      flex-direction: row; } }
-  @media screen and (max-width: 700px) {
-    #services #services-wrapper {
-      flex-direction: column; }
-      #services #services-wrapper .service {
-        width: auto; } }
+    #services {
+      list-style-type: none; }
+      #services .inner-wrapper {
+        padding: 25px 0; }
+        #services .inner-wrapper #services-wrapper {
+          flex-direction: column;
+          justify-content: center;
+          width: 85%; }
+          #services .inner-wrapper #services-wrapper .ui.card {
+            margin: 25px auto; }
+        #services .inner-wrapper ul {
+          text-align: left; }
+          #services .inner-wrapper ul li {
+            line-height: 150%; } }
 
 #contact {
   background: #FAFAFA;
@@ -666,7 +651,16 @@
       #testimonials .slick-slider blockquote footer {
         margin: 25px 0;
         display: flex;
+        flex-direction: column;
         align-items: center; }
+        #testimonials .slick-slider blockquote footer a {
+          color: #2185d0;
+          font-style: normal;
+          font-size: 12px; }
+        #testimonials .slick-slider blockquote footer div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px; }
         #testimonials .slick-slider blockquote footer img {
           max-width: 75px;
           max-height: 75px; }
@@ -686,8 +680,38 @@
         #testimonials .slick-slider blockquote footer cite::before {
           content: "- "; }
 
+@media screen and (max-width: 800px) {
+  #testimonials .slick-slider {
+    width: 85% !important; } }
+
+.vertical-timeline hr {
+  margin: 15px 0; }
+
+.vertical-timeline .logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px; }
+
+.vertical-timeline .vertical-timeline-element-role {
+  font-weight: 300;
+  margin: 5px 0;
+  padding-top: 5px; }
+
+.vertical-timeline .logo {
+  max-height: 70px; }
+
 .vertical-timeline::before {
   background: #2185d0; }
+
+.vertical-timeline .technologies {
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  padding-top: 10px; }
+  .vertical-timeline .technologies ul {
+    display: flex; }
+    .vertical-timeline .technologies ul li {
+      padding-right: 15px;
+      font-size: 20px; }
 
 .vertical-timeline-element-icon {
   display: flex;
@@ -700,6 +724,9 @@
   background: #1A5273 !important; }
   .vertical-timeline-element-icon i {
     font-size: 36px; }
+
+.vertical-timeline-element .vertical-timeline-element-content {
+  box-shadow: none; }
 
 .vertical-timeline-element:nth-of-type(even) .vertical-timeline-element-date {
   right: 135% !important; }
@@ -788,9 +815,6 @@ p {
 
 .App > section > div:first-child {
   padding: 40px 0; }
-
-.App > section:first-of-type {
-  padding: 100px 0 !important; }
 
 .card {
   display: flex;

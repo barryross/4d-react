@@ -8,36 +8,15 @@
   align-items: center;
   margin: 3em auto;
   padding: .1em 0; }
-  #portfolio-menu button {
-    border-radius: 0px;
-    display: flex; }
-    #portfolio-menu button:hover {
-      color: white; }
-    #portfolio-menu button i {
+  #portfolio-menu .filter-preset, #portfolio-menu .filters {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: "Cantarell" !important; }
+    #portfolio-menu .filter-preset i, #portfolio-menu .filters i {
       margin-right: 5px; }
-  #portfolio-menu button.true {
-    background: #1A5273;
-    color: #fff; }
-  #portfolio-menu div {
-    font-weight: 300 !important;
-    text-align: center;
-    margin: 0 .05em;
-    font-size: 1em;
-    height: 100%;
-    justify-content: center;
-    padding: .5em;
-    display: flex;
-    transition: .25s all; }
-    #portfolio-menu div:hover {
-      cursor: pointer; }
-    #portfolio-menu div::before {
-      font-size: 1.5em;
-      text-align: center;
-      width: 100%;
-      color: #26262a; }
-    #portfolio-menu div .filter-label {
-      font-family: "Cantarell" !important;
-      font-weight: 400; }
+    #portfolio-menu .filter-preset .active, #portfolio-menu .filters .active {
+      background: #2185d0;
+      color: #fff; }
   #portfolio-menu .toggle {
     width: auto !important; }
 
@@ -45,6 +24,8 @@
   #portfolio-menu {
     width: 100%;
     height: auto; }
+    #portfolio-menu .menu {
+      flex-direction: column; }
     #portfolio-menu .filters {
       flex-wrap: wrap; }
       #portfolio-menu .filters button {

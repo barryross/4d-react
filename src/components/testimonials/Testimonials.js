@@ -43,7 +43,11 @@ class Testimonials extends Component {
                         {testimonial.content}
                       </p>  
                       <footer>
-                        <img alt="avatar" class="avatar" src={testimonial.avatar ? `images/testimonials/${testimonial.avatar}` : defaultImage}/> <cite>{testimonial.citation}</cite>
+                        <div>
+                          <img alt="avatar" class="avatar" src={testimonial.avatar ? `images/testimonials/${testimonial.avatar}` : defaultImage}/> 
+                          <cite>{testimonial.citation}</cite>
+                        </div>
+                        <a href="testimonial.website">{testimonial.website}</a>
                       </footer>
                     </blockquote>
                   )

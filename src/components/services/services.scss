@@ -1,7 +1,6 @@
 /* SERVICES */
 #services{
 
-    
   
     list-style-type:none;
     .inner-wrapper{
@@ -32,20 +31,29 @@
 
 
   @media screen and (max-width:800px){
-    #services-wrapper{
-        display:flex;
-      flex-direction:row;
+    list-style-type:none;
+    .inner-wrapper{
+      // padding:20px 0;
+      #services-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        width:85%;
+        .ui.card{
+          margin:25px auto;
 
-    }
+        }        
+        }
+        padding: 25px 0;
+        ul{
+          text-align:left;
+          li{
+            line-height:150%;
+          }
+        }
+  
+      }
+  
     
   }
 
-  @media screen and (max-width:700px){
-    #services-wrapper{
-      flex-direction:column;
-      .service{
-        width:auto;
-      }
-    }
-  }
 }
