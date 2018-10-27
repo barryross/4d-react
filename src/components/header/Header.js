@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Scroll from 'react-scroll'; // Imports all Mixins
 import { Container, Menu, Responsive, Visibility, Segment, Button, Sidebar, Icon} from 'semantic-ui-react'
-
 const menu = [
   {label:"about", tag:"about"},         
   {label:"services", tag:"services"},
