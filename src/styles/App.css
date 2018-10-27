@@ -200,17 +200,17 @@
   Font-Family: 'Ubuntu', Sans-Serif;
   font-weight: 300; }
 
-.primary-header {
+.menu-item .primary-header {
   display: flex;
   align-items: center; }
-  .primary-header .secondary {
+  .menu-item .primary-header .secondary {
     margin: 0; }
 
-.logo-container {
+.menu-item .logo-container {
   margin-left: 15px;
   display: flex;
   align-items: center; }
-  .logo-container .logo {
+  .menu-item .logo-container .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,75 +226,75 @@
     padding: 0.25em;
     font-size: 1.25em;
     border-radius: 10em; }
-    .logo-container .logo div {
+    .menu-item .logo-container .logo div {
       display: flex;
       flex-direction: column; }
 
-.primary-nav {
+.menu-item .primary-nav {
   display: flex;
   align-items: center;
   height: auto;
   display: flex;
   justify-content: flex-end; }
-  .primary-nav a {
+  .menu-item .primary-nav a {
     height: auto; }
 
 @media screen and (max-width: 780px) {
-  .pusher {
+  .menu-item .pusher {
     width: 100vw; }
-  .primary-header {
+  .menu-item .primary-header {
     flex-direction: column;
     display: block;
     padding: 5px 0; }
-    .primary-header .hamburger {
+    .menu-item .primary-header .hamburger {
       color: white;
       display: block;
       text-align: right;
       font-weight: 700;
       font-size: 1.5em; }
-      .primary-header .hamburger:hover {
+      .menu-item .primary-header .hamburger:hover {
         cursor: pointer; }
-    .primary-header .inner-wrapper {
+    .menu-item .primary-header .inner-wrapper {
       width: 100%;
       display: flex;
       align-items: center; }
-      .primary-header .inner-wrapper .logo-container {
+      .menu-item .primary-header .inner-wrapper .logo-container {
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-between;
         padding: 0 20px; }
-        .primary-header .inner-wrapper .logo-container .logo {
+        .menu-item .primary-header .inner-wrapper .logo-container .logo {
           flex: none; }
-    .primary-header nav {
+    .menu-item .primary-header nav {
       padding-top: 0.95em;
       height: 0;
       overflow: hidden;
       transition: 0.5s all;
       background: black;
       width: 100%; }
-      .primary-header nav ul {
+      .menu-item .primary-header nav ul {
         display: flex;
         flex-direction: column; }
-        .primary-header nav ul a,
-        .primary-header nav ul li {
+        .menu-item .primary-header nav ul a,
+        .menu-item .primary-header nav ul li {
           display: inline-block;
           width: 100%;
           font-size: 1em; }
-          .primary-header nav ul a a.active,
-          .primary-header nav ul li a.active {
+          .menu-item .primary-header nav ul a a.active,
+          .menu-item .primary-header nav ul li a.active {
             border: none; }
-          .primary-header nav ul a a:hover,
-          .primary-header nav ul li a:hover {
+          .menu-item .primary-header nav ul a a:hover,
+          .menu-item .primary-header nav ul li a:hover {
             border: none;
             color: #1A5273;
             background: #cdcdcd; }
-      .primary-header nav.open {
+      .menu-item .primary-header nav.open {
         height: 20em; }
-  header .hamburger i:after {
+  .menu-item header .hamburger i:after {
     font-size: 28px; }
-  header .hamburger,
-  header .logo {
+  .menu-item header .hamburger,
+  .menu-item header .logo {
     flex: 1; } }
 
 /* respectfully taken from https://codepen.io/ramenhog/pen/MpORPa */

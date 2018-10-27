@@ -2,9 +2,11 @@
   "name": "4d-react",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://guarded-tor-80082.herokuapp.com/",
   "dependencies": {
     "@blueprintjs/core": "^1.31.0",
     "@firebase/storage": "^0.2.3",
+    "axios": "^0.18.0",
     "elemental": "^0.6.1",
     "firebase": "^5.2.0",
     "lodash": "^4.17.4",
