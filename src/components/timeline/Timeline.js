@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import firebase from '../../common/firebase.js';
+import {API_URI} from '../../common/globals'
 import {icons} from '../../common/icons'
 import {find} from 'lodash'
+import axios from 'axios'
+import moment from 'moment'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 function WorkIcon(){
@@ -15,11 +17,12 @@ export class Timeline extends Component {
     this.state = {
       timeline:[]
     }
-   const timeline = firebase.database().ref('timeline/');
-   timeline.on('value', ((snapshot)=>{
-     let filtered = snapshot.val() //Filter out items that are set to hidden
-      this.setState({timeline:filtered});
-    }));
+  }
+
+  async componentDidMount(){
+	let res =  await axios.get(`${API_URI}/timeline`)
+      console.log("Timeline response", res)	
+	this.setState({timeline: res.data.timeline})
   }
 
 render(){
@@ -34,12 +37,12 @@ render(){
           return (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date={item.date}
+              date={`${moment(item.startDate).format("MMM YYYY")} - ${moment(item.endDate).format("MMM YYYY")}`}
               iconStyle={{ background: 'white', color: '#fff' }}
               // icon={<WorkIcon />}
             >
               <div className="logoContainer"> <img className="logo" src={item.logo}/></div>
-              <h3 className="vertical-timeline-element-title">{item.title}</h3>
+              <h3 className="vertical-timeline-element-title">{item.project}</h3>
               <h4 className="vertical-timeline-element-role">{item.role}</h4>
               <hr/>
               <p className="vertical-timeline-element-subtitle">{item.subtitle}</p>

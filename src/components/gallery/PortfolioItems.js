@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {intersection} from 'lodash'
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
-import firebase from '../../common/firebase.js';
 import { GridLoader } from 'react-spinners';
 
 
@@ -17,11 +16,6 @@ constructor(props){
     loading: true
   }
 
-  this.portfolioRef = firebase.database().ref('portfolio/');
-  this.portfolioRef.on('value', ((snapshot)=>{
-      console.log("Updating", snapshot.val())
-    this.setState({portfolio:snapshot.val()});
-  }));
 
 }
 

@@ -101,7 +101,7 @@ class MobileHeader extends Component {
     return (
       <Responsive maxWidth={"800"}>
         <Sidebar.Pushable
-          style={{ minHeight: '100vh', position:'absolute' }}
+          style={{ minHeight: '100vh', position:'fixed', width:'100vw',zIndex:'100'  }}
         >
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
            {menu.map(m => {

@@ -1,1 +1,1 @@
-export const API_URI='https://guarded-tor-80082.herokuapp.com'
+export const API_URI = "https://infinite-beach-14551.herokuapp.com/api/v1";
