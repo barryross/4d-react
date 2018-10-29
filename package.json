@@ -41,6 +41,9 @@
   "watch": {
     "build": "src/"
   },
+  "engines":{
+	"node":"7.10.0"
+  },
   "devDependencies": {
     "npm-watch": "^0.4.0"
   }

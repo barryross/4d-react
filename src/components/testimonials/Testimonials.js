@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Slider from "react-slick";
 import {API_URI} from '../../common/globals'
-import functions from'firebase-functions';
 
 import axios from 'axios'
 class Testimonials extends Component {
@@ -15,7 +14,6 @@ class Testimonials extends Component {
   }
 
   async componentDidMount(){
-	  console.log("FUNCTIONS", functions.config())
 	  let res =  await axios.get(`${API_URI}/testimonials`);
 	console.log("RES", res)	
 	  this.setState({testimonials: res.data.testimonials})
