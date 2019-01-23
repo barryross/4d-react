@@ -21,11 +21,9 @@ export default class MobileHeader extends Component {
     if (sidebarOpened) this.setState({ sidebarOpened: false })
   }
 
-  handleToggle = () => this.setState({ sidebarOpened: !this.state.sidebarOpened })
 
   render() {
-    const { children, items } = this.props
-    const { sidebarOpened } = this.state
+    const {handleToggle, sidebarOpened } = this.props
 
     return (
       <Responsive maxWidth={"800"}>
@@ -33,7 +31,7 @@ export default class MobileHeader extends Component {
           style={{ minHeight: '100vh', position:'fixed', width:'100vw',zIndex:'100'  }} 
 				>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-						<MenuItems items={items}/>
+						<MenuItems {...this.props}/>
           </Sidebar>
 
           <Sidebar.Pusher
@@ -46,14 +44,12 @@ export default class MobileHeader extends Component {
               vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
-                  <Menu.Item onClick={this.handleToggle}>
+                  <Menu.Item onClick={handleToggle}>
                     <Icon name='sidebar' />
                   </Menu.Item>
                 </Menu>
               </Container>
             </Segment>
-
-            {children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Responsive>

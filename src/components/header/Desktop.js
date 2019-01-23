@@ -9,16 +9,14 @@ let Link = Scroll.Link;
 export default class DesktopHeader extends Component {
 	state = {}
 
-	handleSetActive = (item)=>{
-	 this.setState({activeItem:item, open: false})
- }
+
 
  handleHamburger = () =>{
 	 this.setState({open:!this.state.open})
  }
 	render(){
 
-	 const { children, items, setFixedMenu, fixed } = this.props
+	 const { setFixedMenu, fixed } = this.props
 	 return (
 		 <Responsive minWidth={"800"}>
 			<Visibility
@@ -45,7 +43,7 @@ export default class DesktopHeader extends Component {
 				 >     
 			
 					 <Container className="primary-nav">
-						<MenuItems items={items}/>
+						<MenuItems {...this.props} />
 					 </Container>
 				 </Menu>
 			 </Segment>
