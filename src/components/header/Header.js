@@ -20,34 +20,30 @@ export default class Header extends Component  {
 			sidebarOpened:false
     };
 	}
+	
 	handleSetActive = (item)=> this.setState({activeItem:item, open: false})
-	handleToggle = () => {
-		this.setState((state)=>{
-			console.log("STATE", state)
-			return {sidebarOpened:!state.sidebarOpened}
-		})
-	}
+	handleToggle = () => this.setState( state => { return {sidebarOpened:!state.sidebarOpened} })
 
 	setFixedMenu = (boolean) => this.setState({ fixed: boolean })
 
   render(){
 		const { sidebarOpened} = this.state
-    return(<div>
-			<DesktopHeader 
-				items={menuItems} 
-				fixed={this.state.fixed} 
-				setFixedMenu={this.setFixedMenu}
-				handleSetActive={this.handleSetActive}
+    return(
+			<div>
+				<DesktopHeader 
+					items={menuItems} 
+					fixed={this.state.fixed} 
+					setFixedMenu={this.setFixedMenu}
+					handleSetActive={this.handleSetActive}
 				/>
 
-			<MobileHeader 
-			items={menuItems}
-			handleToggle={this.handleToggle}
-			sidebarOpened={sidebarOpened}
-			handleSetActive={this.handleSetActive}
-
-			/>
-    </div>
+				<MobileHeader 
+					items={menuItems}
+					handleToggle={this.handleToggle}
+					sidebarOpened={sidebarOpened}
+					handleSetActive={this.handleSetActive}
+				/>
+			</div>
     )
   }
 }

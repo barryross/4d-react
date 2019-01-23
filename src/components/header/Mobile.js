@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
-import { Container, Menu, Responsive, Visibility, Segment, Sidebar, Icon} from 'semantic-ui-react'
-import Scroll from 'react-scroll'; 
-
+import { Container, Menu, Responsive, Segment, Sidebar, Icon} from 'semantic-ui-react'
 import MenuItems from './MenuItems'
-let Link = Scroll.Link;
 
 export default class MobileHeader extends Component {
 	state = {}
