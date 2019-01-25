@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './footer.css'
 import { Segment, List, Grid, Header, Container } from 'semantic-ui-react'
+import {LINKEDIN_URL, GITHUB_URL} from '../../common/globals'
 
 export default class Footer extends Component  {
 
@@ -22,10 +23,10 @@ render(){
 									</List.Content>
 								</List.Item>
 								<List.Item>
-									<a href="https://www.linkedin.com/in/barry-ross-a3b19520/" target="_blank">
+									<a href={LINKEDIN_URL} target="_blank">
 										<List.Icon name='linkedin' />
 									</a>
-									<a href="https://www.github.com/barryross" target="_blank">
+									<a href={GITHUB_URL} target="_blank">
 										<List.Icon name='github' />
 									</a>
 								</List.Item>
