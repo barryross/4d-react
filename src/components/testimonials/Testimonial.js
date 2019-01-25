@@ -4,7 +4,7 @@ import {DEFAULT_AVATAR} from '../../common/globals'
 
 export default({data}) => {
     return (
-        <blockquote>
+        <blockquote class="testimonial">
             <p>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
                 {data.content}
