@@ -38,9 +38,12 @@ export default class Contact extends Component {
         const {fname, lname, email, message} = this.state;
 
         return (
-            <section id="contact">
+            <section id="contact" class="primary-section">
+											<div class="section-header-wrapper">
+
                 <h1>Contact</h1>
-                <div className="form-container">
+								</div>
+                <div className="inner-content-wrapper">
                     <Form success={this.state.formSuccess} onSubmit={this.handleSubmit}>
                         <Message
                             success
@@ -71,7 +74,7 @@ export default class Contact extends Component {
                             label='Message'
                             placeholder='What can I help you with?'
                             onChange={this.onChange}/>
-                        <Form.Button>Submit</Form.Button>
+                        <Form.Button className="primary">Submit</Form.Button>
                     </Form>
                 </div>
             </section>
