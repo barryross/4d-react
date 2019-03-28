@@ -4,7 +4,6 @@ import {API_URI, SLIDER_SETTINGS} from '../../common/globals'
 import Slider from "react-slick";
 import Testimonial from './Testimonial'
 
-
 class Testimonials extends Component {
     constructor(props) {
         super(props)
@@ -21,15 +20,17 @@ class Testimonials extends Component {
     render() {
         const {testimonials} = this.state;
         return (
-            <section id="testimonials">
-                <h1>Testimonials</h1>
-                <div>
+            <section id="testimonials" class="primary-section">
+                <div class="section-header-wrapper">
+
+                    <h1>Testimonials</h1>
+                </div>
+                <div className="inner-content-wrapper">
                     <Slider {...SLIDER_SETTINGS}>
-                        { 
-													testimonials.map(data => {
+                        {testimonials.map(data => {
                             return (<Testimonial data={data}/>)
-													})
-												}
+                        })
+}
                     </Slider>
                 </div>
             </section>
