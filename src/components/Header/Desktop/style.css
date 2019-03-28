@@ -1,0 +1,21 @@
+/* 768px / 16px = 48em */
+.desktop-header {
+  display: flex;
+  align-items: center;
+  font-size: 15px; }
+  .desktop-header .menu-item a {
+    color: black;
+    font-size: 18px;
+    Font-Family: 'Ubuntu', Sans-Serif;
+    font-weight: 300; }
+  .desktop-header .menu-item .secondary {
+    margin: 0;
+    flex: 1; }
+  .desktop-header .primary-nav {
+    display: flex;
+    align-items: center;
+    height: auto;
+    display: flex;
+    justify-content: flex-end; }
+    .desktop-header .primary-nav a {
+      height: auto; }

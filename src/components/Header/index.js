@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import DesktopHeader from './Desktop'
-import MobileHeader from './Mobile'
+import DesktopHeader from './Desktop/'
+import MobileHeader from './Mobile/'
 
 const menuItems = [
   {label:"about", tag:"about"},         
@@ -23,7 +23,6 @@ export default class Header extends Component  {
 	
 	handleSetActive = (item)=> this.setState({activeItem:item, open: false})
 	handleToggle = () => this.setState( state => { return {sidebarOpened:!state.sidebarOpened} })
-
 	setFixedMenu = (boolean) => this.setState({ fixed: boolean })
 
   render(){

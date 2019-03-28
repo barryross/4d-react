@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+@import "../../../styles/base/media-queries.scss";
+
+.desktop-header {
+	display: flex;
+	align-items: center;
+	font-size:15px;
+  .menu-item {
+    a {
+      color: black;
+      font-size: 18px;
+      Font-Family: 'Ubuntu', Sans-Serif;
+      font-weight: 300;
+    }
+    .secondary {
+      margin: 0;
+      flex: 1;
+    }
+  }
+  .primary-nav {
+    display: flex;
+    align-items: center;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    a {
+      height: auto;
+    }
+  }
+}

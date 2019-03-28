@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import CallToAction from '../cta/cta'
+import { Image } from 'semantic-ui-react'
 
 const About = () => {
     return (
@@ -9,10 +10,8 @@ const About = () => {
 						<h2>Full-stack web developer,
                     experienced instructor with entrepreneurial tendencies.</h2>
 						</div>
-            <div className="card inner-content-wrapper">
-                <div>
-                    <img src="/images/barry.jpg" alt="image of Barry Ross"/>
-                </div>
+            <div className="flex card inner-content-wrapper">
+								<Image src="/images/barry.jpg" alt="image of Barry Ross" size="medium"/>
                 <div className="about-text">
                     <p>
                         <strong>I am an experienced full-stack developer, creative thinker, and
@@ -34,17 +33,7 @@ const About = () => {
             <h4 class="ui horizontal divider header">
                 <i class="phone icon"></i>Availability
             </h4>
-						<Container textAlign="center">
-            <div class="cta-container">
-						<div class="cta">
-                <h4>
-                    I am currently available for light contract work,
-                    <br/>as well as for consulting regarding technical project scope and breakdown
-                </h4>
-            </div>
-            <button class="ui primary button">Get in touch!</button>
-						</div>
-						</Container>
+						<CallToAction/>
         </section>
     )
 }

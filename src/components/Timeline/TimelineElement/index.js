@@ -2,7 +2,7 @@ import React from 'react'
 import {VerticalTimelineElement} from 'react-vertical-timeline-component';
 import moment from 'moment'
 
-import Technologies from './Technologies'
+import Technologies from './Technologies/'
 export default({item}) => {
 
     return (

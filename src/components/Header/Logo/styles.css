@@ -1,0 +1,24 @@
+.logo-container {
+  margin-left: 15px;
+  display: flex;
+  flex: 1;
+  align-items: center; }
+  .logo-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    color: #18121E;
+    Font-Family: 'Ubuntu', Sans-Serif;
+    font-weight: 800;
+    line-height: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 0.25em;
+    font-size: 1.25em;
+    border-radius: 10em; }
+    .logo-container .logo div {
+      display: flex;
+      flex-direction: column; }

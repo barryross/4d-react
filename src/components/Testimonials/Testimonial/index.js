@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {DEFAULT_AVATAR} from '../../common/globals'
+import {DEFAULT_AVATAR} from '../../../common/globals'
 
 export default({data}) => {
     return (

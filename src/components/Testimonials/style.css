@@ -1,0 +1,13 @@
+/* TESTIMONIALS */
+#testimonials {
+  color: #324343;
+  font-size: 1.15em; }
+  #testimonials img.avatar {
+    border-radius: 100px; }
+  #testimonials .slick-slider {
+    width: 50%;
+    margin: 50px auto; }
+
+@media screen and (max-width: 800px) {
+  #testimonials .slick-slider {
+    width: 85% !important; } }

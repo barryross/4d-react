@@ -1,5 +1,5 @@
 import React from 'react';
-import {icons} from '../../common/icons'
+import {icons} from '../../../../common/icons'
 import {find} from 'lodash'
 
 export default({tags}) => {

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { Container, Menu, Responsive, Visibility, Segment} from 'semantic-ui-react'
-import Logo from './Logo'
-import MenuItems from './MenuItems'
+import Logo from '../Logo'
+import MenuItems from '../MenuItems'
+import './style.css'
 export default class DesktopHeader extends Component {
 
 	render(){
@@ -15,7 +16,7 @@ export default class DesktopHeader extends Component {
 				onBottomPassedReverse={()=>setFixedMenu(false)}
 			>
 			 <Segment
-				 className="primary-header"
+				 className="desktop-header"
 				 inverted
 				 textAlign='center'
 				 style={{ padding: '1em 0em' }}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Container, Menu, Responsive, Segment, Sidebar, Icon} from 'semantic-ui-react'
-import MenuItems from './MenuItems'
-
+import MenuItems from '../MenuItems'
+import './style.css'
 export default class MobileHeader extends Component {
 	state = {}
 	

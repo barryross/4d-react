@@ -1,4 +1,4 @@
-// @import '../../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 /* TESTIMONIALS */
 #testimonials {
@@ -13,9 +13,6 @@
     margin:50px auto;
     
   }
-
- 
-
 }
 @media screen and (max-width:800px){
   #testimonials .slick-slider{

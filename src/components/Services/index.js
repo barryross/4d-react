@@ -1,6 +1,6 @@
 import React from 'react'
-import ServiceItem from './ServiceItem'
-import Service from './Service'
+import ServiceItem from './ServiceItem/'
+import Service from './Service/'
 import { Grid, Image, Container} from 'semantic-ui-react'
 
 const Services = () => {

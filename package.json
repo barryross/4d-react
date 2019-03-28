@@ -16,9 +16,9 @@
     "node-sass-chokidar": "0.0.3",
     "npm": "^6.4.1",
     "npm-run-all": "^4.1.1",
-    "react": "^16.0.0",
+    "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.2.1",
     "react-firestore": "^0.8.1",
     "react-mailchimp-subscribe": "^1.0.2",
     "react-router-dom": "^4.2.2",
@@ -41,8 +41,8 @@
   "watch": {
     "build": "src/"
   },
-  "engines":{
-	"node":"7.10.0"
+  "engines": {
+    "node": "7.10.0"
   },
   "devDependencies": {
     "npm-watch": "^0.4.0"

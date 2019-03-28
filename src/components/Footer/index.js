@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import './footer.css'
 import { Segment, List, Grid, Header, Container } from 'semantic-ui-react'
 import {LINKEDIN_URL, GITHUB_URL} from '../../common/globals'
+import './style.css'
 
 export default class Footer extends Component  {
 

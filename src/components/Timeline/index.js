@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {API_URI} from '../../common/globals'
 import axios from 'axios'
-import TimelineElement from './TimelineElement'
+import TimelineElement from './TimelineElement/'
 import {VerticalTimeline} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 

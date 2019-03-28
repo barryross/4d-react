@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {API_URI, SLIDER_SETTINGS} from '../../common/globals'
 import Slider from "react-slick";
-import Testimonial from './Testimonial'
+import Testimonial from './Testimonial/'
 
 class Testimonials extends Component {
     constructor(props) {

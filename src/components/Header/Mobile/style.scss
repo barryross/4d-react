@@ -1,0 +1,76 @@
+@import '../../../styles/variables.scss';
+@import "../../../styles/base/media-queries.scss";
+.pusher {
+  width: 100vw;
+}
+
+.hamburger {
+  color: white;
+  display: block;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.inner-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .logo-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    .logo {
+      flex: none;
+    }
+  }
+}
+
+nav {
+  padding-top: 0.95em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+  background: black;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    a,
+    li {
+      display: inline-block;
+      width: 100%;
+      font-size: 1em;
+      a {
+        &.active {
+          border: none;
+        }
+        &:hover {
+          border: none;
+          color: $cta;
+          background: $lightGray;
+        }
+      }
+    }
+  }
+  &.open {
+    height: 20em;
+  }
+}
+
+// }
+header .hamburger {
+  i:after {
+    font-size: 28px;
+  }
+}
+
+header .hamburger,
+header .logo {
+  flex: 1;
+}

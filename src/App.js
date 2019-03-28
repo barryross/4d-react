@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import About from './components/about/About'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-import Header from './components/header/Header'
-import Services from './components/services/Services'
-import Timeline from './components/timeline/Timeline'
-import Testimonials from './components/testimonials/Testimonials'
+import About from './components/About/'
+import Contact from './components/Contact/'
+import Footer from './components/Footer/'
+import Header from './components/Header'
+import Services from './components/Services/'
+import Timeline from './components/Timeline/'
+import Testimonials from './components/Testimonials/'
 
 import './styles/App.css';
 
