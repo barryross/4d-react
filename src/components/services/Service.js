@@ -1,9 +1,10 @@
 import React from 'react';
+import { Card } from 'semantic-ui-react'
 
 export default({children, icon}) => {
     return (
-            <div class="ui card">
-                <div class="content">
+            <Card centered>
+                <Card.Content>
                     <i className={icon} aria-hidden="true"></i>
                     <div class="center aligned header">Technical consulting</div>
                     <div class="center aligned description">
@@ -11,7 +12,7 @@ export default({children, icon}) => {
 													{children}
                         </ul>
                     </div>
-                </div>
-            </div>
+								</Card.Content>
+            </Card>
     )
 }
