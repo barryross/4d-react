@@ -1,0 +1,38 @@
+blockquote.testimonial {
+  padding: 1em 2em;
+  font-style: italic;
+  border-radius: .5em;
+  font-weight: normal;
+  flex: 1;
+  text-align: center; }
+  blockquote.testimonial footer {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    blockquote.testimonial footer a {
+      color: #2185d0;
+      font-style: normal;
+      font-size: 12px; }
+    blockquote.testimonial footer div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px; }
+    blockquote.testimonial footer img {
+      max-width: 75px;
+      max-height: 75px; }
+  blockquote.testimonial i {
+    font-size: 150%;
+    padding-right: 3px;
+    color: #cdcdcd; }
+  blockquote.testimonial blockquote::first-letter {
+    font-size: 150%; }
+  blockquote.testimonial footer {
+    justify-content: center; }
+    blockquote.testimonial footer cite {
+      font-style: normal;
+      font-weight: bold;
+      padding: 1em;
+      display: inline-block; }
+    blockquote.testimonial footer cite::before {
+      content: "- "; }
