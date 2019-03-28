@@ -6,8 +6,7 @@ import { Grid, Image, Container} from 'semantic-ui-react'
 const Services = () => {
     return (
         <section id="services" className="section">
-									<div class="section-header-wrapper">
-
+					<div class="section-header-wrapper">
             <h1>Services</h1>
                 <h2>What do I offer?</h2>
 						</div>
@@ -15,7 +14,6 @@ const Services = () => {
 							<Container textAlign="center">
                 <Grid>
 								<Grid.Column mobile={16} tablet={8} computer={8}>
-
                     <Service icon="fa fa-whatsapp fa-service-icon" label="Technical Consulting">
                         <ServiceItem text="Understanding and synthesis of your idea(s)"/>
                         <ServiceItem text="Suggestions to narrow the focus"/>
@@ -23,7 +21,6 @@ const Services = () => {
                     </Service>
 								</Grid.Column>
 								<Grid.Column mobile={16} tablet={8} computer={8}>
-
                     <Service icon="fa fa-code-fork fa-service-icon" label="Full-stack development">
                         <ServiceItem text="Database architecture"/>
                         <ServiceItem text="Backend API development"/>

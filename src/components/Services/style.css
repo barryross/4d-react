@@ -1,0 +1,31 @@
+/* SERVICES */
+/* 768px / 16px = 48em */
+#services #services-wrapper {
+  width: 75%;
+  margin: 30px auto; }
+  #services #services-wrapper .card {
+    min-height: 350px;
+    padding: 20px 0;
+    margin-top: 0; }
+    #services #services-wrapper .card .header {
+      padding: 20px 0; }
+  #services #services-wrapper ul {
+    text-align: left; }
+    #services #services-wrapper ul li {
+      line-height: 150%; }
+
+@media only screen and (max-width: 48em) {
+  #services {
+    list-style-type: none; }
+    #services .inner-wrapper {
+      padding: 25px 0; }
+      #services .inner-wrapper #services-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        width: 85%; }
+        #services .inner-wrapper #services-wrapper .ui.card {
+          margin: 25px auto; }
+      #services .inner-wrapper ul {
+        text-align: left; }
+        #services .inner-wrapper ul li {
+          line-height: 150%; } }
