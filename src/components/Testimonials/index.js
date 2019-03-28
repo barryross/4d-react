@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import {API_URI, SLIDER_SETTINGS} from '../../common/globals'
 import Slider from "react-slick";
 import Testimonial from './Testimonial/'
+import {API_URI, SLIDER_SETTINGS} from '../../common/globals'
 
 class Testimonials extends Component {
     constructor(props) {
@@ -22,7 +22,6 @@ class Testimonials extends Component {
         return (
             <section id="testimonials" class="primary-section">
                 <div class="section-header-wrapper">
-
                     <h1>Testimonials</h1>
                 </div>
                 <div className="inner-content-wrapper">
@@ -30,7 +29,7 @@ class Testimonials extends Component {
                         {testimonials.map(data => {
                             return (<Testimonial data={data}/>)
                         })
-}
+											}
                     </Slider>
                 </div>
             </section>
