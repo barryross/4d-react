@@ -1,12 +1,15 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react'
-
-export default({children, icon}) => {
+import './style.css'
+export default({children, icon, label}) => {
     return (
-            <Card centered>
+            <Card className="service-card" centered>
                 <Card.Content>
-                    <i className={icon} aria-hidden="true"></i>
-                    <div class="center aligned header">Technical consulting</div>
+									<Card.Header>
+									<i className={icon} aria-hidden="true"></i>
+									</Card.Header>
+                    
+                    <div class="center aligned header">{label}</div>
                     <div class="center aligned description">
                         <ul>
 													{children}
