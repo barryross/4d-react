@@ -1,0 +1,20 @@
+#contact {
+  background: #FAFAFA;
+  min-height: 600px; }
+  #contact .ui.form .field > label {
+    color: #26262a !important; }
+  #contact h1 {
+    color: #fff; }
+  #contact .form-container {
+    width: 75%;
+    margin: 0 auto; }
+  #contact form {
+    margin: 100px auto;
+    max-width: 500px; }
+    #contact form #placeholder {
+      color: #26262a; }
+    #contact form input,
+    #contact form textarea {
+      border-radius: 0;
+      border: 1px solid #26262a;
+      color: #cdcdcd; }
