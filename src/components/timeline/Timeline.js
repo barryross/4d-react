@@ -22,15 +22,19 @@ export class Timeline extends Component {
     render() {
         let {timelineElements} = this.state
         return (
-            <section id="timeline">
-                <h1>Timeline
-                    <span>What's my story?</span>
-                </h1>
+            <section id="timeline" class="primary-section">
+											<div class="section-header-wrapper">
+
+                <h1>Timeline</h1>
+                    <h2>What's my story?</h2>
+                </div>
+								<div className="inner-content-wrapper">
                 <VerticalTimeline>
                     {timelineElements.map(item => {
                         return (<TimelineElement item={item}/>)
                     })}
                 </VerticalTimeline>
+								</div>
             </section>
         )
     }

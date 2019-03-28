@@ -1,7 +1,12 @@
 @import '../../styles/variables.scss';
 
 .vertical-timeline{
-  hr{
+	font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;
+.vertical-timeline-element-date{
+	font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;
+	font-weight:300!important;
+}
+	hr{
     margin: 15px 0;
   }
   .logoContainer{
@@ -17,8 +22,6 @@
   }
   .logo{
     max-height:70px;
-    // max-width:100px;
-    // padding-bottom:10px;
   }
   &::before{
     background: $lightBlue;
