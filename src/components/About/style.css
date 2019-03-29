@@ -8,7 +8,8 @@
         flex-direction: column; } }
     #about .inner-content-wrapper .about-text {
       text-align: left;
-      align-self: stretch; }
+      align-self: stretch;
+      font-size: 16px; }
     #about .inner-content-wrapper img {
       width: 250px;
       height: 300px;

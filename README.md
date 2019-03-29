@@ -10,6 +10,7 @@ It is a React app based off of Create React App, and the data is populated from 
 - CSS3
 - React
 - Semantic UI
+- Fontello (custom icons)
 
 ## Ideas for future refactoring
 
