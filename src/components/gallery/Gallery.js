@@ -88,7 +88,7 @@ export default class Portfolio extends Component {
   }
   render(){
     return (
-      <section id="gallery">
+      <section id="gallery" class="primary-section">
           <section id="work">
           <h1>Work <span>What have I worked on?</span></h1>
             <div className="wrapper">
