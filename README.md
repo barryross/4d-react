@@ -1,16 +1,18 @@
-## Future Refactoring
+## Overview
 
-- Leverage more refactor CSS and markup to reduce custom css and make better use of Semantic-UI components/classes 
+This is my website for my freelance development & consulting business, http://www.4d-media.com
+
+It is a React app based off of Create React App, and the data is populated from a Node.js backend built with <a href="https://keystonejs.com/">Keystone.js</a>
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- React
+- Semantic UI
+
+## Ideas for future refactoring
+
+- Make better use of Semantic-UI components/classes and reduce amount of custom CSS
 - Make CTA component dynamic and accept props for content and button
-- Consistent use of media query mixin or standard media query syntax
-## Header
-
-## About
-
-## Services
-
-## Testimonials
-
-## Contact
-
-## Timeline
+- Ensure consistent use of media query mixin over standard media query syntax
