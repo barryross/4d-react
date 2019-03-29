@@ -6,22 +6,20 @@ import { Button, Menu } from 'semantic-ui-react'
 const PortfolioMenu =  ({toggleFilter, active}) => {
   return (
   
-    <div  id="portfolio-menu">
-         <Menu className={`filter-preset`}>
-          { portfolioControls.map( item =>{
-                return( 
-                  <Menu.Item
-                    name={item.label}
-                    active={item.active === true}
-                    onClick={()=>toggleFilter(item)}>
-                     <span className={item}>{item.label}</span>
-                  </Menu.Item>
-                )
-            })}
-           
-            </Menu>
-  
-
+		<div  id="portfolio-menu">
+				<Menu className={`filter-preset`}>
+				{ portfolioControls.map( item =>{
+							return( 
+								<Menu.Item
+									name={item.label}
+									active={item.active === true}
+									onClick={()=>toggleFilter(item)}>
+										<span className={item}>{item.label}</span>
+								</Menu.Item>
+							)
+					})}
+					
+					</Menu>
          <Menu className={`filters `}>
         {
           icons.map((item)=>{
@@ -37,7 +35,7 @@ const PortfolioMenu =  ({toggleFilter, active}) => {
           })
         }
      </Menu>
-      </div>
+    </div>
   )
 }
 
